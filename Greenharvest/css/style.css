@@ -1,0 +1,1384 @@
+:root {
+    --bg-color: #03A65A;
+    --text: #fff;
+    --text-hover: yellow;
+    --header-text: #001AFF;
+    --icon-bg: #fff;
+    --icon-text: black;
+    --icon-notification-bg: black;
+    --banner-bg-color: #ecf7ee;
+    --border: black;
+    --sub-text: #3ac253;
+    --Button-hover: white;
+    --star: #ff5e1a;
+    --th-bg: #f2f2f2;
+    --tr-hover: #e9e9e9;
+    --tr-even: #f9f9f9;
+    --input-box: #ccc;
+    --product-icon: #dedada;
+    --price: red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    width: 100%;
+    height: 115px;
+    margin: auto;
+    background-color: var(--bg-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* company logo */
+.logo img {
+    max-width: 180px;
+    max-height: 90px;
+}
+
+/* navbar */
+.navbar ul {
+    list-style: none;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li a {
+    padding: 3px 10px;
+    margin: 0 15px;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: var(--text);
+    letter-spacing: 0.5px;
+    transition: all ease 0.3s;
+}
+
+/* navbar and active web hover */
+.menu li a:hover,
+.menu .active {
+    color: var(--text-hover);
+    transition: all ease 0.3s;
+}
+
+/* right nav */
+.right_nav {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 15px;
+}
+
+.right_nav a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    background-color: var(--icon-bg);
+    color: var(--icon-text);
+    box-shadow: 1px 1px;
+    transition: 1s;
+}
+
+.right_nav a:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+/* icon notification count */
+.right_nav a span {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--text);
+    font-size: 0.8rem;
+    background-color: var(--icon-notification-bg);
+}
+
+/* search bar */
+.search_bar {
+    display: none;
+    position: absolute;
+    top: 125px;
+    right: 5%;
+    background-color: var(--icon-bg);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 5px;
+    z-index: 2;
+}
+
+.search_bar input[type="text"] {
+    width: 350px;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+.search_bar button {
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.right_nav .side_menu {
+    display: none;
+}
+
+
+
+/* main-banner */
+.main_banner {
+    height: 600px;
+    background-color: var(--banner-bg-color);
+    position: relative; 
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* background imag  */
+.bg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 550px;
+    object-fit: contain;
+    object-position: center;
+    padding: 160px 10px 10px 10px;
+}
+
+.bg-1 {
+    position: absolute;
+    right: -300px;
+    top: 0px;
+    width: 1000px;
+    object-fit: contain;
+    object-position: center;
+
+}
+
+.bg-2 {
+    position: absolute;
+    left: 360px;
+    top: 350px;
+    width: 330px;
+    object-fit: contain;
+    object-position: center;
+    display: none;
+}
+
+/* main-banner text */
+.main_banner_text {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    margin: 15px auto;
+}
+
+/* header text  */
+.main_banner_text h1 {
+    font-size: 3em;
+    color: var(--header-text);
+    line-height: 60px;
+    font-weight: 700;
+    padding: 30px 10px 5px 10px;
+}
+
+/* sub text  */
+.main_banner_text strong {
+    font-size: 1.4em;
+    color: var(--sub-text);
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 500;
+    padding: 10px;
+}
+
+
+
+/* about Supermarket */
+.intro_title h1 {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    padding: 40px 20px 10px 20px;
+}
+
+.supermarket_intro {
+    display: flex;
+    flex-direction: row;
+    max-width: 90%;
+    margin: 3% 5%;
+}
+
+/* Supermarket img box */
+.supermarket_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    height: 400px;
+    padding: 25px;
+    background-color: var(--banner-bg-color);
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin-right: 2%;
+}
+
+/* Supermarket img */
+.supermarket_img img {
+    max-width: 100%;
+    max-height: 320vh;
+    border-radius: 30px;
+    transition: 1s;
+}
+
+/* Services img img hover */
+.supermarket_img img:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+/* Supermarket text box */
+.supermarket_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    height: 400px;
+    background-color: var(--banner-bg-color);
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: justify;
+    padding: 45px;    
+}
+
+/* Supermarket text */
+.supermarket_text h3 {
+    font-size: 1.8em;
+    padding-bottom: 25px;
+    font-family: "Poetsen One", sans-serif;
+    color: var(--header-text);
+    font-weight: 500;
+    text-align: center;
+}
+
+.supermarket_text h4 {
+    font-size: 1em;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+.supermarket_text ul {
+    list-style: disc;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+
+
+/* Services they offer */
+.service_offer {
+    display: flex;
+    flex-direction: row;
+    max-width: 90%;
+    margin: 3% 5%;
+}
+
+/* Services text box */
+.service_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    height: 400px;
+    background-color: var(--banner-bg-color);
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: justify;
+    padding: 45px;
+    margin-right: 2%;
+}
+
+/* Services text */
+.service_text h3 {
+    font-size: 1.8em;
+    padding-bottom: 25px;
+    font-family: "Poetsen One", sans-serif;
+    color: var(--header-text);
+    font-weight: 500;
+}
+
+.service_text h4 {
+    font-size: 1em;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+/* Services list */
+.service_text ol {
+    font-size: 1em;
+    line-height: 30px;
+    font-weight: 500;
+    list-style-type: decimal;
+}
+
+/* Services img box */
+.service_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    height: 400px;
+    padding: 25px;
+    background-color: var(--banner-bg-color);
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Services img */
+.service_img img {
+    max-width: 100%;
+    max-height: 320px;
+    border-radius: 30px;
+    transition: 1s;
+}
+
+/* Services img img hover */
+.service_img img:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+
+
+/* sub-sections */
+.sub_title h1 {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    padding: 30px 20px 10px 20px;
+}
+
+.sub_sections {
+    display: flex;
+    flex-direction: row ;   
+    max-width: 90%;
+    margin: 3% 5%;  
+    justify-content: space-around;
+}
+
+/* sub section box */
+.sub_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 35%;
+    height: auto;
+    background-color: var(--banner-bg-color);
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin: 0% 2%;
+}
+
+/* sub section img */
+.sub_section img {
+    width: 250px;
+    height: 250px;
+    padding-bottom: 10px;
+    transition: 1s;
+}
+ 
+/* sub section img hover */
+.sub_section img:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+/* sub section text */
+.sub_section h4 {
+    font-size: 1.8em;
+    padding: 30px;
+    font-family: "Poetsen One", sans-serif;
+    color: var(--header-text);
+    font-weight: 500;
+}
+
+.sub_section p {
+    padding: 10px 25px;
+    text-align: justify;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+
+/* footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 5%;
+    width: 100%;
+    margin: auto;
+    background-color: var(--bg-color);
+}
+
+/* company logo */
+.company_logo {   
+    justify-content: left;
+}
+
+.company_logo img {
+    max-width: 180px;
+    max-height: 90px;
+    transition: 1s;
+}
+
+/* company logo hover*/
+.company_logo img:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+/* company info */
+.details {
+    padding: 6px;
+}
+
+.details p {
+    color: var(--text);
+    font-weight: 500;
+    padding: 3px;
+}
+
+.footer_middle {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+/* payment_methods */
+.payment_methods {
+    color: var(--text);
+    font-weight: 500;
+}
+
+/* payment_methods - cards */
+.cards {
+    padding: 8px;
+}
+
+/* card img */
+.cards img {
+    max-width: 60px;
+    height: auto;
+    border-radius: 10px;
+    padding: 3px;
+    transition: 1s;
+}
+
+/* card img hover */
+.cards img:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+/* copy_right */
+.copy_right p {
+    color: var(--text);
+    font-weight: 500;
+}
+
+/* social logo  */
+.social_logo {
+    display: grid;
+    padding: 8px;
+    grid-template-columns: auto auto auto;
+    grid-gap: 15px;
+}
+
+.social_logo a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    transition: 1s;
+}
+
+/* social logo hover */
+.social_logo a:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.social_logo .facebook, .twitter, .instagram {
+    background-color: var(--icon-bg);
+    color: var(--icon-text);
+    box-shadow: 1px 1px;
+}
+
+.footer_right {
+    display: flex;
+    flex-direction: row;
+}
+
+/* quick_links */
+.quick_links {
+    padding-right: 30px;
+}
+
+.quick_links h4, .categories h4 {
+    font-weight: 600;
+    color: var(--text-hover);
+    margin: 3px;
+}
+
+.quick_links p, .categories p{
+    font-weight: 500;
+    font-size: 0.85em;
+    color: var(--text); 
+    padding: 1px 2px;   
+}
+
+/* categories */
+.categories {
+    padding-left: 15px;
+}
+
+
+
+/* media queries */
+@media screen and (max-width: 1300px) and (min-width: 1100px){
+
+    /* main-banner */
+    /*.bg-1 {
+        right: 240px;
+        top: 20px;
+        width: 300px;
+    }
+    .bg-2 {
+        left: 230px;
+        top: 350px;
+        width: 330px;
+    }*/
+} 
+
+
+
+/* media queries */
+@media screen and (max-width: 1100px) and (min-width: 950px){
+
+    /* header */
+    .navigation {
+        padding: 10px 50px;
+    }
+    /* navbar */
+    .menu li a {
+        margin: 0 3px;
+        font-size: 1em;
+    }
+
+
+
+    /* main-banner */
+    /* .bg-1 {
+        right: 130px;
+        top: 20px;
+    }
+    .bg-2 {
+        left: 160px;
+        top: 360px;
+        width: 300px;
+    }
+    /* main-banner text */
+    .main_banner_text h1 {
+        font-size: 2.5em;
+    }
+    .main_banner_text strong {
+        font-size: 1.2em;
+    } 
+
+
+
+    /* about Supermarket */
+    .intro_title h1 {
+        padding: 30px 20px 30px 20px;
+    }
+    .supermarket_intro {
+        margin: 0 5%;
+    }
+    /* Supermarket img box */
+    .supermarket_img {
+        max-width: 50%;
+        min-width: 300px;
+        max-height: 400px;
+    }
+    /* Supermarket img */
+    .supermarket_img img {
+        max-width: 510px;
+        min-width: 280px;
+        max-height: 320px;
+        min-height: 90px;
+    }
+    /* Supermarket text box */
+    .supermarket_text {
+        max-width: 50%;
+        min-width: 300px;
+        max-height: 400px;
+        padding: 30px;    
+    }
+    /* Supermarket text */
+    .supermarket_text h3 {
+        padding-bottom: 15px;
+        font-size: 1.4em;
+    }
+
+
+
+    /* About Services we offer */
+    .service_offer {
+        margin: 5%;
+    }
+    /* Services text box */
+    .service_text {
+        max-width: 50%;
+        min-width: 300px;
+        max-height: 400px;
+        padding: 30px;
+    }
+    /* Services text */
+    .service_text h3 {
+        padding-bottom: 15px;
+        font-size: 1.4em;
+    }
+    /* Services img box */
+    .service_img {
+        max-width: 50%;
+        min-width: 300px;
+        max-height: 400px;
+    }
+    /* Services img */
+    .service_img img {
+        max-width: 510px;
+        min-width: 280px;
+        max-height: 320px;
+        min-height: 90px;
+    }
+
+
+
+    /* sub-sections */
+    .sub_title h1 {
+        padding: 0px 20px 30px 20px;
+    }
+    .sub_sections {
+        margin: 0 5% 5% 5%;  
+    }
+    /* sub section img box */
+    .sub_section {
+        width: 35%;
+        height: auto;
+    }
+    /* sub section img */
+    .sub_section img {
+        width: 75%;
+        height: 240px;
+    }
+    /* sub section text */
+    .sub_section h4 {
+        padding: 20px;
+        font-size: 1.4em;
+    }
+    .sub_section p {
+        font-size: 0.8em;
+    }
+
+
+
+    /* footer */
+    .footer {
+        justify-content: space-around;
+        padding: 1% 5%
+    } 
+    /* company info */
+    .details {
+        padding: 4px;
+        font-size: 0.85em;
+    }
+    .footer_middle {
+        padding: 10px;
+        text-align: center;
+    }    
+    /* card img */
+    .cards img {
+        max-width: 50px;
+    }
+    .social_logo a {
+        width: 35px;
+        height: 35px;
+    }
+    /* quick_links */
+    .quick_links {
+        padding: 5px;
+    }
+    /* categories */
+    .categories {
+        padding: 5px;
+    }
+}
+
+
+
+/* media queries */
+@media screen and (max-width: 950px) and (min-width: 750px){
+
+    /* header */ 
+    .right_nav .side_menu {
+        display: flex;
+        text-align: center;       
+    }
+    /* menu bar */
+    .menu {
+        display: block;
+        position: fixed;
+        top: 116px;
+        right: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        padding: 10px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 10;
+    }
+    .menu.active {
+        transform: translateX(0);
+    }
+    .menu li {
+        margin: 10px 0;
+    }
+    .menu li a {
+        display: block;
+        padding: 10px;
+        color: var(--text);
+        text-align: center;
+    }
+    .right_nav {
+        margin: 10px;
+    }
+    /* search bar */
+    .search_bar {
+        top: 125px;
+        right: 5%;
+    }
+    .search_bar input[type="text"] {
+        width: 270px;
+    }
+    .right_nav .side_menu {
+        display: flex;
+        text-align: center;       
+    }
+
+    
+    
+    /* main-banner */
+    .main_banner {
+        align-items: baseline;
+    }
+    .bg-1 {
+        display: none;
+    }
+    .bg-2 {
+        display: none;
+    }
+    /* main-banner text */   
+    .main_banner_text {
+        margin: 15px auto;
+    } 
+    .main_banner_text h1 {
+        font-size: 2.5em;
+    }
+    .main_banner_text strong {
+        font-size: 1.2em;
+    } 
+
+
+
+    /* about Supermarket */
+    .intro_title h1 {
+        padding: 30px 20px 20px 20px;
+    }
+    .supermarket_text h3 {
+        font-size: 1.4em;
+    }
+    .supermarket_text h4 {
+        font-size: 0.9em;
+    }
+    .supermarket_text ul {
+        font-size: 0.85em;
+        line-height: 25px;
+    }
+
+
+
+    /* Services they offer */
+    .service_text h3 {
+        font-size: 1.4em;
+    }
+    .service_text h4 {
+        font-size: 0.9em;
+    }
+    /* Services list */
+    .service_text ol {
+        font-size: 0.85em;
+        line-height: 25px;
+    }
+
+
+    /* sub-sections */
+    .sub_title h1 {
+        padding: 20px 20px 0px 20px;
+    }
+    .sub_sections {
+        display: block; 
+        margin: 5%;
+    }
+    /* sub section img box */
+    .sub_section {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin: 0 0 5% 0;
+    }
+    /* sub section img */
+    .sub_section img {
+        width: 25%;
+        height: 25%;
+    }
+    /* sub section text */
+    .sub_section h4 {
+        font-size: 1.2em;
+        padding: 10px 10px 5px 10px;
+    }
+    .sub_section p {
+        font-size: 0.85em;
+        padding-bottom: 20px;
+    }
+
+
+
+    /* footer */
+    .footer {
+        justify-content: space-around;
+        padding: 10px 50px
+    } 
+    /* company info */
+    .details {
+        padding: 4px;
+        font-size: 0.8em;
+    }
+    .footer_middle {
+        padding: 8px;
+        text-align: center;
+        font-size: 0.9em;
+    }    
+    /* card img */
+    .cards img {
+        max-width: 50px;
+    }
+    .social_logo a {
+        width: 35px;
+        height: 35px;
+    }
+    /* quick_links */
+    .quick_links {
+        padding: 5px;
+        font-size: 0.85em;
+    }
+    /* categories */
+    .categories {
+        padding: 5px;
+        font-size: 0.85em;
+    }
+}
+
+
+
+/* media queries */
+@media screen and (max-width: 750px) and (min-width: 550px){
+
+    /* header */
+    .right_nav .side_menu {
+        display: flex;
+        text-align: center;       
+    }
+    /* menu bar */
+    .menu {
+        display: block;
+        position: fixed;
+        top: 116px;
+        right: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        padding: 10px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 10;
+    }
+    .menu.active {
+        transform: translateX(0);
+    }
+    .menu li {
+        margin: 10px 0;
+    }
+    .menu li a {
+        display: block;
+        padding: 10px;
+        color: var(--text);
+        text-align: center;
+    }
+    .right_nav {
+        margin: 10px;
+    }
+    /* search bar */
+    .search_bar {
+        top: 125px;
+        right: 5%;
+    }
+    .search_bar input[type="text"] {
+        width: 270px;
+    }
+    .right_nav .side_menu {
+        display: flex;
+        text-align: center;       
+    }
+    
+
+
+    /* main-banner */
+    .main_banner {
+        height: 500px;
+    }
+    .bg-1 {
+        display: none;
+    }
+    .bg-2 {
+        display: none;
+    }
+    /* main-banner text */   
+    .main_banner_text {
+        margin: 30px auto 0 auto;
+    } 
+    /* main banner text  */
+    .main_banner_text h1 {
+        font-size: 2.5em;
+        padding: 5px;
+    }
+    .main_banner_text strong {
+        font-size: 1.2em;
+        padding: 5px;
+    }
+
+
+    
+    /* about Supermarket */
+    .intro_title h1 {
+        padding: 30px 20px 30px 20px;
+    }
+    .supermarket_img {
+        padding: 5px;
+    }
+    .supermarket_text {
+        padding: 25px;
+    }
+    .supermarket_text h3 {
+        font-size: 1.2em;
+    }
+    .supermarket_text h4 {
+        font-size: 0.8em;
+        line-height: 25px;
+    }
+    .supermarket_text ul {
+        font-size: 0.75em;
+        line-height: 25px;
+    }
+
+
+
+    /* Services they offer */
+    .service_text {
+        padding: 25px;
+    }
+    .service_text h3 {
+        font-size: 1.2em;
+        padding-bottom: 8px;
+    }
+    .service_text h4 {
+        font-size: 0.8em;
+        line-height: 25px;
+    }
+    /* Services list */
+    .service_text ol {
+        font-size: 0.75em;
+        line-height: 25px;
+    }
+    .service_img {
+        padding: 5px;
+    }
+
+
+
+    /* sub-sections */
+    .sub_title h1 {
+        padding: 30px 20px 20px 20px;
+    }
+    .sub_sections {
+        display: block; 
+        margin: 5%;
+    }
+    /* sub section img box */
+    .sub_section {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin: 0 0 5% 0;
+    }
+    /* sub section img */
+    .sub_section img {
+        width: 25%;
+        height: 25%;
+    }
+    /* sub section text */
+    .sub_section h4 {
+        font-size: 1.2em;
+        padding: 10px 10px 5px 10px;
+    }
+    .sub_section p {
+        font-size: 0.8em;
+        padding-bottom: 20px;
+    }
+
+
+
+    /* footer */
+    .footer {
+        display: inline-block;
+        padding: 1% 5%;
+        max-width: 100%;
+    }    
+    /* footer left  */
+    .footer_left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* company info */
+    .details p {
+        padding: 0px;
+        text-align: center;
+        font-size: 0.9em;
+    }
+    .footer_middle {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+        font-size: 0.9em;
+    }
+    /* payment_methods */
+    .payment_methods {
+        display: none;
+    }
+    /* copy_right */
+    .copy_right p {
+        text-align: center;
+    }
+    .footer_right {
+        justify-content: center;
+        align-items: center;
+        font-size: 0.9em;
+    }
+}
+
+
+
+/* media queries */
+@media screen and (max-width: 550px) {
+
+    /* header */
+    .navigation {
+        flex-direction: column;
+        height: 175px;
+    }
+    /* menu bar */
+    .menu {
+        display: block;
+        position: fixed;
+        top: 176px;
+        right: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        padding: 10px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 10;
+    }
+    .menu.active {
+        transform: translateX(0);
+    }
+    .menu li {
+        margin: 10px 0;
+    }
+    .menu li a {
+        display: block;
+        padding: 10px;
+        color: var(--text);
+        text-align: center;
+    }
+    .right_nav {
+        margin: 10px;
+    }
+    /* search bar */
+    .search_bar {
+        top: 185px;
+        right: 5%;
+    }
+    .search_bar input[type="text"] {
+        width: 270px;
+    }
+    .right_nav .side_menu {
+        display: flex;
+        text-align: center;       
+    }
+
+
+    
+    /* main-banner */
+    .main_banner {
+        height: 450px;
+        align-items: baseline;
+    }
+    .bg {
+        width: 400px;
+        padding: 180px 10px 10px 10px;
+    }
+    .bg-1 {
+        display: none;
+    }
+    .bg-2 {
+        display: none;
+    }
+    /* main-banner text */   
+    .main_banner_text {
+        margin: 35px auto 0 auto;
+    } 
+    /* main banner text  */
+    .main_banner_text h1 {
+        font-size: 2.4em;
+        padding: 5px;
+    }
+    .main_banner_text strong {
+        font-size: 1.2em;
+        padding: 5px;
+    }
+
+
+
+    /* about Supermarket */
+    .intro_title h1 {
+        padding: 30px 20px 30px 20px;
+    }
+    .supermarket_intro {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    /* Supermarket img box */
+    .supermarket_img {
+        width: 100%;
+        max-height: 300px;
+        margin-right: 0;
+        padding: 15px;
+        margin: 5% 0 0 0;
+    }
+    /* Supermarket img */
+    .supermarket_img img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    /* Supermarket text box */
+    .supermarket_text {
+        width: 100%;
+        max-height: 300px; 
+        padding: 25px;   
+    }
+    /* Supermarket text */
+    .supermarket_text h3 {
+        font-size: 1.3em;
+        padding-bottom: 15px;
+    }
+    .supermarket_text h4 {
+        font-size: 0.85em;
+        line-height: 20px;
+    }
+    .supermarket_text ul {
+        font-size: 0.8em;
+        line-height: 20px;
+        padding-top: 10px;
+    }
+
+
+
+    /* About Services they offer */
+    .service_offer {
+        display: block;
+    }
+    /* Services text box */
+    .service_text {
+        width: 100%;
+        max-height: 300px;
+        padding: 25px;
+        margin: 5% 0;
+    }
+    /* Services text */
+    .service_text h3 {
+        font-size: 1.3em;
+        padding-bottom: 15px;
+    }
+    .service_text h4 {
+        font-size: 0.85em;
+        line-height: 20px;
+    }
+    /* Services list */
+    .service_text ol {
+        font-size: 0.8em;
+        line-height: 20px;
+        padding-top: 10px;
+    }
+    /* Services img box */
+    .service_img {
+        width: 100%;
+        max-height: 300px;
+        padding: 15px;
+    }
+    /* Services img */
+    .service_img img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+
+
+    /* sub-sections */
+    .sub_title h1 {
+        padding: 30px 20px 20px 20px;
+    }
+    .sub_sections {
+        display: block; 
+        margin: 5%;
+    }
+    /* sub section img box */
+    .sub_section {
+        width: 100%;
+        height: auto;
+        margin: 0 0 5% 0;
+    }
+    /* sub section img */
+    .sub_section img {
+        width: 40%;
+        height: 40%;
+    }
+    /* sub section text */
+    .sub_section h4 {
+        font-size: 1.3em;
+    }
+    .sub_section p {
+        padding: 10px 25px;
+        font-size: 0.8em;
+    }
+
+
+
+    /* footer */
+    .footer {
+        display: inline-block;
+        padding: 10px 30px;
+        max-width: 100%;
+    }    
+    /* footer left  */
+    .footer_left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* company info */
+    .details p {
+        padding: 0px;
+        text-align: center;
+        font-size: 0.9em;
+    }
+    .footer_middle {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+        font-size: 0.9em;
+    }
+    /* payment_methods */
+    .payment_methods {
+        display: none;
+    }
+    /* copy_right */
+    .copy_right p {
+        text-align: center;
+    }
+    .footer_right {
+        justify-content: center;
+        align-items: center;
+        font-size: 0.9em;
+    }
+}
+

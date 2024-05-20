@@ -117,37 +117,6 @@ a {
     background-color: var(--icon-notification-bg);
 }
 
-/* search bar */
-.search_bar {
-    display: none;
-    position: absolute;
-    top: 125px;
-    right: 5%;
-    background-color: var(--icon-bg);
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    padding: 5px;
-    z-index: 2;
-}
-
-.search_bar input[type="text"] {
-    width: 350px;
-    padding: 5px;
-    border: none;
-    outline: none;
-}
-
-.search_bar button {
-    background-color: transparent;
-    width: 30px;
-    height: 30px;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    margin-top: 0;
-    padding: 0;
-}
-
 .right_nav .side_menu {
     display: none;
 }

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>GreenHarvest</title>
+
+    <!-- reset stylesheet -->
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./css/baking.css" type="text/css">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <header>
+        <nav class="navigation">
+
+            <!-- company logo -->
+            <section class="logo">
+                <a href="./index.html"><img src="./image/logo.webp" alt="GreenHarvest's company logo"></a>
+            </section>
+
+            <!-- navbar -->
+            <section class="navbar">
+                <ul class="menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>                    
+                    <li><a href="./categories.html" class="active">Categories</a></li>
+                    <li><a href="./order.html">Order</a></li>
+                    <li><a href="./registration.html">Registration</a></li>
+                </ul>
+            </section>
+
+            <!-- right nav -->
+            <section class="right_nav">
+                <!-- search bar -->
+                <section id="search_bar" class="search_bar">
+                    <input type="text" placeholder="Search here...">
+                    <button onclick="closeSearch()">&times;</button>
+                </section>
+
+                <a href="#" class="search" onclick="toggleSearch()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+
+                <!-- cart -->
+                <a href="./cart.html" class="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>0</span>
+                </a>
+                <!-- log in -->
+                <a href="./login.html" class="user">
+                    <i class="fa-solid fa-user"></i>
+                    <span>0</span>
+                </a>
+                <!-- side menu -->
+                <a href="#" class="side_menu" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </section>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- main bannner -->
+        <section class="main_banner">                      
+            <section class="main_banner_text">
+                <h1>Baking & Cooking Ingredients</h1>
+                <strong>#BakingEssentials #ArtOfCooking #CulinaryCreativity #DeliciousDishes</strong>
+                <strong>#KitchenInspiration #CookingIngredients #HomeCooking #PremiumIngredients</strong>
+            </section>           
+        </section> 
+
+        <!-- info about Baking Ingredients_providers -->
+        <section class="title">
+            <h1>Explore Our Products</h1>
+            <section class="sub_banner">
+                <section class="baking_product">
+                    <h3>Baking & Cooking Essentials: Elevate Your Culinary Creations</h3>
+                    <h4>Discover culinary excellence at our Baking & Cooking Ingredients aisle, where quality meets inspiration. From essential pantry staples like flours, sugars, and oils to specialty finds such as gourmet salts and exotic spices, we offer a meticulously curated selection to elevate your creations. Explore our range sourced from trusted suppliers, and let your culinary imagination take flight with every dish you create.</h4>                        
+                </section>
+    
+                <section class="baking_product_img">
+                    <img src="./image/baking_products.webp" alt="Baking product">
+                </section>
+            </section>
+        </section>
+
+        <section class="baking_title">
+            <h1>Enjoy Nature's Bounty</h1>
+            <section class="baking">
+                <section class="box_container">
+                    <!-- Baking & Cooking Ingredient 01 -->
+                    <section class="box">
+                        <span class="discount">-10%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/baking_product-1.webp" alt="CBL Sera Curry Powder">
+                        <h3>CBL Sera Curry Powder 500g</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 545.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="1000" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                    <!-- Baking & Cooking Ingredient 02 -->
+                    <section class="box">
+                        <span class="discount">-5%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/baking_product-2.webp" alt="Wijaya Chilli Powder">
+                        <h3>Wijaya Chilli Powder 500g</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 703.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="1000" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                    <!-- Baking & Cooking Ingredient 03 -->
+                    <section class="box">
+                        <span class="discount">-6%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/baking_product-3.webp" alt="Wijaya Kurakkan Flour">
+                        <h3>Wijaya Kurakkan Flour 400g</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 330.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="1000" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+            
+                    <!-- Baking & Cooking Ingredient 04 -->
+                    <section class="box">
+                        <span class="discount">-20%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/baking_product-4.webp" alt="Motha Cocoa Powder">
+                        <h3>Motha Cocoa Powder 100g</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 600.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="1000" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                    <!-- Baking & Cooking Ingredient 05 -->
+                    <section class="box">
+                        <span class="discount">-13%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/baking_product-5.webp" alt="Fortune Coconut Oil">
+                        <h3>Fortune Coconut Oil 1l</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 1058.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="100" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                    <!-- Baking & Cooking Ingredient 06 -->
+                    <section class="box">
+                        <span class="discount">-20%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/baking_product-6.webp" alt="Motha Baking Powder">
+                        <h3>Motha Baking Powder 50g</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 776.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="100" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                    <!-- Baking & Cooking Ingredient -->
+                    <section class="box">
+                        <span class="discount">-8%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/baking_product-7.webp" alt="Delmege Vanilla Essence">
+                        <h3>Delmege Vanilla Essence 28ml</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 660.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="1000" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+            
+                    <!-- Baking & Cooking Ingredient 08 -->
+                    <section class="box">
+                        <span class="discount">-4%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/baking_product-8.webp" alt="Motha Watalappan Mix">
+                        <h3>Motha Watalappan Mix 110g</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 990.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="1000" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                    <!-- Baking & Cooking Ingredient 09 -->
+                    <section class="box">
+                        <span class="discount">-3%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/baking_product-9.webp" alt="Harischandra Kurakkan Flour">
+                        <h3>Kurakkan Flour 400g</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 1520.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="1000" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                </section>            
+            </section>
+
+        </section>
+
+    </main>
+    
+    <footer>
+        <section class="footer">
+            <!-- company infoo -->
+            <section class="footer_left">
+                <!-- logo and name -->
+                <section class="company_logo">
+                    <a href="./index.html"><img src="./image/logo.webp" alt="GreenHarvest's company logo"></a>
+                </section>
+
+                <!-- details -->
+                <section class="details">
+                    <P>Tel No. - 0701733646</P>
+                    <p>E-mail - greenharvest@gmail.com</p>
+                </section>
+            </section>
+
+            <section class="footer_middle">
+                <!-- payment_methods -->
+                <section class="payment_methods">
+                    <P>Payment Methods</P>
+                </section>
+
+                <!-- cards -->
+                <section class="cards">
+                    <img src="./image/card-1.webp" alt="VISA card">
+                    <img src="./image/card-2.webp" alt="MASTER card">
+                    <img src="./image/card-3.webp" alt="AMERICAN EXPRESS card">
+                    <img src="./image/card-4.webp" alt="DISCOVER card">
+                </section>
+
+                <!-- copy_right -->
+                <section class="copy_right">
+                    <P>&copy;2024 GreenHarvest, All Right Received.</P>
+                </section>
+
+                <!-- social logo -->
+                <section class="social_logo">
+                    <!-- facebook -->
+                    <a href="#" class="facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <!-- twitter -->
+                    <a href="#" class="twitter">
+                        <i class="fa-brands fa-twitter"></i> 
+                    </a>
+
+                    <!-- instagram -->
+                    <a href="#" class="instagram">
+                        <i class="fa-brands fa-instagram"></i>    
+                    </a>
+                </section>
+            </section>           
+            
+            <section class="footer_right">
+                <!-- quick_links -->
+                <section class="quick_links">
+                    <h4>Quick Links</h4>
+                    <a href="./index.html"><p>Home</p></a>
+                    <a href="./about.html"><p>About</p></a>
+                    <a href="./categories.html"><p>Categories</p></a>
+                    <a href="./order.html"><p>Order</p></a>
+                    <a href="./registration.html"><p>Registration</p></a>  
+                </section>
+
+                <!-- categories -->
+                <section class="categories">
+                    <h4>Categories</h4>
+                    <a href="./vegetable.html"><p>Vegetable</p></a>
+                    <a href="./fruit.html"><p>Fruit</p></a>
+                    <a href="./meat .html"><p>Meat & Seafood</p></a>
+                    <a href="./dairy.html"><p>Dairy</p></a>
+                    <a href="./cosmetic.html"><p>Cosmatic</p></a>
+                </section>
+            </section>
+
+        </section>
+    </footer>
+
+    <!-- js file  -->
+    <script src="./script/categories.js"></script>
+
+</body>
+</html>

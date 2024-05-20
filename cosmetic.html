@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>GreenHarvest</title>
+
+    <!-- reset stylesheet -->
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./css/cosmetic.css" type="text/css">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <header>
+        <nav class="navigation">
+
+            <!-- company logo -->
+            <section class="logo">
+                <a href="./index.html"><img src="./image/logo.webp" alt="GreenHarvest's company logo"></a>
+            </section>
+
+            <!-- navbar -->
+            <section class="navbar">
+                <ul class="menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>                    
+                    <li><a href="./categories.html" class="active">Categories</a></li>
+                    <li><a href="./order.html">Order</a></li>
+                    <li><a href="./registration.html">Registration</a></li>
+                </ul>
+            </section>
+
+            <!-- right nav -->
+            <section class="right_nav">
+                <!-- search bar -->
+                <section id="search_bar" class="search_bar">
+                    <input type="text" placeholder="Search here...">
+                    <button onclick="closeSearch()">&times;</button>
+                </section>
+
+                <a href="#" class="search" onclick="toggleSearch()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+
+                <!-- cart -->
+                <a href="./cart.html" class="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>0</span>
+                </a>
+                <!-- log in -->
+                <a href="./login.html" class="user">
+                    <i class="fa-solid fa-user"></i>
+                    <span>0</span>
+                </a>
+                <!-- side menu -->
+                <a href="#" class="side_menu" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </section>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- main bannner -->
+        <section class="main_banner">                      
+            <section class="main_banner_text">
+                <h1>Cosmetic Products</h1>
+                <strong>#BeautyEssentials #BeautyTrends #SkincareSolutions #BeautyInspiration</strong>
+                <strong>#BeautyRoutine #GlowUpGoals #LuxeLooks #BeautyObsessed</strong>
+            </section>           
+        </section>
+
+        <!-- cosmetic product category -->
+        <section class="category_title">
+            <!-- category header -->
+            <h1>Cosmetic Product Categories</h1>
+
+            <section class="product_category">
+
+                <section class="facecare"> 
+                    <a href="#hyperlink_Facecare"><img src="./image/face-care.webp" alt="Women's Face care"></a> 
+                    <a href="#hyperlink_Facecare"><h3>Face care</h3></a>
+                </section>
+
+                <section class="womensfragrances"> 
+                    <a href="#hyperlink_WomensFragrances"><img src="./image/womens-fragrances.webp" alt="Women's-Fragrances"></a> 
+                    <a href="#hyperlink_WomensFragrances"><h3>Fragrances</h3></a>
+                </section>
+
+                <section class="skincare"> 
+                    <a href="#hyperlink_SkinCare"><img src="./image/skin-care.webp" alt="Men's Skin care"></a>  
+                    <a href="#hyperlink_SkinCare"><h3>Skin-Care</h3></a>   
+                </section>
+
+                <section class="mensfragrances"> 
+                    <a href="#hyperlink_MensFragrances"><img src="./image/mens-fragrances.webp" alt="Men's-Fragrances"></a> 
+                    <a href="#hyperlink_MensFragrances"><h3>Fragrances</h3></a>
+                </section>
+
+                <section class="colorcosmetics"> 
+                    <a href="#hyperlink_Color-Cosmetics"><img src="./image/color-cosmetics.webp" alt="Color-Cosmetics"></a> 
+                    <a href="#hyperlink_Color-Cosmetics"><h3>Color-Cosmetics</h3></a>
+                </section>
+                
+            </section>
+
+        </section>
+
+        <!-- face care product table -->
+        <section class="cosmetic_product">            
+            <h3 id="hyperlink_Facecare">Face care</h3>
+            <img src="./image/face-care.webp" alt="Women's Face care">          
+            <section class="table">
+                <table>
+                    <!-- table header -->
+                    <thead>                        
+                        <tr>
+                            <th>Product Image</th>
+                            <th>Product Name</th>                            
+                            <th>Price</th>
+                            <th>Availability</th>
+                            <th>Buy Now</th>
+                        </tr>
+                    </thead>
+                    <!-- table body -->
+                    <tbody>
+                        <tr>
+                            <td><img src="./image/face_care_product-1.webp" alt="NEUTROGENA Oil-Free Acne Wash Daily Scrub" class="product_img"></td>
+                            <td>NEUTROGENA Oil-Free Acne Wash Daily Scrub</td>
+                            <td>Rs. 7,500.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>                     
+                        <tr>
+                            <td><img src="./image/face_care_product-2.webp" alt="Dr.Rashel Vitamin C Brightening and Anti-Aging Face Cream" class="product_img"></td>
+                            <td>Dr.Rashel Vitamin C Brightening and Anti-Aging Face Cream</td>
+                            <td>Rs. 2,100.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/face_care_product-3.webp" alt="LOREAL Dermo-Expertise Aura Perfect Rosy Night Cream" class="product_img"></td>
+                            <td>LOREAL Dermo-Expertise Aura Perfect Rosy Night Cream</td>
+                            <td>Rs. 7,950.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/face_care_product-4.webp" alt="Cerave Hydrating Cleanser for Normal to Dry Skin" class="product_img"></td>
+                            <td>Cerave Hydrating Cleanser for Normal to Dry Skin</td>
+                            <td>Rs. 9,950.00</td>
+                            <td>out of stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/face_care_product-5.webp" alt="Loreal Revitalift Cleansing Foam" class="product_img"></td>
+                            <td>Loreal Revitalift Cleansing Foam</td>
+                            <td>Rs. 3,350.50</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                    </tbody>                    
+                </table>
+            </section>
+        </section>
+
+        <!-- Womens-Fragrances product table -->
+        <section class="cosmetic_product">
+            <h3 id="hyperlink_WomensFragrances">Womens-Fragrances</h3>
+            <img src="./image/womens-fragrances.webp" alt="Women's-Fragrances">
+            <section class="table">
+                <table>
+                    <!-- table header -->
+                    <thead>                        
+                        <tr>
+                            <th>Product Image</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Availability</th>
+                            <th>Buy Now</th>
+                        </tr>
+                    </thead>
+                    <!-- table body -->
+                    <tbody>
+                        <tr>
+                            <td><img src="./image/w-fragrances_product-1.webp" alt="AVON little black dress Party Eau De Perfume Spray" class="product_img"></td>
+                            <td>AVON little black dress Party Eau De Perfume Spray</td>
+                            <td>Rs. 9,280.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>                     
+                        <tr>
+                            <td><img src="./image/w-fragrances_product-2.webp" alt="FA Pink Passion Deodoran" class="product_img"></td>
+                            <td>FA Pink Passion Deodoran</td>
+                            <td>Rs. 1,250.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/w-fragrances_product-3.webp" alt="AVON IMARI bold Eau De Toilette " class="product_img"></td>
+                            <td>AVON IMARI bold Eau De Toilette </td>
+                            <td>Rs. 7,280.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/w-fragrances_product-4.webp" alt="NIVEA Fresh Energy Anti–Perspirant " class="product_img"></td>
+                            <td>NIVEA Fresh Energy Anti – Perspirant </td>
+                            <td>Rs. 1,650.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/w-fragrances_product-5.webp" alt="RASASI While in Love Forever EDP Perfume for Women with Romantic Fragrance" class="product_img"></td>
+                            <td>RASASI While in Love Forever EDP Perfume </td>
+                            <td>Rs. 11,475.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                    </tbody>                    
+                </table>
+            </section>
+        </section>
+
+        <!-- Skin-Care product table -->
+        <section class="cosmetic_product">            
+            <h3 id="hyperlink_SkinCare">Skin-Care</h3>
+            <img src="./image/skin-care.webp" alt="Men's Skin care">
+            <section class="table">
+                <table>
+                    <!-- table header -->
+                    <thead>                        
+                        <tr>
+                            <th>Product Image</th>
+                            <th>Product Name</th>                            
+                            <th>Price</th>
+                            <th>Availability</th>
+                            <th>Buy Now</th>
+                        </tr>
+                    </thead>
+                    <!-- table body -->
+                    <tbody>
+                        <tr>
+                            <td><img src="./image/skin_care_product-1.webp" alt="Roushun Aloe Vera Soothing Moisturizing Gel" class="product_img"></td>
+                            <td>Roushun Aloe Vera Soothing Moisturizing Gel </td>
+                            <td>Rs. 1,850.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>                     
+                        <tr>
+                            <td><img src="./image/skin_care_product-2.webp" alt="CETAPHIL Moisturizing Cream Very Dry to Dry Sensitive Skin" class="product_img"></td>
+                            <td>CETAPHIL Moisturizing Cream Very Dry to Dry Sensitive Skin</td>
+                            <td>Rs. 11,950.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/skin_care_product-3.webp" alt="THE ORDINARY Mineral UV Filters SPF 30 With Antioxidants" class="product_img"></td>
+                            <td>THE ORDINARY Mineral UV Filters SPF 30 With Antioxidants</td>
+                            <td>Rs. 6,50.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/skin_care_product-4.webp" alt="LOREAL White Activ Brightening Deep Exfoliatine Foam" class="product_img"></td>
+                            <td>LOREAL White Activ Brightening Deep Exfoliatine Foam</td>
+                            <td>Rs. 2,950.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/skin_care_product-5.webp" alt="NIVEA Men Deep Acne Attack Scrub Mud Foam" class="product_img"></td>
+                            <td>NIVEA Men Deep Acne Attack Scrub Mud Foam</td>
+                            <td>Rs. 2,950.50</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                    </tbody>                    
+                </table>
+            </section>
+        </section>
+
+        <!-- Mens-Fragrances product table -->
+        <section class="cosmetic_product">            
+            <h3 id="hyperlink_MensFragrances">Mens-Fragrances</h3>
+            <img src="./image/mens-fragrances.webp" alt="Men's-Fragrances">
+            <section class="table">
+                <table>
+                    <!-- table header -->
+                    <thead>                        
+                        <tr>
+                            <th>Product Image</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Availability</th>
+                            <th>Buy Now</th>
+                        </tr>
+                    </thead>
+                    <!-- table body -->
+                    <tbody>
+                        <tr>
+                            <td><img src="./image/m-fragrances_product 1.webp" alt="AVON Black Suede hot Eau De Toilette" class="product_img"></td>
+                            <td>AVON Black Suede hot Eau De Toilette</td>
+                            <td>Rs. 9,280.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>                     
+                        <tr>
+                            <td><img src="./image/m-fragrances_product 2.webp" alt="NIVEA Men Fresh Deo Roll " class="product_img"></td>
+                            <td>NIVEA Men Fresh Deo Roll</td>
+                            <td>Rs. 1,650.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/m-fragrances_product 3.webp" alt="RASASI Emotion for Men EDP – Eau De Perfume" class="product_img"></td>
+                            <td>RASASI Emotion for Men EDP – Eau De Perfume</td>
+                            <td>Rs. 8,415.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/m-fragrances_product 4.webp" alt="NIVEA Dry Impact 48h Anti Perspirant" class="product_img"></td>
+                            <td>NIVEA Dry Impact 48h Anti Perspirant</td>
+                            <td>Rs. 1,650.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/m-fragrances_product 5.webp" alt="RASASI ROYAL Blue Perfume" class="product_img"></td>
+                            <td>RASASI ROYAL Blue Perfume</td>
+                            <td>Rs. 7,225.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                    </tbody>                    
+                </table>
+            </section>
+        </section>
+
+        <!-- Color-Cosmetics product table -->
+        <section class="cosmetic_product">            
+            <h3 id="hyperlink_Color-Cosmetics">Color-Cosmetics</h3>
+            <img src="./image/color-cosmetics.webp" alt="Color-Cosmetics">
+            <section class="table">
+                <table>
+                    <!-- table header -->
+                    <thead>                        
+                        <tr>
+                            <th>Product Image</th>
+                            <th>Product Name</th>                           
+                            <th>Price</th>
+                            <th>Availability</th>
+                            <th>Buy Now</th>
+                        </tr>
+                    </thead>
+                    <!-- table body -->
+                    <tbody>
+                        <tr>
+                            <td><img src="./image/color-cosmetics_product-1.webp" alt="Flormar Jelly Look NailEnamel" class="product_img"></td>
+                            <td>Flormar Jelly Look NailEnamel</td>
+                            <td>Rs. 690.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>                     
+                        <tr>
+                            <td><img src="./image/color-cosmetics_product-2.webp" alt="Eye Liner" class="product_img"></td>
+                            <td>Eye Liner</td>
+                            <td>Rs. 1,200.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/color-cosmetics_product-3.webp" alt="DC CREAM D18" class="product_img"></td>
+                            <td>DC CREAM D18</td>
+                            <td>Rs. 4,494.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/color-cosmetics_product-4.webp" alt="Palmer’s Cocoa Butter Original Lip Balm" class="product_img"></td>
+                            <td>Palmer’s Cocoa Butter Original Lip Balm</td>
+                            <td>Rs. 870.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./image/color-cosmetics_product-5.webp" alt="Lip Gloss" class="product_img"></td>
+                            <td>Lip Gloss</td>
+                            <td>Rs. 990.00</td>
+                            <td>In stock</td>
+                            <td><a href="./order.html">Add to Cart</a></td>
+                        </tr>
+                    </tbody>              
+                </table>
+            </section>
+        </section>
+
+    </main>
+    
+    <footer>
+        <section class="footer">
+            <!-- company infoo -->
+            <section class="footer_left">
+                <!-- logo and name -->
+                <section class="company_logo">
+                    <a href="./index.html"><img src="./image/logo.webp" alt="GreenHarvest's company logo"></a>
+                </section>
+
+                <!-- details -->
+                <section class="details">
+                    <P>Tel No. - 0701733646</P>
+                    <p>E-mail - greenharvest@gmail.com</p>
+                </section>
+            </section>
+
+            <section class="footer_middle">
+                <!-- payment_methods -->
+                <section class="payment_methods">
+                    <P>Payment Methods</P>
+                </section>
+
+                <!-- cards -->
+                <section class="cards">
+                    <img src="./image/card-1.webp" alt="VISA card">
+                    <img src="./image/card-2.webp" alt="MASTER card">
+                    <img src="./image/card-3.webp" alt="AMERICAN EXPRESS card">
+                    <img src="./image/card-4.webp" alt="DISCOVER card">
+                </section>
+
+                <!-- copy_right -->
+                <section class="copy_right">
+                    <P>&copy;2024 GreenHarvest, All Right Received.</P>
+                </section>
+
+                <!-- social logo -->
+                <section class="social_logo">
+                    <!-- facebook -->
+                    <a href="#" class="facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <!-- twitter -->
+                    <a href="#" class="twitter">
+                        <i class="fa-brands fa-twitter"></i> 
+                    </a>
+
+                    <!-- instagram -->
+                    <a href="#" class="instagram">
+                        <i class="fa-brands fa-instagram"></i>    
+                    </a>
+                </section>
+            </section>           
+            
+            <section class="footer_right">
+                <!-- quick_links -->
+                <section class="quick_links">
+                    <h4>Quick Links</h4>
+                    <a href="./index.html"><p>Home</p></a>
+                    <a href="./about.html"><p>About</p></a>
+                    <a href="./categories.html"><p>Categories</p></a>
+                    <a href="./order.html"><p>Order</p></a>
+                    <a href="./registration.html"><p>Registration</p></a>  
+                </section>
+
+                <!-- categories -->
+                <section class="categories">
+                    <h4>Categories</h4>
+                    <a href="./vegetable.html"><p>Vegetable</p></a>
+                    <a href="./fruit.html"><p>Fruit</p></a>
+                    <a href="./meat .html"><p>Meat & Seafood</p></a>
+                    <a href="./dairy.html"><p>Dairy</p></a>
+                    <a href="./cosmetic.html"><p>Cosmatic</p></a>
+                </section>
+            </section>
+
+        </section>
+    </footer>
+
+    <!-- js file  -->
+    <script src="./script/categories.js"></script>
+
+</body>
+</html>

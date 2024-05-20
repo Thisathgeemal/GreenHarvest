@@ -151,172 +151,180 @@ a {
 }
 
 
-/* container */
-.container {
+/* main-banner */ 
+.main_banner {
     max-width: 90%;
-    height: 800px;
+    height: 600px;
+    border-radius: 30px;
+    margin: 3% 5%;
+    background-color: var(--banner-bg-color);
+    position: relative; 
+    overflow: hidden;
+    background-image: url(/image/cosmetic-banner.webp);
+    background-repeat: no-repeat;
+    background-position: bottom ;
+    background-size: 550px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid var(--border);;
+}
+
+/* banner text */
+.main_banner_text {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    padding-bottom: 320px;
+    margin: 15px auto;
+}
+
+/* header text  */
+.main_banner_text h1 {
+    font-size: 3em;
+    color: var(--header-text);
+    line-height: 60px;
+    font-weight: 700;
+    font-family: "Langar", system-ui;
+    padding: 10px;
+    text-align: center;
+}
+
+/* sub text  */
+.main_banner_text strong {
+    font-size: 1.4em;
+    color: var(--sub-text);
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 500;
+    padding: 10px;
+}
+
+
+/* cosmetic product category */
+.category_title h1 {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 20px 0 20px;
+}
+
+.product_category {
+    display: flex;
+    flex-direction: row;  
+    width: 90%;
+    height: 270px;
     border-radius: 30px;
     background-color: var(--banner-bg-color);
     margin: 3% 5%;
-    position: relative; 
-    overflow: hidden;
-    padding: 20px;
-    display: flex;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-form {
-    width: 400px;
-    height: 580px;
-    background-color: rgba(255, 255, 255, 0);
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.1);
-    box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    padding: 40px 35px;
-}
-
-form * {
-    font-family: 'Poppins',sans-serif;
-    color: var(--icon-text);
-    letter-spacing: 0.5px;
-    outline: none;
-    border: none;
-}
-
-/* form text  */
-form h3 {
-    font-size: 2em;
-    font-weight: 500;
-    line-height: 42px;
-    text-align: center;
-}
-
-.background {
-    width: 430px;
-    height: 520px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    top: 50%;
-}
-
-/* circle shape  */
-.background .shape {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    border-radius: 50%;
-}
-
-/* first circle  */
-.shape:first-child {
-    background: linear-gradient(
-        #1845ad,
-        #23a2f6
-    );
-    left: -80px;
-    top: -80px;
-}
-
-/* last circle  */
-.shape:last-child {
-    background: linear-gradient(
-        to right,
-        #ff512f,
-        #f09819
-    );
-    right: -70px;
-    bottom: -80px;
-}
-
-/* product box  */
-.box {
-    display: flex;
-    flex-direction: row;
-    padding: 5px;
-    margin: 5px;
-    justify-content: center;
-    align-items: center;
-}
-
-/* product box img  */
-.box img {
-    max-width: 100px;
-    height: 100px; 
-    margin: 4px;
-    padding: 2px;
-}
-
-/* product box content */
-.box .content {
-    margin: 6px;
-    padding: 4px; 
-}
-
-.box .content h4 {
-    font-size: 1.2em;
-    color: var(--header-text);
-}
-
-.box .content span {
-    font-size: 0.9em;
-}
-
-/* cart trash icon */
-.box i {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
     position: relative;
-    transition: 1s;
-    background-color: var(--icon-bg);
-    color: var(--icon-text);
-    margin: 10px;
-    padding: 10px; 
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--border);
 }
 
-.box i:hover {
-    transform: scale(1.1);
-    z-index: 1;
+.facecare img, .womensfragrances img, .skincare img, .mensfragrances img, .colorcosmetics img {
+    border-radius: 100%;
+    width: 130px;
+    height: 130px;
+    border: 1px solid var(--border);
+    margin: auto 30px;
 }
 
-/* total cost of goods */
-.total {
+.facecare h3, .womensfragrances h3, .skincare h3, .mensfragrances h3, .colorcosmetics h3{
     text-align: center;
-    font-size: 1em;
-    padding: 3px;
-    font-weight: 600;
-}
-
-.total span {
-    color: var(--price);
-}
-
-/* checkout button */
-button {
-    margin-top: 20px;
-    width: 100%;
-    background-color: var(--icon-bg);
-    color: var(--icon-text);
-    padding: 15px 0;
     font-size: 1.1em;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 10px;
+    font-weight: 500;
+    color: var(--icon-text);
 }
 
-button:hover {
-    background-color: rgba(228, 228, 228, 0.54);
+
+/* cosmetic_product */
+.cosmetic_product {
+    display: flex;
+    flex-direction: column;  
+    width: 90%;
+    border-radius: 30px;
+    background-color: var(--banner-bg-color);
+    margin: 3% 5%; 
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--border);
+}
+
+/* cosmetic product table */
+.cosmetic_product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 25px;
+}
+
+/* cosmetic table header*/
+.cosmetic_product h3 {
+    color: var(--header-text);
+    padding: 10px;
+    font-size: 1.5em;
+    font-family: "Poetsen One", sans-serif;
+}
+
+/* cosmetic table header image*/
+.cosmetic_product img {
+    border-radius: 100%;
+    width: 130px;
+    height: 130px;
+    border: 1px solid var(--border);
+}
+
+/* cosmetic table body*/
+.cosmetic_product .table {   
+    padding: 10px;
+    margin: 10px;
+    border-collapse: collapse;
+}
+
+/* table hyper link */
+table td a {
+    padding: 8px;
+    border-radius: 50px;
+    color: var(--icon-text);
+    background-color: var(--icon-bg);
+}
+
+/* table hyper link hover */
+table td a:hover {
+    background-color: var(--sub-text);    
+    color: var(--text);
+}
+
+.table th, td {
+    border: 2px solid var(--border);
+    text-align: left;
+    padding: 6px;
+}
+
+.cosmetic_product .table .product_img {   
+    width: fit-content;
+    border: none;
+    border-radius: 0;
+}
+
+.table th{
+    background-color: var(--th-bg);
+}
+
+.table tbody tr:nth-child(even){
+    background-color: var(--tr-even);
+}
+
+/* table raw hover */
+.table tbody tr:hover {
+    background-color: var(--tr-hover);
 }
 
 
@@ -475,6 +483,29 @@ button:hover {
         font-size: 1em;
     }
 
+    
+    /* cosmetic table header image*/
+    .facecare img, .womensfragrances img, .skincare img, .mensfragrances img, .colorcosmetics img {
+        margin: auto 15px;
+    }
+    
+
+    /* cosmetic table body*/
+    .cosmetic_product {
+        width: 90%;
+        margin: 3% auto;
+    }
+    .cosmetic_product .table {
+        font-size: 0.85em;
+    }
+    .cosmetic_product .table th,
+    .cosmetic_product .table td {
+        font-size: 0.85em;
+    }
+    .cosmetic_product .table .product_img {
+        width: 90px;
+        height: auto;
+    }
 
 
     /* footer */
@@ -508,7 +539,6 @@ button:hover {
         padding: 5px;
     }
 }
-
 
 
 /* media queries */
@@ -562,6 +592,69 @@ button:hover {
     }
 
 
+    /* main-banner */ 
+    .main_banner {
+        background-size: 450px;
+        height: auto;
+    }
+    /* header text  */
+    .main_banner_text {
+        padding-bottom: 240px;
+    }
+    .main_banner_text h1 {
+        font-size: 2.5em;
+    }
+    /* sub text  */
+    .main_banner_text strong {
+        font-size: 1.1em;
+    }
+
+
+    /* cosmetic product category */
+    .category_title h1 {
+        padding: 15px 0 15px 0;
+    }
+    .product_category {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        justify-content: center;
+    }
+    .facecare h3, .womensfragrances h3, .skincare h3, .mensfragrances h3, .colorcosmetics h3{
+        text-align: center;
+        font-size: 1em;
+    }
+    .facecare img, .womensfragrances img, .skincare img, .mensfragrances img, .colorcosmetics img {
+        width: 100px;
+        height: 100px;
+        margin: auto 50px;
+    }
+
+
+    /* cosmetic table body*/
+    .cosmetic_product {
+        width: 90%;
+        margin: 3% auto;
+    }
+    .cosmetic_product img {
+        width: 100px;
+        height: 100px;
+    }
+    .cosmetic_product .table {
+        font-size: 0.75em;
+    }
+    .cosmetic_product .table th,
+    .cosmetic_product .table td {
+        font-size: 0.75em;
+        padding: 4px;
+    }
+    .cosmetic_product .table .product_img {
+        width: 80px;
+        height: auto;
+    }
+
 
     /* footer */
     .footer {
@@ -597,7 +690,6 @@ button:hover {
         font-size: 0.85em;
     }
 }
-
 
 
 /* media queries */
@@ -651,51 +743,60 @@ button:hover {
     }
 
 
-
-    /* container */
-    .background .shape {
-        max-width: 150px;
-        max-height: 150px;
+    /* main-banner */ 
+    .main_banner {
+        background-size: 450px;
+        height: auto;
     }
-    /* first circle  */
-    .shape:first-child {
-        left: -5px;
-        top: -70px;
+    /* header text  */
+    .main_banner_text {
+        padding-bottom: 240px;
     }
-    /* last circle  */
-    .shape:last-child {
-        right: -5px;
-        bottom: -70px;
+    .main_banner_text h1 {
+        font-size: 2.4em;
     }
-    form {
-        max-width: 300px;
-        max-height: 520px;
-        padding: 30px 20px;
-    }
-    /* product box img  */
-    .box img {
-        max-width: 80px;
-        height: 80px; 
-    }
-    /* product box content */
-    .box .content {
-        margin: 4px;
-        padding: 2px; 
-    }
-    .box .content h4 {
+    /* sub text  */
+    .main_banner_text strong {
         font-size: 1em;
     }
-    .box .content span {
-        font-size: 0.75em;
+
+
+    /* cosmetic product category */
+    .category_title h1 {
+        padding: 15px 0 15px 0;
     }
-    /* cart trash icon */
-    .box i {
-        width: 35px;
-        height: 35px;
-        margin: 5px;
-        padding: 5px; 
+    .product_category {
+        display: flex;
+        flex-direction: column;  
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+    .facecare h3, .womensfragrances h3, .skincare h3, .mensfragrances h3, .colorcosmetics h3{
+        text-align: center;
+        font-size: 1em;
     }
 
+
+    /* cosmetic table body*/
+    .cosmetic_product {
+        width: 90%;
+        margin: 3% auto;
+    }
+    .cosmetic_product .table {
+        width: 100%;
+        overflow-x: auto;
+        font-size: 0.8em;
+    }
+    .cosmetic_product .table th,
+    .cosmetic_product .table td {
+        white-space: nowrap;
+        font-size: 0.8em;
+    }
+    .cosmetic_product .table .product_img {
+        width: 90px;
+        height: auto;
+    }
 
 
     /* footer */
@@ -736,7 +837,6 @@ button:hover {
         font-size: 0.9em;
     }
 }
-
 
 
 /* media queries */
@@ -790,55 +890,60 @@ button:hover {
     }
 
 
-    
-    /* container */
-    .container {
-        height: 650px;
-        margin: 5%;
+    /* main-banner */ 
+    .main_banner {
+        background-size: 350px;
+        height: auto;
     }
-    .background .shape {
-        width: 100px;
-        height: 100px;
+    /* header text  */
+    .main_banner_text {
+        padding-bottom: 180px;
     }
-    /* first circle  */
-    .shape:first-child {
-        left: 30px;
-        top: -40px;
+    .main_banner_text h1 {
+        font-size: 2.5em;
     }
-    /* last circle  */
-    .shape:last-child {
-        right: 30px;
-        bottom: -40px;
-    }
-    form {
-        width: 300px;
-        height: 540px;
-        padding: 30px 20px;
-    }    
-    /* product box img  */
-    .box img {
-        max-width: 80px;
-        height: 80px; 
-    }
-    /* product box content */
-    .box .content {
-        margin: 4px;
-        padding: 2px; 
-    }
-    .box .content h4 {
-        font-size: 1em;
-    }
-    .box .content span {
-        font-size: 0.75em;
-    }
-    /* cart trash icon */
-    .box i {
-        width: 35px;
-        height: 35px;
-        margin: 5px;
-        padding: 5px; 
+    /* sub text  */
+    .main_banner_text strong {
+        display: none;
     }
 
+
+    /* cosmetic product category */
+    .category_title h1 {
+        padding: 15px 0 15px 0;
+    }
+    .product_category {
+        display: flex;
+        flex-direction: column;  
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+    .facecare h3, .womensfragrances h3, .skincare h3, .mensfragrances h3, .colorcosmetics h3{
+        text-align: center;
+        font-size: 1em;
+    }
+
+
+    /* cosmetic table body*/
+    .cosmetic_product {
+        width: 90%;
+        margin: 3% auto;
+    }
+    .cosmetic_product .table {
+        width: 100%;
+        overflow-x: auto;
+        font-size: 0.8em;
+    }
+    .cosmetic_product .table th,
+    .cosmetic_product .table td {
+        white-space: nowrap;
+        font-size: 0.8em;
+    }
+    .cosmetic_product .table .product_img {
+        width: 90px;
+        height: auto;
+    }
 
 
     /* footer */
@@ -879,3 +984,4 @@ button:hover {
         font-size: 0.9em;
     }
 }
+

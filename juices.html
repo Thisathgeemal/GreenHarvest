@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>GreenHarvest</title>
+
+    <!-- reset stylesheet -->
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./css/juices.css" type="text/css">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <header>
+        <nav class="navigation">
+
+            <!-- company logo -->
+            <section class="logo">
+                <a href="./index.html"><img src="./image/logo.webp" alt="GreenHarvest's company logo"></a>
+            </section>
+
+            <!-- navbar -->
+            <section class="navbar">
+                <ul class="menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>                    
+                    <li><a href="./categories.html" class="active">Categories</a></li>
+                    <li><a href="./order.html">Order</a></li>
+                    <li><a href="./registration.html">Registration</a></li>
+                </ul>
+            </section>
+
+            <!-- right nav -->
+            <section class="right_nav">
+                <!-- search bar -->
+                <section id="search_bar" class="search_bar">
+                    <input type="text" placeholder="Search here...">
+                    <button onclick="closeSearch()">&times;</button>
+                </section>
+
+                <a href="#" class="search" onclick="toggleSearch()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+
+                <!-- cart -->
+                <a href="./cart.html" class="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>0</span>
+                </a>
+                <!-- log in -->
+                <a href="./login.html" class="user">
+                    <i class="fa-solid fa-user"></i>
+                    <span>0</span>
+                </a>
+                <!-- side menu -->
+                <a href="#" class="side_menu" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </section>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- main bannner -->
+        <section class="main_banner">                      
+            <section class="main_banner_text">
+                <h1>Juices & Carbonates</h1>
+                <strong>#RefreshingDrinks #JuiceBoost #FruitFusion</strong>
+                <strong>#FruitFusion #LiquidRefreshment #BubblyDelights</strong>
+            </section>           
+        </section> 
+        
+        <!-- info about Juices & Carbonates -->
+        <section class="title">
+            <h1>Explore Our Products</h1>
+            <section class="sub_banner">
+                <section class="juices_product">
+                    <h3>Refreshing Drinks: Dive into Juices & Carbonates</h3>
+                    <h4>Thirst Quenchers & Bubbly Bliss: Explore our Juices & Carbonates section for a refreshing array of beverages. From fresh fruit juices to sparkling sodas, we offer top-quality drinks to satisfy every craving. Elevate your drinking experience with our carefully curated selection sourced from premium ingredients and renowned brands.</h4>                        
+                </section>
+    
+                <section class="juices_product_img">
+                    <img src="./image/juices_products.webp" alt="Juices & Carbonates product">
+                </section>
+            </section>
+        </section>
+
+        <section class="juices_title">
+            <h1>Enjoy Nature's Bounty</h1>
+            <section class="juices">
+                <section class="box_container">
+                    <!-- Juices & Carbonates-product 01 -->
+                    <section class="box">
+                        <span class="discount">-22%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/juices_product-1.webp" alt="Eh Ginger Beer">
+                        <h3>Eh Ginger Beer 1.5L</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 310.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="100" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                    <!-- Juices & Carbonates-product 02 -->
+                    <section class="box">
+                        <span class="discount">-15%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/juices_product-2.webp" alt="Coca Cola Pet">
+                        <h3>Coca Cola Pet 1.5L</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 380.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="100" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                    <!-- Juices & Carbonates-product 03 -->
+                    <section class="box">
+                        <span class="discount">-11%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/juices_product-3.webp" alt="Mountain Dew">
+                        <h3>Mountain Dew 1.5L</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 395.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="100" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+            
+                    <!-- Juices & Carbonates-product 04 -->
+                    <section class="box">
+                        <span class="discount">-12%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/juices_product-4.webp" alt="Sprite Pet">
+                        <h3>Sprite Pet 1.5L</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 388.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="100" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                    <!-- Juices & Carbonates-product 05 -->
+                    <section class="box">
+                        <span class="discount">-8%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/juices_product-5.webp" alt="Kist Nectar Mixed Fruit">
+                        <h3>Kist Nectar Mixed Fruit 1L</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 540.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="100" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                    <!-- Juices & Carbonates-product 06 -->
+                    <section class="box">
+                        <span class="discount">-15%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/juices_product-6.webp" alt="Eh Fit O Orange">
+                        <h3>Eh Fit O Orange 1L</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 467.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="100" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                    <!-- Juices & Carbonates-product 07 -->
+                    <section class="box">
+                        <span class="discount">-10%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/juices_product-7.webp" alt="Fontana Cranberry Juice">
+                        <h3>Fontana Cranberry Juice 1L</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 1510.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="100" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+            
+                    <!-- Juices & Carbonates-product 08 -->
+                    <section class="box">
+                        <span class="discount">-15%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/juices_product-8.webp" alt="Eh Twistee Apple">
+                        <h3>Eh Twistee Apple 1L</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 399.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="100" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                    <!-- Juices & Carbonates-product 09 -->
+                    <section class="box">
+                        <span class="discount">-10%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/juices_product-9.webp" alt="Sozo Ginger Lime Tonic">
+                        <h3>Sozo Ginger Lime Tonic 1L</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 1490.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="100" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                </section>            
+            </section>
+
+        </section>
+
+    </main>
+    
+    <footer>
+        <section class="footer">
+            <!-- company infoo -->
+            <section class="footer_left">
+                <!-- logo and name -->
+                <section class="company_logo">
+                    <a href="./index.html"><img src="./image/logo.webp" alt="GreenHarvest's company logo"></a>
+                </section>
+
+                <!-- details -->
+                <section class="details">
+                    <P>Tel No. - 0701733646</P>
+                    <p>E-mail - greenharvest@gmail.com</p>
+                </section>
+            </section>
+
+            <section class="footer_middle">
+                <!-- payment_methods -->
+                <section class="payment_methods">
+                    <P>Payment Methods</P>
+                </section>
+
+                <!-- cards -->
+                <section class="cards">
+                    <img src="./image/card-1.webp" alt="VISA card">
+                    <img src="./image/card-2.webp" alt="MASTER card">
+                    <img src="./image/card-3.webp" alt="AMERICAN EXPRESS card">
+                    <img src="./image/card-4.webp" alt="DISCOVER card">
+                </section>
+
+                <!-- copy_right -->
+                <section class="copy_right">
+                    <P>&copy;2024 GreenHarvest, All Right Received.</P>
+                </section>
+
+                <!-- social logo -->
+                <section class="social_logo">
+                    <!-- facebook -->
+                    <a href="#" class="facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <!-- twitter -->
+                    <a href="#" class="twitter">
+                        <i class="fa-brands fa-twitter"></i> 
+                    </a>
+
+                    <!-- instagram -->
+                    <a href="#" class="instagram">
+                        <i class="fa-brands fa-instagram"></i>    
+                    </a>
+                </section>
+            </section>           
+            
+            <section class="footer_right">
+                <!-- quick_links -->
+                <section class="quick_links">
+                    <h4>Quick Links</h4>
+                    <a href="./index.html"><p>Home</p></a>
+                    <a href="./about.html"><p>About</p></a>
+                    <a href="./categories.html"><p>Categories</p></a>
+                    <a href="./order.html"><p>Order</p></a>
+                    <a href="./registration.html"><p>Registration</p></a>  
+                </section>
+
+                <!-- categories -->
+                <section class="categories">
+                    <h4>Categories</h4>
+                    <a href="./vegetable.html"><p>Vegetable</p></a>
+                    <a href="./fruit.html"><p>Fruit</p></a>
+                    <a href="./meat .html"><p>Meat & Seafood</p></a>
+                    <a href="./dairy.html"><p>Dairy</p></a>
+                    <a href="./cosmetic.html"><p>Cosmatic</p></a>
+                </section>
+            </section>
+
+        </section>
+    </footer>
+
+    <!-- js file  -->
+    <script src="./script/categories.js"></script>
+
+</body>
+</html>

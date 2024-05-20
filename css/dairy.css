@@ -151,172 +151,245 @@ a {
 }
 
 
-/* container */
-.container {
+/* main-banner */ 
+.main_banner {
     max-width: 90%;
-    height: 800px;
+    height: 600px;
     border-radius: 30px;
-    background-color: var(--banner-bg-color);
     margin: 3% 5%;
+    background-color: var(--banner-bg-color);
     position: relative; 
     overflow: hidden;
+    background-image: url(/image/dairy-banner.webp);
+    background-repeat: no-repeat;
+    background-position: bottom ;
+    background-size: 550px;
     padding: 20px;
     display: flex;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     justify-content: center;
-    align-items: center;
+    border: 2px solid var(--border);
 }
 
-form {
-    width: 400px;
-    height: 580px;
-    background-color: rgba(255, 255, 255, 0);
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.1);
-    box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    padding: 40px 35px;
-}
-
-form * {
-    font-family: 'Poppins',sans-serif;
-    color: var(--icon-text);
-    letter-spacing: 0.5px;
-    outline: none;
-    border: none;
-}
-
-/* form text  */
-form h3 {
-    font-size: 2em;
-    font-weight: 500;
-    line-height: 42px;
-    text-align: center;
-}
-
-.background {
-    width: 430px;
-    height: 520px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    top: 50%;
-}
-
-/* circle shape  */
-.background .shape {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    border-radius: 50%;
-}
-
-/* first circle  */
-.shape:first-child {
-    background: linear-gradient(
-        #1845ad,
-        #23a2f6
-    );
-    left: -80px;
-    top: -80px;
-}
-
-/* last circle  */
-.shape:last-child {
-    background: linear-gradient(
-        to right,
-        #ff512f,
-        #f09819
-    );
-    right: -70px;
-    bottom: -80px;
-}
-
-/* product box  */
-.box {
+.main_banner_text {
     display: flex;
-    flex-direction: row;
-    padding: 5px;
-    margin: 5px;
-    justify-content: center;
-    align-items: center;
-}
-
-/* product box img  */
-.box img {
-    max-width: 100px;
-    height: 100px; 
-    margin: 4px;
-    padding: 2px;
-}
-
-/* product box content */
-.box .content {
-    margin: 6px;
-    padding: 4px; 
-}
-
-.box .content h4 {
-    font-size: 1.2em;
-    color: var(--header-text);
-}
-
-.box .content span {
-    font-size: 0.9em;
-}
-
-/* cart trash icon */
-.box i {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+    flex-direction: column;
     position: relative;
-    transition: 1s;
-    background-color: var(--icon-bg);
-    color: var(--icon-text);
-    margin: 10px;
-    padding: 10px; 
+    align-items: center;
+    padding-bottom: 320px;
+    margin: 15px auto;
 }
 
-.box i:hover {
-    transform: scale(1.1);
-    z-index: 1;
-}
-
-/* total cost of goods */
-.total {
+/* header text  */
+.main_banner_text h1 {
+    font-size: 3em;
+    color: var(--header-text);
+    line-height: 60px;
+    font-weight: 700;
+    font-family: "Langar", system-ui;
+    padding: 10px;
     text-align: center;
+}
+
+/* sub text  */
+.main_banner_text strong {
+    font-size: 1.4em;
+    color: var(--sub-text);
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 500;
+    padding: 10px;
+}
+
+
+/* info about dairy_product */
+.title h1 {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.sub_banner {
+    display: flex;
+    width: 90%;
+    margin: 3% 5%;
+}
+
+/* dairy_product text */
+.dairy_product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 45px;
+    width: 50%;
+    height: 400px;
+    background-color: var(--banner-bg-color);
+    border-radius: 30px;
+    border: 2px solid var(--border);
+    margin-right: 8px;
+}
+
+.dairy_product h3 {
+    font-size: 1.5em;
+    padding-bottom: 25px;
+    font-family: "Poetsen One", sans-serif;
+    color: var(--header-text);
+    text-align: center;
+}
+
+.dairy_product h4 {
     font-size: 1em;
-    padding: 3px;
+    line-height: 25px;
+    text-align: justify;
+    padding-bottom: 12px;
     font-weight: 600;
 }
 
-.total span {
-    color: var(--price);
+/* dairy_product img */
+.dairy_product_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 400px;
+    padding: 25px;
+    background-color: var(--banner-bg-color);
+    border-radius: 30px;
+    border: 2px solid var(--border);
+    position: relative;
 }
 
-/* checkout button */
-button {
-    margin-top: 20px;
-    width: 100%;
+.dairy_product_img img {
+    max-width: 450px;
+    border-radius: 30px;
+}
+
+
+/* dairy products */
+.dairy_title h1 {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 20px 0 20px; 
+}
+
+.dairy {
+    display: flex; 
+    width: 90%;
+    margin: 3% 5%;     
+}
+
+/* product container */
+.dairy .box_container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* product cart */
+.dairy .box_container .box {
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid var(--border);
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--banner-bg-color);
+}
+
+/* product cart img */
+.dairy .box_container .box img {
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+}
+
+/* product cart discount */
+.dairy .box_container .box .discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--icon-bg);
+    color: var(--sub-text);
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 30px;
+}
+
+/* product cart icons */
+.dairy .box_container .box .icons {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+}
+
+/* product cart icons hyper links */
+.dairy .box_container .box .icons a {
+    display: block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: var(--icon-text);
+    background-color: var(--product-icon);
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.dairy .box_container .box .icons a:hover {
+    background-color: var(--sub-text);
+    color: var(--text);
+}
+
+.dairy .box_container .box h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* product stars */
+.dairy .box_container .box .stars {
+    color: var(--star);
+    padding: 5px;
+}
+
+/* product cart price */
+.dairy .box_container .box .price {
+    font-size: 1.2em;
+    color: var(--price);
+    font-weight: 500;
+}
+
+/* product cart quantity */
+.dairy .box_container .box .quantity {
+    padding-bottom: 18px;
+}
+
+input {
+    border: 1px solid var(--border);
+    padding: 0;
+    color: var(--icon-text);
+    width: 60px;
+    border-radius: 3px;
+}
+
+/* product cart btn */
+.dairy .box_container .box .btn {
     background-color: var(--icon-bg);
     color: var(--icon-text);
-    padding: 15px 0;
-    font-size: 1.1em;
-    font-weight: 600;
-    border-radius: 5px;
+    padding: 8px 15px;
+    margin: 4px 2px;
     cursor: pointer;
+    border-radius: 100px;
 }
 
-button:hover {
-    background-color: rgba(228, 228, 228, 0.54);
+.dairy .box_container .box .btn:hover {
+    background-color: var(--sub-text);
+    color: var(--text);
 }
 
 
@@ -461,7 +534,6 @@ button:hover {
 }
 
 
-
 /* media queries */
 @media screen and (max-width: 1100px) and (min-width: 950px){
 
@@ -475,6 +547,31 @@ button:hover {
         font-size: 1em;
     }
 
+
+    /* dairy_product text */
+    .dairy_product {
+        padding: 35px;
+        margin-right: 8px;
+    }
+    .dairy_product h3 {
+        font-size: 1.3em;
+    }
+    .dairy_product h4 {
+        font-size: 0.9em;
+        line-height: 20px;;
+    }
+    .dairy_product_img img {
+        max-width: 450px;
+        min-width: 300px;
+        max-height: 350px;
+        min-height: 200px;
+    }
+
+
+    /* product container */
+    .dairy .box_container {
+        justify-content: space-around;
+    }
 
 
     /* footer */
@@ -508,7 +605,6 @@ button:hover {
         padding: 5px;
     }
 }
-
 
 
 /* media queries */
@@ -561,6 +657,43 @@ button:hover {
         text-align: center;       
     }
 
+    
+    /* main-banner */ 
+    .main_banner {
+        height: 500px;
+        background-size: 450px;
+    }
+
+
+    /* dairy_product text */
+    .dairy_product {
+        padding: 30px;
+    }
+    .dairy_product h3 {
+        font-size: 1.2em;
+        padding-bottom: 20px;
+    }
+    .dairy_product h4 {
+        font-size: 0.8em;
+        line-height: 20px;
+    }
+    .dairy_product_img {
+        padding: 20px;
+    }
+    .dairy_product_img img {
+        max-width: 400px;
+        min-width: 200px;
+    }
+
+
+    /* product container */
+    .dairy .box_container {
+        justify-content: space-around;
+    }
+    /* product cart */
+    .dairy .box_container .box {
+        padding: 10px;
+    }
 
 
     /* footer */
@@ -597,7 +730,6 @@ button:hover {
         font-size: 0.85em;
     }
 }
-
 
 
 /* media queries */
@@ -650,52 +782,61 @@ button:hover {
         text-align: center;       
     }
 
-
-
-    /* container */
-    .background .shape {
-        max-width: 150px;
-        max-height: 150px;
+  
+    /* main-banner */   
+    .main_banner {
+        height: auto;
+        background-size: 400px;
     }
-    /* first circle  */
-    .shape:first-child {
-        left: -5px;
-        top: -70px;
+    .main_banner_text {
+        padding-bottom: 240px;
     }
-    /* last circle  */
-    .shape:last-child {
-        right: -5px;
-        bottom: -70px;
-    }
-    form {
-        max-width: 300px;
-        max-height: 520px;
-        padding: 30px 20px;
-    }
-    /* product box img  */
-    .box img {
-        max-width: 80px;
-        height: 80px; 
-    }
-    /* product box content */
-    .box .content {
-        margin: 4px;
-        padding: 2px; 
-    }
-    .box .content h4 {
-        font-size: 1em;
-    }
-    .box .content span {
-        font-size: 0.75em;
-    }
-    /* cart trash icon */
-    .box i {
-        width: 35px;
-        height: 35px;
-        margin: 5px;
-        padding: 5px; 
+    .main_banner_text strong {
+        font-size: 1.2em;;
     }
 
+
+    /* info about dairy products */
+    .sub_banner {
+        display: block;
+    }
+    /* dairy products text */
+    .dairy_product {
+        display: block;
+        padding: 30px;
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 3%;
+    }
+    .dairy_product h3 {
+        font-size: 1.3em;
+        padding-bottom: 25px;
+    }
+    .dairy_product h4 {
+        font-size: 0.9em;
+        line-height: 25px;
+    }
+    /* dairy_product img */
+    .dairy_product_img {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+    .dairy_product_img img {
+        max-width: 400px;
+    }
+
+
+    /* product container */
+    .dairy_title h1 {
+        padding: 20px 20px 20px 20px;
+    }
+    .dairy .box_container {
+        justify-content: center;
+    }
 
 
     /* footer */
@@ -736,7 +877,6 @@ button:hover {
         font-size: 0.9em;
     }
 }
-
 
 
 /* media queries */
@@ -789,54 +929,75 @@ button:hover {
         text-align: center;       
     }
 
-
     
-    /* container */
-    .container {
-        height: 650px;
+    /* main-banner */
+    .main_banner {
+        max-width: 90%;
+        height: 320px;
+        background-size: 300px;
         margin: 5%;
     }
-    .background .shape {
-        width: 100px;
-        height: 100px;
+    /* main banner text  */
+    .main_banner_text h1 {
+        font-size: 2.5em;
     }
-    /* first circle  */
-    .shape:first-child {
-        left: 30px;
-        top: -40px;
+    .main_banner_text strong {
+        display: none;
     }
-    /* last circle  */
-    .shape:last-child {
-        right: 30px;
-        bottom: -40px;
+    
+
+    /* info about dairy_product */
+    .sub_banner {
+        display: block;
     }
-    form {
-        width: 300px;
-        height: 540px;
-        padding: 30px 20px;
-    }    
-    /* product box img  */
-    .box img {
-        max-width: 80px;
-        height: 80px; 
+    /* dairy_product text */
+    .dairy_product {
+        display: block;
+        padding: 30px;
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 5%;
     }
-    /* product box content */
-    .box .content {
-        margin: 4px;
-        padding: 2px; 
+    .dairy_product h3 {
+        font-size: 1.2em;
+        padding-bottom: 25px;
     }
-    .box .content h4 {
-        font-size: 1em;
+    .dairy_product h4 {
+        font-size: 0.9em;
+        line-height: 25px;
     }
-    .box .content span {
-        font-size: 0.75em;
+    /* dairy_product img */
+    .dairy_product_img {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        text-align: center;
     }
-    /* cart trash icon */
-    .box i {
-        width: 35px;
-        height: 35px;
-        margin: 5px;
-        padding: 5px; 
+    .dairy_product_img img {
+        max-width: 250px;
+    }
+
+
+    /* dairy products */
+    .dairy_title {
+        margin: 5%;     
+    }
+    /* product container */
+    .dairy .box_container {
+        justify-content: center;
+    }
+    /* product cart */
+    .dairy .box_container .box {
+        padding: 15px;
+        margin-bottom: 5%;
+    }
+    /* product cart img */
+    .dairy .box_container .box img {
+        width: 250px;
+        height: 250px;
+        padding: 50px;
     }
 
 
@@ -879,3 +1040,4 @@ button:hover {
         font-size: 0.9em;
     }
 }
+

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>GreenHarvest</title>
+
+    <!-- reset stylesheet -->
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./css/dairy.css" type="text/css">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <header>
+        <nav class="navigation">
+
+            <!-- company logo -->
+            <section class="logo">
+                <a href="./index.html"><img src="./image/logo.webp" alt="GreenHarvest's company logo"></a>
+            </section>
+
+            <!-- navbar -->
+            <section class="navbar">
+                <ul class="menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>                    
+                    <li><a href="./categories.html" class="active">Categories</a></li>
+                    <li><a href="./order.html">Order</a></li>
+                    <li><a href="./registration.html">Registration</a></li>
+                </ul>
+            </section>
+
+            <!-- right nav -->
+            <section class="right_nav">
+                <!-- search bar -->
+                <section id="search_bar" class="search_bar">
+                    <input type="text" placeholder="Search here...">
+                    <button onclick="closeSearch()">&times;</button>
+                </section>
+
+                <a href="#" class="search" onclick="toggleSearch()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+
+                <!-- cart -->
+                <a href="./cart.html" class="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>0</span>
+                </a>
+                <!-- log in -->
+                <a href="./login.html" class="user">
+                    <i class="fa-solid fa-user"></i>
+                    <span>0</span>
+                </a>
+                <!-- side menu -->
+                <a href="#" class="side_menu" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </section>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- main bannner -->
+        <section class="main_banner">                      
+            <section class="main_banner_text">
+                <h1>Dairy Products</h1>
+                <strong>#DairyDelights #FreshFromFarm #Dairylicious #MilkMania</strong>
+                <strong>#ButterAndMore #CheesePlease #YogurtYum #DairyGoodness</strong>
+            </section>           
+        </section> 
+        
+        <!-- info about dairy_providers -->
+        <section class="title">
+            <h1>Explore Our Products</h1>
+            <section class="sub_banner">
+                <section class="dairy_product">
+                    <h3>Dairy Delights: Taste the Freshness</h3>
+                    <h4>Our supermarket's Dairy Delights section offers a variety of dairy products, including milk, artisan cheeses, butter, ice cream, and yogurts, sourced from local farms. Our aim is to satisfy every palate with a diverse range of dairy products, whether you're looking for a breakfast cereal or a charcuterie board. Our carefully curated selection ensures the best of dairy goodness, enhancing your culinary experience.</h4>                        
+                </section>
+    
+                <section class="dairy_product_img">
+                    <img src="./image/dairy_products.webp" alt="Dairy product">
+                </section>
+            </section>
+        </section>
+
+        <section class="dairy_title">
+            <h1>Enjoy Nature's Bounty</h1>
+            <section class="dairy">
+                <section class="box_container">
+                    <!-- dairy-product 01 -->
+                    <section class="box">
+                        <span class="discount">-20%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/dairy_product-1.webp" alt="Kotmale Butter Salted">
+                        <h3>Kotmale Butter Salted <br> 200 g</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 880.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="1000" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                    <!-- dairy-product 02 -->
+                    <section class="box">
+                        <span class="discount">-20%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/dairy_product-2.webp" alt="Kotmale Cheddar Cheese">
+                        <h3>Kotmale Cheddar Cheese <br> 250 g</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 1040.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="1000" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                    <!-- dairy-product 03 -->
+                    <section class="box">
+                        <span class="discount">-16%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/dairy_product-3.webp" alt="Kotmale Non Fat Yoghurt">
+                        <h3>Kotmale Non Fat Yoghurt <br> 450 g</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 296.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="1000" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+            
+                    <!-- dairy-product 04 -->
+                    <section class="box">
+                        <span class="discount">-25%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/dairy_product-4.webp" alt="Magic Cone Heavenly Crunch">
+                        <h3>Magic Cone Heavenly Crunch <br> 120 ml</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 180.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="1000" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                    <!-- dairy-product 05 -->
+                    <section class="box">
+                        <span class="discount">-20%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/dairy_product-5.webp" alt="Richlife Full Cream Fresh Milk">
+                        <h3>Richlife Full Cream Fresh Milk <br> 180 ml</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 104.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="1000" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                    <!-- dairy-product 06 -->
+                    <section class="box">
+                        <span class="discount">-18%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/dairy_product-6.webp" alt="Magic Fruit & Nut Ice Cream">
+                        <h3>Magic Fruit & Nut Ice Cream <br> 1l</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 656.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="100" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                    <!-- dairy-product 07 -->
+                    <section class="box">
+                        <span class="discount">-25%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/dairy_product-7.webp" alt="Kotmale Cheese Spread">
+                        <h3>Kotmale Cheese Spread <br> 175 g</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 660.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="1000" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+            
+                    <!-- dairy-product 08 -->
+                    <section class="box">
+                        <span class="discount">-10%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/dairy_product-8.webp" alt="Kotmale Curd">
+                        <h3>Kotmale Curd <br> 450 g</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 350.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="1000" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                    <!-- dairy-product 09 -->
+                    <section class="box">
+                        <span class="discount">-3%</span>
+                        <section class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            <a href="#" class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/dairy_product-9.webp" alt="Imorich Salted Caramel Ice Cream">
+                        <h3>Imorich Salted Caramel <br> Ice Cream 1l</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 1100.00</section>
+                        <section class="quantity">
+                            <span>Quantity : </span>
+                            <input type="number" min="1" max="100" value="1">
+                            <span>/Unit</span>
+                        </section>
+                        <a href="./order.html" class="btn">Add to Cart</a>
+                    </section>
+
+                </section>            
+            </section>
+
+        </section>
+
+    </main>
+    
+    <footer>
+        <section class="footer">
+            <!-- company infoo -->
+            <section class="footer_left">
+                <!-- logo and name -->
+                <section class="company_logo">
+                    <a href="./index.html"><img src="./image/logo.webp" alt="GreenHarvest's company logo"></a>
+                </section>
+
+                <!-- details -->
+                <section class="details">
+                    <P>Tel No. - 0701733646</P>
+                    <p>E-mail - greenharvest@gmail.com</p>
+                </section>
+            </section>
+
+            <section class="footer_middle">
+                <!-- payment_methods -->
+                <section class="payment_methods">
+                    <P>Payment Methods</P>
+                </section>
+
+                <!-- cards -->
+                <section class="cards">
+                    <img src="./image/card-1.webp" alt="VISA card">
+                    <img src="./image/card-2.webp" alt="MASTER card">
+                    <img src="./image/card-3.webp" alt="AMERICAN EXPRESS card">
+                    <img src="./image/card-4.webp" alt="DISCOVER card">
+                </section>
+
+                <!-- copy_right -->
+                <section class="copy_right">
+                    <P>&copy;2024 GreenHarvest, All Right Received.</P>
+                </section>
+
+                <!-- social logo -->
+                <section class="social_logo">
+                    <!-- facebook -->
+                    <a href="#" class="facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <!-- twitter -->
+                    <a href="#" class="twitter">
+                        <i class="fa-brands fa-twitter"></i> 
+                    </a>
+
+                    <!-- instagram -->
+                    <a href="#" class="instagram">
+                        <i class="fa-brands fa-instagram"></i>    
+                    </a>
+                </section>
+            </section>           
+            
+            <section class="footer_right">
+                <!-- quick_links -->
+                <section class="quick_links">
+                    <h4>Quick Links</h4>
+                    <a href="./index.html"><p>Home</p></a>
+                    <a href="./about.html"><p>About</p></a>
+                    <a href="./categories.html"><p>Categories</p></a>
+                    <a href="./order.html"><p>Order</p></a>
+                    <a href="./registration.html"><p>Registration</p></a>  
+                </section>
+
+                <!-- categories -->
+                <section class="categories">
+                    <h4>Categories</h4>
+                    <a href="./vegetable.html"><p>Vegetable</p></a>
+                    <a href="./fruit.html"><p>Fruit</p></a>
+                    <a href="./meat .html"><p>Meat & Seafood</p></a>
+                    <a href="./dairy.html"><p>Dairy</p></a>
+                    <a href="./cosmetic.html"><p>Cosmatic</p></a>
+                </section>
+            </section>
+
+        </section>
+    </footer>
+
+    <!-- js file  -->
+    <script src="./script/categories.js"></script>
+
+</body>
+</html>

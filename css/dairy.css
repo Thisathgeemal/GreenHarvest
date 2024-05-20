@@ -160,7 +160,7 @@ a {
     background-color: var(--banner-bg-color);
     position: relative; 
     overflow: hidden;
-    background-image: url(/image/dairy-banner.webp);
+    background-image: url(./image/dairy-banner.webp);
     background-repeat: no-repeat;
     background-position: bottom ;
     background-size: 550px;

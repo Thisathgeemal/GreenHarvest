@@ -161,7 +161,7 @@ a {
     background-color: var(--banner-bg-color);
     position: relative; 
     overflow: hidden;
-    background-image: url(/image/vegetable-banner.webp);
+    background-image: url(./image/vegetable-banner.webp);
     background-repeat: no-repeat;
     background-position: bottom ;
     background-size: 550px;

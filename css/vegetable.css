@@ -533,3 +533,537 @@ input {
 }
 
 
+/* media queries */
+@media screen and (max-width: 3000px) and (min-width: 1600px){
+
+    .vegetable .box_container{
+        display: grid; 
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+
+/* media queries */
+@media screen and (max-width: 1100px) and (min-width: 950px){
+
+    /* header */
+    .navigation {
+        padding: 10px 50px;
+    }
+    /* navbar */
+    .menu li a {
+        margin: 0 3px;
+        font-size: 1em;
+    }
+
+
+    /* vegetable_providers text */
+    .vegetable_provider  {
+        padding: 35px;
+        margin-right: 2%;
+    }
+    .vegetable_provider h3 {
+        font-size: 1.3em;
+    }
+    .vegetable_provider h4 {
+        font-size: 0.9em;
+        line-height: 20px;;
+    }
+    .vegetable_provider_img img {
+        width: 400px;
+        height: 250px;
+    }
+
+
+    /* product container */
+    .vegetable .box_container {
+        display: grid; 
+        grid-template-columns: auto auto ;
+        justify-content: space-around;
+    }
+
+
+    /* footer */
+    .footer {
+        justify-content: space-around;
+        padding: 1% 5%
+    } 
+    /* company info */
+    .details {
+        padding: 4px;
+        font-size: 0.85em;
+    }
+    .footer_middle {
+        padding: 10px;
+        text-align: center;
+    }    
+    /* card img */
+    .cards img {
+        max-width: 50px;
+    }
+    .social_logo a {
+        width: 35px;
+        height: 35px;
+    }
+    /* quick_links */
+    .quick_links {
+        padding: 5px;
+    }
+    /* categories */
+    .categories {
+        padding: 5px;
+    }
+}
+
+
+/* media queries */
+@media screen and (max-width: 950px) and (min-width: 750px){
+
+    /* header */ 
+    .right_nav .side_menu {
+        display: flex;
+        text-align: center;       
+    }
+    /* menu bar */
+    .menu {
+        display: block;
+        position: fixed;
+        top: 116px;
+        right: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        padding: 10px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 10;
+    }
+    .menu.active {
+        transform: translateX(0);
+    }
+    .menu li {
+        margin: 10px 0;
+    }
+    .menu li a {
+        display: block;
+        padding: 10px;
+        color: var(--text);
+        text-align: center;
+    }
+    .right_nav {
+        margin: 10px;
+    }
+    /* search bar */
+    .search_bar {
+        top: 125px;
+        right: 5%;
+    }
+    .search_bar input[type="text"] {
+        width: 270px;
+    }
+    .right_nav .side_menu {
+        display: flex;
+        text-align: center;       
+    }
+
+
+    /* main-banner */ 
+    .main_banner {
+        height: 500px;
+    }
+    .main_banner_text img {
+        width: 70%;
+    }
+
+
+    /* vegetable_providers text */
+    .vegetable_provider {
+        padding: 20px;
+    }
+    .vegetable_provider h3 {
+        font-size: 1.2em;
+        padding-bottom: 20px;
+    }
+    .vegetable_provider h4 {
+        font-size: 0.7em;
+        line-height: 20px;
+    }
+    .vegetable_provider_img {
+        padding: 20px;
+    }
+    .vegetable_provider_img img {
+        max-width: 400px;
+        max-height: 250px;
+        min-width: 200px;
+    }
+
+
+    /* product container */
+    .vegetable .box_container {
+        display: grid; 
+        grid-template-columns: auto auto ;
+        justify-content: space-around;
+    }
+    /* product cart */
+    .vegetable .box_container .box  {
+        padding: 10px;
+    }
+
+
+    /* footer */
+    .footer {
+        justify-content: space-around;
+        padding: 10px 50px
+    } 
+    /* company info */
+    .details {
+        padding: 4px;
+        font-size: 0.8em;
+    }
+    .footer_middle {
+        padding: 8px;
+        text-align: center;
+        font-size: 0.9em;
+    }    
+    /* card img */
+    .cards img {
+        max-width: 50px;
+    }
+    .social_logo a {
+        width: 35px;
+        height: 35px;
+    }
+    /* quick_links */
+    .quick_links {
+        padding: 5px;
+        font-size: 0.85em;
+    }
+    /* categories */
+    .categories {
+        padding: 5px;
+        font-size: 0.85em;
+    }
+}
+
+
+/* media queries */
+@media screen and (max-width: 750px) and (min-width: 550px){
+
+    /* header */
+    .right_nav .side_menu {
+        display: flex;
+        text-align: center;       
+    }
+    /* menu bar */
+    .menu {
+        display: block;
+        position: fixed;
+        top: 116px;
+        right: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        padding: 10px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 10;
+    }
+    .menu.active {
+        transform: translateX(0);
+    }
+    .menu li {
+        margin: 10px 0;
+    }
+    .menu li a {
+        display: block;
+        padding: 10px;
+        color: var(--text);
+        text-align: center;
+    }
+    .right_nav {
+        margin: 10px;
+    }
+    /* search bar */
+    .search_bar {
+        top: 125px;
+        right: 5%;
+    }
+    .search_bar input[type="text"] {
+        width: 270px;
+    }
+    .right_nav .side_menu {
+        display: flex;
+        text-align: center;       
+    }
+    
+
+    
+    /* main-banner */   
+    .main_banner {
+        height: auto;
+    }
+    .main_banner_text {
+        padding-bottom: 0px;
+    }
+    .main_banner_text strong {
+        font-size: 1.2em;
+    }
+
+    
+
+    /* info about vegetable_providers */
+    .sub_banner {
+        display: block;
+    }
+    /* vegetable_providers text */
+    .vegetable_provider {
+        display: block;
+        padding: 30px;
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 3%;
+    }
+    .vegetable_provider h3 {
+        font-size: 1.3em;
+        padding-bottom: 25px;
+    }
+    .vegetable_provider h4 {
+        font-size: 0.9em;
+        line-height: 25px;
+    }
+    /* vegetable_providers img */
+    .vegetable_provider_img {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+    .vegetable_provider_img img {
+        max-width: 400px;
+    }
+
+
+    /* product container */
+    .vagetable_title h1 {
+        padding: 20px 20px 20px 20px;
+    }
+    .vegetable .box_container {
+        grid-template-columns: auto;
+        justify-content: space-around;
+    }
+    /* product cart */
+    .vegetable .box_container .box {
+        margin-bottom: 5%;
+    }
+
+
+    /* footer */
+    .footer {
+        display: inline-block;
+        padding: 1% 5%;
+        max-width: 100%;
+    }    
+    /* footer left  */
+    .footer_left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* company info */
+    .details p {
+        padding: 0px;
+        text-align: center;
+        font-size: 0.9em;
+    }
+    .footer_middle {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+        font-size: 0.9em;
+    }
+    /* payment_methods */
+    .payment_methods {
+        display: none;
+    }
+    /* copy_right */
+    .copy_right p {
+        text-align: center;
+    }
+    .footer_right {
+        justify-content: center;
+        align-items: center;
+        font-size: 0.9em;
+    }
+}
+
+
+/* media queries */
+@media screen and (max-width: 550px) {
+
+    /* header */
+    .navigation {
+        flex-direction: column;
+        height: 175px;
+    }
+    /* menu bar */
+    .menu {
+        display: block;
+        position: fixed;
+        top: 176px;
+        right: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        padding: 10px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 10;
+    }
+    .menu.active {
+        transform: translateX(0);
+    }
+    .menu li {
+        margin: 10px 0;
+    }
+    .menu li a {
+        display: block;
+        padding: 10px;
+        color: var(--text);
+        text-align: center;
+    }
+    .right_nav {
+        margin: 10px;
+    }
+    /* search bar */
+    .search_bar {
+        top: 185px;
+        right: 5%;
+    }
+    .search_bar input[type="text"] {
+        width: 270px;
+    }
+    .right_nav .side_menu {
+        display: flex;
+        text-align: center;       
+    }
+    
+
+    /* main-banner */
+    .main_banner {
+        max-width: 90%;
+        height: auto;
+        margin: 5% auto;
+    }
+    /* main banner text  */
+    .main_banner_text {
+        padding-bottom: 10px;
+    }
+    .main_banner_text h1 {
+        font-size: 2.5em;
+    }
+    .main_banner_text strong {
+        display: none;
+    }
+    .main_banner_text img {
+        width: 90%;
+    }
+
+    /* info about vegetable_providers */
+    .sub_banner {
+        display: block;
+    }
+    /* vegetable_providers text */
+    .vegetable_provider {
+        display: block;
+        padding: 30px;
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 5%;
+    }
+    .vegetable_provider h3 {
+        font-size: 1.2em;
+        padding-bottom: 25px;
+    }
+    .vegetable_provider h4 {
+        font-size: 0.9em;
+        line-height: 25px;
+    }
+    /* vegetable_providers img */
+    .vegetable_provider_img {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+    .vegetable_provider_img img {
+        max-width: 250px;
+    }
+
+
+    /* vegetable products */
+    .vegetable_title h1 {
+        padding: 20px 20px 20px 20px;
+    }
+    .vegetable {
+        margin: 5%;     
+    }
+    /* product container */
+    .vegetable .box_container {
+        grid-template-columns: auto;
+        justify-content: space-around;
+    }
+    /* product cart */
+    .vegetable .box_container .box {
+        padding: 15px;
+        margin-bottom: 5%;
+    }
+    /* product cart img */
+    .vegetable .box_container .box img {
+        width: 250px;
+        height: 250px;
+        padding: 50px;
+    }
+
+
+    /* footer */
+    .footer {
+        display: inline-block;
+        padding: 10px 30px;
+        max-width: 100%;
+    }    
+    /* footer left  */
+    .footer_left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* company info */
+    .details p {
+        padding: 0px;
+        text-align: center;
+        font-size: 0.9em;
+    }
+    .footer_middle {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+        font-size: 0.9em;
+    }
+    /* payment_methods */
+    .payment_methods {
+        display: none;
+    }
+    /* copy_right */
+    .copy_right p {
+        text-align: center;
+    }
+    .footer_right {
+        justify-content: center;
+        align-items: center;
+        font-size: 0.9em;
+    }
+}

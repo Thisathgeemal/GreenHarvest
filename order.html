@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>GreenHarvest</title>
+
+    <!-- reset stylesheet -->
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./css/order.css" type="text/css">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <header>
+        <nav class="navigation">
+
+            <!-- company logo -->
+            <section class="logo">
+                <a href="./index.html"><img src="./image/logo.webp" alt="GreenHarvest's company logo"></a>
+            </section>
+
+            <!-- navbar -->
+            <section class="navbar">
+                <ul class="menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>                    
+                    <li><a href="./categories.html">Categories</a></li>
+                    <li><a href="./order.html" class="active">Order</a></li>
+                    <li><a href="./registration.html">Registration</a></li>
+                </ul>
+            </section>
+
+            <!-- right nav -->
+            <section class="right_nav">
+                <!-- search bar -->
+                <section id="search_bar" class="search_bar">
+                    <input type="text" placeholder="Search here...">
+                    <button onclick="closeSearch()">&times;</button>
+                </section>
+
+                <a href="#" class="search" onclick="toggleSearch()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+
+                <!-- cart -->
+                <a href="./cart.html" class="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>0</span>
+                </a>
+                <!-- log in -->
+                <a href="./login.html" class="user">
+                    <i class="fa-solid fa-user"></i>
+                    <span>0</span>
+                </a>
+                <!-- side menu -->
+                <a href="#" class="side_menu" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </section>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- main bannner -->
+        <section class="main_banner">
+            <section class="main_banner_text">
+                <h1>Order Your Essentials</h1>
+                <strong>"Empowering Your Purchases, Simplifying Your Life"</strong>
+            </section>  
+            
+            <section class="main_banner_img">
+                <img src="./image/order_bg-1.webp" alt="Background image">
+            </section> 
+        </section>
+
+        <section class="order_title">
+            <h1>Start Your Shopping Journey !</h1> 
+            <section class="container">         
+                <form onsubmit="submitForm(event)">
+                    <section class="row">
+                        
+                        <!-- Billing Details -->
+                        <section class="col">                  
+                            <h3>BILLING DETAILS</h3>
+                            <!-- First Name -->
+                            <section class="inputbox">
+                                <span>First Name:</span>
+                                <input type="text" class="fname" name="fname" placeholder="Enter Your First Name">
+                            </section>
+                            <!-- Last Name -->
+                            <section class="inputbox">
+                                <span>Last Name:</span>
+                                <input type="text" id="lname" name="lname" placeholder="Enter Your Last Name">
+                            </section>
+                            <!-- E-mail -->
+                            <section class="inputbox">
+                                <span>E-mail:</span>
+                                <input type="text" id="email" name="email" placeholder="Enter Your E-mail">
+                            </section>
+                            <!-- Address -->
+                            <section class="inputbox">
+                                <span>Address:</span>
+                                <input type="text" id="address" name="address" placeholder="Enter Your Address">
+                            </section>
+                            <!-- Mobile number -->
+                            <section class="inputbox">
+                                <span>Contact Number:</span>
+                                <input type="text" id="cnumber" name="cnumber" placeholder="Enter Your Mobile Number">
+                            </section>
+                            <!-- City -->
+                            <section class="inputbox">
+                                <span>City/Town:</span>
+                                <input type="text" id="city" name="city" placeholder="Enter Your City">
+                            </section>
+                            <!-- Zip code -->
+                            <section class="inputbox">
+                                <span>Zip Code:</span>
+                                <input type="text" id="zip" name="zip" placeholder="Enter Your Zip Code">
+                            </section>
+                        </section>
+                        
+                        <!-- Payment Details -->
+                        <section class="col">
+                            <h3>PAYMENT DETAILS</h3>
+                            <!-- Accepted Cards -->
+                            <h5>Accepted Cards:</h5>
+                            <section class="cards">
+                                <img src="./image/card-1.webp" alt="VISA card">
+                                <img src="./image/card-2.webp" alt="MASTER card">
+                                <img src="./image/card-3.webp" alt="AMERICAN EXPRESS card">
+                                <img src="./image/card-4.webp" alt="DISCOVER card">
+                            </section>
+                            <!-- Name on Card -->
+                            <section class="inputbox">
+                                <span>Name on Card:</span>
+                                <input type="text" id="cname" name="cname" placeholder="Enter Your Name On Card">
+                            </section>
+                            <!-- Card number -->
+                            <section class="inputbox">
+                                <span>Card number:</span>
+                                <input type="text" id="Cardnumber" name="Cardnumber" placeholder="Enter Your Card Number">
+                            </section>
+                            <!-- Exp Month -->
+                            <section class="inputbox">
+                                <span>Exp Month:</span>
+                                <input type="text" id="expmonth" name="expmonth" placeholder="Enter Exp Month">
+                            </section>
+                            <!-- Exp Year -->
+                            <section class="inputbox">
+                                <span>Exp Year:</span>
+                                <input type="text" id="expyear" name="expyear" placeholder="Enter Your Card Exp Year">
+                            </section>
+                            <!-- CVV -->
+                            <section class="inputbox">
+                                <span>CVV:</span>
+                                <input type="text" id="cvv" name="cvv" placeholder="Enter Your CVV">
+                            </section>
+                            <!-- Country -->
+                            <section class="inputbox">
+                                <span>Country:</span>
+                                <input type="text" id="country" name="country" placeholder="Enter Your Country">
+                            </section>
+                        </section>
+                    </section>
+                
+                    <!-- Checkbox for shipping address -->
+                    <label>
+                        <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                    </label>
+                    <!-- Submit Button -->
+                    <input type="submit" value="Continue to checkout" class="btn" onclick="submitForm()">
+                </form>
+            </section>
+        </section>     
+
+    </main>
+    
+    <footer>
+        <section class="footer">
+            <!-- company infoo -->
+            <section class="footer_left">
+                <!-- logo and name -->
+                <section class="company_logo">
+                    <a href="./index.html"><img src="./image/logo.webp" alt="GreenHarvest's company logo"></a>
+                </section>
+
+                <!-- details -->
+                <section class="details">
+                    <P>Tel No. - 0701733646</P>
+                    <p>E-mail - greenharvest@gmail.com</p>
+                </section>
+            </section>
+
+            <section class="footer_middle">
+                <!-- payment_methods -->
+                <section class="payment_methods">
+                    <P>Payment Methods</P>
+                </section>
+
+                <!-- cards -->
+                <section class="cards">
+                    <img src="./image/card-1.webp" alt="VISA card">
+                    <img src="./image/card-2.webp" alt="MASTER card">
+                    <img src="./image/card-3.webp" alt="AMERICAN EXPRESS card">
+                    <img src="./image/card-4.webp" alt="DISCOVER card">
+                </section>
+
+                <!-- copy_right -->
+                <section class="copy_right">
+                    <P>&copy;2024 GreenHarvest, All Right Received.</P>
+                </section>
+
+                <!-- social logo -->
+                <section class="social_logo">
+                    <!-- facebook -->
+                    <a href="#" class="facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <!-- twitter -->
+                    <a href="#" class="twitter">
+                        <i class="fa-brands fa-twitter"></i> 
+                    </a>
+
+                    <!-- instagram -->
+                    <a href="#" class="instagram">
+                        <i class="fa-brands fa-instagram"></i>    
+                    </a>
+                </section>
+            </section>           
+            
+            <section class="footer_right">
+                <!-- quick_links -->
+                <section class="quick_links">
+                    <h4>Quick Links</h4>
+                    <a href="./index.html"><p>Home</p></a>
+                    <a href="./about.html"><p>About</p></a>
+                    <a href="./categories.html"><p>Categories</p></a>
+                    <a href="./order.html"><p>Order</p></a>
+                    <a href="./registration.html"><p>Registration</p></a>  
+                </section>
+
+                <!-- categories -->
+                <section class="categories">
+                    <h4>Categories</h4>
+                    <a href="./vegetable.html"><p>Vegetable</p></a>
+                    <a href="./fruit.html"><p>Fruit</p></a>
+                    <a href="./meat .html"><p>Meat & Seafood</p></a>
+                    <a href="./dairy.html"><p>Dairy</p></a>
+                    <a href="./cosmetic.html"><p>Cosmatic</p></a>
+                </section>
+            </section>
+
+        </section>
+    </footer>
+
+    <!-- js file  -->
+    <script src="./script/order.js"></script>
+
+</body>
+</html>

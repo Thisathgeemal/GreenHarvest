@@ -159,10 +159,6 @@ a {
     background-color: var(--banner-bg-color);
     position: relative; 
     overflow: hidden;
-    background-image: url(./image/juices-banner.webp);
-    background-repeat: no-repeat;
-    background-position: bottom ;
-    background-size: 550px;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -199,6 +195,9 @@ a {
     padding: 10px;
 }
 
+.main_banner_text img {
+    width: 50%;
+}
 
 /* info about Juices & Carbonates */
 .title h1 {
@@ -660,9 +659,13 @@ input {
     /* main-banner */ 
     .main_banner {
         height: 550px;
-        background-size: 450px;
     }
-
+    .main_banner_text {
+        padding-bottom: 10px;
+    }
+    .main_banner_text img {
+        width: 65%;
+    }
 
     /* Juices & Carbonates text */
     .juices_product {
@@ -785,13 +788,15 @@ input {
     /* main-banner */   
     .main_banner {
         height: auto;
-        background-size: 400px;
     }
     .main_banner_text {
-        padding-bottom: 240px;
+        padding-bottom: 0px;
     }
     .main_banner_text strong {
         font-size: 1.2em;;
+    }
+    .main_banner_text img {
+        width: 70%;
     }
 
 
@@ -932,18 +937,22 @@ input {
     /* main-banner */
     .main_banner {
         max-width: 90%;
-        height: 400px;
-        background-size: 300px;
+        height: auto;
         margin: 5%;
     }
     /* main banner text  */
+    .main_banner_text {
+        padding-bottom: 10px;
+    }
     .main_banner_text h1 {
         font-size: 2.5em;
     }
     .main_banner_text strong {
         display: none;
     }
-    
+    .main_banner_text img {
+        width: 90%;
+    }
 
     /* info about Juices & Carbonates product */
     .sub_banner {

@@ -159,10 +159,6 @@ a {
     background-color: var(--banner-bg-color);
     position: relative; 
     overflow: hidden;
-    background-image: url(./image/baking-banner.webp);
-    background-repeat: no-repeat;
-    background-position: bottom ;
-    background-size: 550px;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -199,6 +195,9 @@ a {
     padding: 10px;
 }
 
+.main_banner_text img {
+    width: 60%;
+}
 
 /* info about baking_product */
 .title h1 {
@@ -666,7 +665,6 @@ input {
     /* main-banner */ 
     .main_banner {
         height: 550px;
-        background-size: 400px;
     }
     .main_banner_text h1 {
         font-size: 2.5em;
@@ -798,8 +796,10 @@ input {
   
     /* main-banner */   
     .main_banner {
-        height: 500x;
-        background-size: 400px;
+        height: auto;
+    }
+    .main_banner_text {
+        padding-bottom: 10px;
     }
     .main_banner_text h1{
         font-size: 2.3em;
@@ -945,18 +945,22 @@ input {
     
     /* main-banner */
     .main_banner {
-        height: 380px;
-        background-size: 300px;
+        height: auto;
         margin: 5%;
     }
     /* main banner text  */
+    .main_banner_text  {
+        padding-bottom: 0px;
+    }
     .main_banner_text h1 {
         font-size: 2.2em;
     }
     .main_banner_text strong {
         display: none;
     }
-    
+    .main_banner_text img {
+        width: 80%;
+    }
 
     /* info about baking_product */
     .sub_banner {

@@ -675,6 +675,7 @@ input {
         width: 70%;
     }
 
+
     /* vegetable_providers text */
     .vegetable_provider {
         padding: 20px;
@@ -807,6 +808,8 @@ input {
     .main_banner_text strong {
         font-size: 1.2em;
     }
+
+    
 
     /* info about vegetable_providers */
     .sub_banner {

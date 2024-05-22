@@ -343,10 +343,17 @@ a {
 }
 
 /* services table footer */
+.table_footer {
+    grid-column: 1 / span 3;
+    text-align: center; 
+    padding: 5px;
+}
+
 .service_offred p {
     color: var(--header-text);
     padding: 5px;
     font-weight: 450;
+    font-size: 0.9em;
 }
 
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<browserconfig>
+<browserconfig xmlns="http://schemas.microsoft.com/BrowserConfig">
     <msapplication>
         <tile>
             <square150x150logo src="./favicon/mstile-150x150.png"/>

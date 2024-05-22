@@ -615,7 +615,6 @@ a {
     }
 
 
-
     /* main-banner */
     .bg-1 {
         display: none;
@@ -630,7 +629,6 @@ a {
     .main_banner_text strong {
         font-size: 1.2em;
     } 
-
 
 
     /* about Supermarket */
@@ -667,7 +665,6 @@ a {
     }
 
 
-
     /* About Services we offer */
     .service_offer {
         margin: 5%;
@@ -699,7 +696,6 @@ a {
     }
 
 
-
     /* sub-sections */
     .sub_title h1 {
         padding: 0px 20px 30px 20px;
@@ -725,7 +721,6 @@ a {
     .sub_section p {
         font-size: 0.8em;
     }
-
 
 
     /* footer */
@@ -813,7 +808,6 @@ a {
     }
 
     
-    
     /* main-banner */
     .main_banner {
         align-items: baseline;
@@ -836,7 +830,6 @@ a {
     } 
 
 
-
     /* about Supermarket */
     .intro_title h1 {
         padding: 30px 20px 20px 20px;
@@ -851,7 +844,6 @@ a {
         font-size: 0.85em;
         line-height: 25px;
     }
-
 
 
     /* Services they offer */
@@ -897,7 +889,6 @@ a {
         font-size: 0.85em;
         padding-bottom: 20px;
     }
-
 
 
     /* footer */
@@ -988,7 +979,6 @@ a {
     }
     
 
-
     /* main-banner */
     .main_banner {
         height: 500px;
@@ -1012,7 +1002,6 @@ a {
         font-size: 1.2em;
         padding: 5px;
     }
-
 
     
     /* about Supermarket */
@@ -1038,7 +1027,6 @@ a {
     }
 
 
-
     /* Services they offer */
     .service_text {
         padding: 25px;
@@ -1059,7 +1047,6 @@ a {
     .service_img {
         padding: 5px;
     }
-
 
 
     /* sub-sections */
@@ -1091,7 +1078,6 @@ a {
         font-size: 0.8em;
         padding-bottom: 20px;
     }
-
 
 
     /* footer */
@@ -1185,7 +1171,6 @@ a {
         text-align: center;       
     }
 
-
     
     /* main-banner */
     .main_banner {
@@ -1215,7 +1200,6 @@ a {
         font-size: 1.2em;
         padding: 5px;
     }
-
 
 
     /* about Supermarket */
@@ -1261,7 +1245,6 @@ a {
     }
 
 
-
     /* About Services they offer */
     .service_offer {
         display: block;
@@ -1301,7 +1284,6 @@ a {
     }
 
 
-
     /* sub-sections */
     .sub_title h1 {
         padding: 30px 20px 20px 20px;
@@ -1329,7 +1311,6 @@ a {
         padding: 10px 25px;
         font-size: 0.8em;
     }
-
 
 
     /* footer */

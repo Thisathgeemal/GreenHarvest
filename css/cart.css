@@ -144,6 +144,8 @@ a {
     border: none;
     cursor: pointer;
     outline: none;
+    margin-top: 0;
+    padding: 0;
 }
 
 .right_nav .side_menu {
@@ -309,7 +311,7 @@ button {
     background-color: var(--icon-bg);
     color: var(--icon-text);
     padding: 15px 0;
-    font-size: 1.1em;
+    font-size: 1.3em;
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;

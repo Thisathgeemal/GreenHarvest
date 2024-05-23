@@ -15,8 +15,3 @@ function closeSearch() {
     searchBar.style.display = 'none';
 }
 
-// cart checkout alert 
-function submitForm(event) {
-    event.preventDefault(); 
-    swal("Success!", "Your order has been successfully submitted!", "success");
-}

@@ -114,57 +114,61 @@
         </section>
 
         <section class="registration_title">
-            <h1>Unlock Your Exclusive Rewards !</h1> 
+            <h1>Unlock Your Exclusive Rewards !</h1> 
 
-            <!-- layalty form  -->
+            <!-- loyalty form  -->
             <section class="loyalty_form">
                 <form onsubmit="submitForm(event)">    
                     <section class="row">                 
                         <h3>CUSTOMER INFORMATION</h3>
+
                         <!-- Fist Name  -->
                         <section class="inputbox">
                             <span>Fist Name :</span>
                             <input type="text" id="fname" name="fname" placeholder="Enter Your First Name">
                         </section>
+
                         <!-- Last Name  -->
                         <section class="inputbox">
                             <span>Last Name :</span>
                             <input type="text" id="lname" name="lname" placeholder="Enter Your Last Name">
                         </section>
+
                         <!-- E-mail -->
                         <section class="inputbox">
                             <span>E-mail :</span>
                             <input type="text" id="email" name="email" placeholder="Enter Your E-mail">
                         </section>
+
                         <!-- Mobile number -->
                         <section class="inputbox">
                             <span>Contact Number :</span>
                             <input type="text" id="cnumber" name="cnumber" placeholder="Enter Your Moblie Number">
                         </section>
+
                         <!-- Address -->
                         <section class="inputbox">
                             <span>Address :</span>
                             <input type="text" id="address" name="address" placeholder="Enter Your Address">
-                        </section>                    
+                        </section>    
+
                         <!-- Scheme -->
                         <section class="inputbox">
                             <span>Scheme :</span>
                             <input type="text" id="scheme" name="scheme" placeholder="Enter Your scheme">
                         </section>
+                        
                         <!-- Submit Button -->
                         <input type="submit" value="Submit to Register" class="btn">
                     </section>
                 </form>
             </section>  
-
         </section>
-
+        
         <section class="scheme_title">
-            <h1>Customize Your Benefits !</h1>
-
+            <h1>Customize Your Benefits !</h1>
             <!-- sub-sections-->
             <section class="sub_sections">
-
                 <!-- Silver Scheme -->
                 <section class="sub_section">
                     <h4>Silver Scheme</h4>
@@ -178,13 +182,13 @@
                         <li>Exclusive deals and discounts</li>
                         <li>Birthday gifts</li>
                     </ul>
-                    <a href="#" class="btn subscribeButton">Subscribe</a>
+                    <a href="#" class="btn subscribeButton" onclick="subscribe('Silver')">Subscribe</a>
                 </section>
 
                 <!-- Gold Scheme -->
                 <section class="sub_section">
                     <h4>Gold Scheme</h4>
-                    <img src="./image/Gold.webp" alt="Gold Scheme" >
+                    <img src="./image/Gold.webp" alt="Gold Scheme">
                     <p>Benefits</p>
                     <section class="stars">
                         <i class="fa-solid fa-star"></i>
@@ -195,7 +199,7 @@
                         <li>Priority customer support</li>
                         <li>VIP event invitations</li>
                     </ul>
-                    <a href="#" class="btn subscribeButton">Subscribe</a>
+                    <a href="#" class="btn subscribeButton" onclick="subscribe('Gold')">Subscribe</a>
                 </section>
 
                 <!-- Platinum Scheme -->
@@ -213,10 +217,10 @@
                         <li>Personal shopper service</li>
                         <li>Free home delivery</li>
                     </ul>
-                    <a href="#" class="btn subscribeButton">Subscribe</a>
+                    <a href="#" class="btn subscribeButton" onclick="subscribe('Platinum')">Subscribe</a>
                 </section>
-            </section> 
 
+            </section> 
         </section>
 
     </main>

@@ -1,7 +1,7 @@
 {
     "name": "GreenHarvest",
     "short_name": "GreenHarvest",
-    "start_url": "./",
+    "start_url": "/",
     "display": "standalone",
     "icons": [
         {

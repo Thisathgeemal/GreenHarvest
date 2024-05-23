@@ -392,6 +392,33 @@ input {
 }
  
 
+
+/* back to tp button  */
+.back_to_top {
+    position: fixed;
+    bottom: 32px;
+    right: 1%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--banner-bg-color);
+    color: var(--icon-text);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.back_to_top i {
+    font-size: 1.1em;
+}
+
+.back_to_top:hover {
+    color: var(--text);
+    background-color: var(--bg-color);
+}
+
+
+
 /* footer */
 .footer {
     display: flex;

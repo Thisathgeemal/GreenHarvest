@@ -169,37 +169,6 @@ a {
     align-items: center;
 }
 
-form {
-    width: 400px;
-    height: 580px;
-    background-color: rgba(255, 255, 255, 0);
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.1);
-    box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    padding: 40px 35px;
-}
-
-form * {
-    font-family: 'Poppins',sans-serif;
-    color: var(--icon-text);
-    letter-spacing: 0.5px;
-    outline: none;
-    border: none;
-}
-
-/* form text  */
-form h3 {
-    font-size: 2em;
-    font-weight: 500;
-    line-height: 42px;
-    text-align: center;
-}
-
 .background {
     width: 430px;
     height: 520px;
@@ -238,41 +207,82 @@ form h3 {
     bottom: -80px;
 }
 
-/* product box  */
-.box {
+.table_background {
+    width: 400px;
+    height: 580px;
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(244, 237, 237, 0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 40px 30px 20px 30px;
+    border-collapse: collapse;
     display: flex;
-    flex-direction: row;
-    padding: 5px;
-    margin: 5px;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
-/* product box img  */
-.box img {
+/* table styles */
+table * {
+    font-family: 'Poppins',sans-serif;
+    color: var(--icon-text);
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+/* table th styles */
+table th {
+    font-size: 2em;
+    font-weight: 500;
+    text-align: center;
+} 
+
+/* table body */
+tbody {
+    display: block;
+    height: 360px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+/* cart image */
+table td img {
     max-width: 100px;
-    height: 100px; 
-    margin: 4px;
-    padding: 2px;
-}
-
-/* product box content */
-.box .content {
+    height: 100px;
     margin: 6px;
-    padding: 4px; 
+    padding: 4px;
 }
 
-.box .content h4 {
-    font-size: 1.2em;
+/* item details */
+.cart_info {
+    margin: 6px;
+    padding: 4px;
+}
+
+.cart_info h4 {
+    font-size: 1em;
     color: var(--header-text);
 }
 
-.box .content span {
+.cart_info span {
     font-size: 0.9em;
 }
 
-/* cart trash icon */
-.box i {
+.cart_quantity {
+    background-color: var(--banner-bg-color);
+    width: 50px;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* trash icon for remove the items form csrt  */
+.remove_item {
     width: 40px;
     height: 40px;
     display: flex;
@@ -287,26 +297,23 @@ form h3 {
     padding: 10px; 
 }
 
-.box i:hover {
-    transform: scale(1.1);
-    z-index: 1;
-}
 
-/* total cost of goods */
-.total {
+/* total of cart product */
+.total { 
+    border-top: 1px solid var(--border);
     text-align: center;
     font-size: 1em;
-    padding: 3px;
+    padding: 10px;
     font-weight: 600;
 }
 
-.total span {
+.total_price {
     color: var(--price);
 }
 
-/* checkout button */
-button {
-    margin-top: 20px;
+/* buy now btn */
+.buy_now {
+    margin-top: 5px;
     width: 100%;
     background-color: var(--icon-bg);
     color: var(--icon-text);
@@ -315,9 +322,14 @@ button {
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
+    border: none;
 }
 
-button:hover {
+.buy_now a {
+    color: var(--icon-text);
+}
+
+.buy_now:hover {
     background-color: rgba(228, 228, 228, 0.54);
 }
 
@@ -812,33 +824,41 @@ button:hover {
         right: 30px;
         bottom: -40px;
     }
-    form {
+    .table_background {
         width: 300px;
         height: 540px;
         padding: 30px 20px;
     }    
+    /* table body */
+    tbody {
+    height: 330px;
+    }
     /* product box img  */
-    .box img {
-        max-width: 80px;
-        height: 80px; 
+    table td img {
+        max-width: 70px;
+        height: 70px;
+        margin: 2px;
     }
-    /* product box content */
-    .box .content {
-        margin: 4px;
-        padding: 2px; 
+    /* item details */
+    .cart_info {
+        margin: 6px;
+        padding: 4px;
     }
-    .box .content h4 {
-        font-size: 1em;
+    .cart_info h4 {
+        font-size: 0.85em;
     }
-    .box .content span {
+    .cart_info span {
         font-size: 0.75em;
     }
-    /* cart trash icon */
-    .box i {
-        width: 35px;
-        height: 35px;
-        margin: 5px;
-        padding: 5px; 
+    .cart_quantity {
+        font-size: 0.75em;
+    }
+    /* trash icon */
+    .remove_item {
+        width: 30px;
+        height: 30px;
+        margin: 4px;
+        padding: 4px; 
     }
 
 

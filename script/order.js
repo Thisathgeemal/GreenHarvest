@@ -10,6 +10,7 @@ function toggleSearch() {
     searchBar.style.display = searchBar.style.display === 'block' ? 'none' : 'block';
 }
 
+// close searchbar
 function closeSearch() {
     const searchBar = document.getElementById('search_bar');
     searchBar.style.display = 'none';
@@ -18,7 +19,23 @@ function closeSearch() {
 // submission conform alert 
 function submitForm(event) {
     event.preventDefault(); 
-    swal("Success!", "Your order has been successfully submitted!", "success");
+
+    // calculate the dilivery date
+    let today = new Date();
+    let deliveryDate = new Date(today);
+    deliveryDate.setDate(today.getDate() + 4);
+
+    // format of dilivery date
+    let options = { year: 'numeric', month: 'long', day: 'numeric' };
+    let formattedDeliveryDate = deliveryDate.toLocaleDateString(undefined, options);
+    
+    // display the alert
+    swal("Success!", `Your order has been successfully submitted! Your items will arrive on ${formattedDeliveryDate}.`, "success")
+    .then(() => {
+        // Refresh the page
+        window.location.reload();
+    });
+
 }
 
 // back to top button 

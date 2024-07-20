@@ -152,64 +152,6 @@ a {
 
 
 
-/* main-banner */
-.main_banner {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 600px;
-    background-color: var(--banner-bg-color);
-    position: relative; 
-    overflow: hidden;
-    padding: 3%;
-    justify-content: center;
-}
-
-.main_banner_text {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    text-align: center;
-}
-
-.main_banner_text h1 {
-    font-size: 3em;
-    color: var(--header-text);
-    line-height: 60px;
-    text-align: center;
-    padding: 10px;
-    font-weight: 700;
-}
-
-.main_banner_text strong {
-    font-size: 1.4em;
-    font-family: "Poetsen One", sans-serif;
-    color: var(--sub-text);
-    text-align: center;
-    font-weight: 400;
-    padding: 15px;
-}
-
-.main_banner_img {
-    width: 50%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.main_banner_img img {
-    width: fit-content;
-    max-width: 100%;
-}
-
-
-
 /* container */
 .order_title h1 {
     font-size: 2em;
@@ -243,7 +185,7 @@ a {
 .row .col  {
     width: 50%;
     font-weight: 400;
-    margin: 2%;
+    margin: 2% 2% 0 2%;
     padding: 2%;
 }
 
@@ -259,7 +201,7 @@ a {
     margin: 10px;
 }
 
-input[type=text] {
+input {
     width: 100%;
     margin-bottom: 3px;
     padding: 10px;
@@ -267,11 +209,27 @@ input[type=text] {
     border-radius: 3px; 
 }
 
-.btn {
+.cart_button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#fav_button {
     background-color: var(--bg-color);
     color: var(--text);
     padding: 12px;
-    margin: 3% auto;
+    border: none;
+    margin: 0 auto 3% auto;
+    border-radius: 10px;
+}
+
+.pay_btn {
+    background-color: var(--bg-color);
+    color: var(--text);
+    padding: 12px;
+    margin: auto;
     border: none;
     width: 100%;
     border-radius: 3px;
@@ -279,7 +237,11 @@ input[type=text] {
     font-size: 1.1em;
 }
 
-.btn:hover {
+#fav_button:hover {
+    background-color: var(--sub-text);
+}
+
+.pay_btn:hover {
     background-color: var(--sub-text);
 }
 
@@ -296,11 +258,6 @@ input[type=text] {
 .row .col .cards img {
     padding: 5px;
 }
-
-label input {
-    width: 20px;
-}
-
 
 
 /* back to tp button  */
@@ -486,12 +443,6 @@ label input {
 
 
 
-    .main_banner {
-        height: 500px;
-    }
-
-
-
     /* footer */
     .footer {
         justify-content: space-around;
@@ -577,13 +528,6 @@ label input {
 
 
 
-    /* main-banner */
-    .main_banner {
-        height: 400px;
-    }
-
-
-
     /* container */
     .row .col  {
         margin: 1%;
@@ -601,7 +545,7 @@ label input {
     .cards img {
         max-width: 55px;
     }
-    .btn {
+    .pau_btn {
         font-size: 1em;
     }
 
@@ -694,19 +638,6 @@ label input {
     }
 
     
-    
-    /* main-banner */
-    .main_banner {
-        height: 400px;
-    }
-    .main_banner_text h1 {
-        font-size: 2.5em;
-    }
-    .main_banner_text strong {
-        font-size: 1.2em;
-    }
-
-
 
     /* container */
     .order_title h1 {
@@ -720,7 +651,7 @@ label input {
         font-size: 1.4em;
         padding: 15px;
     }
-    .btn {
+    .pay_btn {
         margin: 15px auto;
         font-size: 0.9em;
     }
@@ -728,7 +659,7 @@ label input {
         font-size: 0.9em;
         padding: 12px;
     }
-    .inputbox span {
+    .inputbox {
         font-size: 0.9em;
     }
     .cards img {
@@ -837,36 +768,6 @@ label input {
     
     
 
-    /* main-banner */
-    .main_banner {
-        display: block;
-        width: 100%;
-        height: 540px;
-        padding: 3%;
-    }
-    .main_banner_text {
-        width: 100%;
-        padding: 30px 5px 5px 5px;
-    }
-    .main_banner_text h1 {
-        font-size: 2.7em;
-    }
-    .main_banner_text strong {
-        font-size: 1.1em;
-    }
-    .main_banner_img {
-        width: 100%;
-        padding: 5px;
-        top: -35px;
-    }
-    .main_banner_img img {
-        width: fit-content;
-        max-width: 100%;
-    }
-
-
-
-
     /* container */
     .order_title h1 {
         font-size: 1.7em;
@@ -883,10 +784,10 @@ label input {
     .row .col  {
         width: 100%;
     }
-    input[type=text] {
+    input {
         margin-bottom: 3%;
     }
-    .btn {
+    .pay_btn {
         font-size: 1em;
         margin-bottom: 20px;
     }

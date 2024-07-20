@@ -975,7 +975,7 @@ input[type=text] {
         font-size: 1.4em;
         padding: 10px;
     }
-    .inputbox span {
+    .inputbox label{
         font-size: 0.9em;
     }
     .row .btn {

@@ -380,10 +380,13 @@ input {
 .vegetable .box_container .box .btn {
     background-color: var(--icon-bg);
     color: var(--icon-text);
+    font-size: 1em;
+    font-weight: 400;
     padding: 8px 15px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 100px;
+    border: none;
 }
 
 .vegetable .box_container .box .btn:hover {

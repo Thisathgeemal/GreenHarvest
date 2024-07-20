@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -71,7 +72,7 @@
             <section class="right_nav">
                 <!-- search bar -->
                 <section id="search_bar" class="search_bar">
-                    <input type="text" placeholder="Search here...">
+                    <input type="text" placeholder="Search here..." name="search_bar">
                     <button onclick="closeSearch()">&times;</button>
                 </section>
 
@@ -107,46 +108,32 @@
                 <section class="shape"></section>
             </section>
 
-            <!--- form  -->
-            <form>
-                <h3>Cart</h3>
+            <section class="table_background">
+                <!--- table  -->
+                <table>
+                    <!-- table head -->
+                    <thead>
+                        <tr>
+                            <th colspan="3">Cart</th>
+                        </tr>
+                    </thead>
+    
+                    <!-- table body -->
+                    <tbody class="cart_content">   
+                        
+                    </tbody>    
 
-                <!-- product box  -->
-                <section class="box">
-                    <img src="./image/vege_product-1.webp" alt="Carrot">
-                    <section class="content">
-                        <h4>Carrot</h4>
-                        <span class="price"> Rs.420</span><br>
-                        <span class="quantity"> Quantity : 1Kg</span>
-                    </section>
-                    <i class="fa-solid fa-trash"></i>
-                </section>        
+                    <!-- table footer -->
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><section class="total">Total: <span class="total_price">Rs.0</span></section></td>
+                        </tr>
+                    </tfoot>
+                </table>
 
-                <section class="box">
-                    <img src="./image/vege_product-3.webp" alt="Cabbage">
-                    <section class="content">
-                        <h4>Cabbage</h4>
-                        <span class="price"> Rs.470</span><br>
-                        <span class="quantity"> Quantity : 1Kg</span>
-                    </section>
-                    <i class="fa-solid fa-trash"></i>
-                </section>  
-
-                <section class="box">
-                    <img src="./image/fruit_product-2.webp" alt="Red-Apple">
-                    <section class="content">
-                        <h4>Red-Apple</h4>
-                        <span class="price"> Rs.2260</span><br>
-                        <span class="quantity"> Quantity : 1Kg</span>
-                    </section>
-                    <i class="fa-solid fa-trash"></i>
-                </section>  
-
-                <!-- total cost of goods -->
-                <section class="total">Total : <span>Rs.3150/=</span> </section>
-
-                <button><a href="./order.html">CheckOut</a></button>
-            </form>        
+                <!-- buy now btn -->
+                 <button type="button" class="buy_now"><a href="./order.html">Buy Now</a></button>
+            </section>                    
         </section>
 
     </main>

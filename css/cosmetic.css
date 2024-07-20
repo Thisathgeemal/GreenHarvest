@@ -288,15 +288,18 @@ a {
 }
 
 /* table hyper link */
-table td a {
+table td .btn {
     padding: 8px;
     border-radius: 50px;
     color: var(--icon-text);
     background-color: var(--icon-bg);
+    font-size: 1em;
+    font-weight: 400;
+    border: none;
 }
 
 /* table hyper link hover */
-table td a:hover {
+table td .btn:hover {
     background-color: var(--sub-text);    
     color: var(--text);
 }
@@ -311,6 +314,15 @@ table td a:hover {
     width: fit-content;
     border: none;
     border-radius: 0;
+}
+
+input {
+    border: 1px solid var(--border);
+    padding: 0;
+    color: var(--icon-text);
+    width: 40px;
+    border-radius: 3px;
+    
 }
 
 .table th{

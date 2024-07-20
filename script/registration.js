@@ -10,6 +10,7 @@ function toggleSearch() {
     searchBar.style.display = searchBar.style.display === 'block' ? 'none' : 'block';
 }
 
+// close searchbar
 function closeSearch() {
     const searchBar = document.getElementById('search_bar');
     searchBar.style.display = 'none';
@@ -19,7 +20,6 @@ function closeSearch() {
 function subscribe(scheme) {
     // Set the scheme input value
     document.getElementById('scheme').value = scheme;
-    // Display success alert
     swal("Success!", "You have successfully subscribed to the " + scheme+ "  Scheme!", "success");
 }
 
@@ -47,4 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
             behavior: 'smooth' 
         });
     });
+
+    updateCartIconQuantity();
+    
 });

@@ -124,7 +124,7 @@ function addProductToCart(title, price, productImg){
 function loadCart(){
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     var cartItems = document.getElementsByClassName('cart_content')[0];
-
+    
     // Clear any existing content
     cartItems.innerHTML = '';
 
@@ -160,6 +160,8 @@ function loadCart(){
             .addEventListener('change', quantitychanged);   
     });
 
+    updateCartIconQuantity();
+
     updateTotal();
 }
 
@@ -177,3 +179,43 @@ function updateTotal(){
     document.getElementsByClassName('total_price')[0].innerText = 'Rs.' + total.toFixed(2);
 }
 
+
+// Function to update the cart icon quantity
+function updateCartIconQuantity() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let iconCartSpan = document.getElementsByClassName('cart_icon_quantity');
+    let cartIconQuantity = 0;
+
+    cart.forEach(item => {
+        cartIconQuantity += item.quantity;
+    });
+
+    // Update all cart icon span elements with the new quantity
+    for (let i = 0; i < iconCartSpan.length; i++) {
+        iconCartSpan[i].innerText = cartIconQuantity;
+    }
+}
+
+
+// back to top button 
+document.addEventListener('DOMContentLoaded', function() {
+    const backToTopButton = document.querySelector('.back_to_top');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) { 
+            backToTopButton.style.display = 'flex'; 
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    });
+
+    backToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' 
+        });
+    });
+
+    updateCartIconQuantity();
+
+});

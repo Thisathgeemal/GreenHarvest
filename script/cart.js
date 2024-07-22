@@ -87,10 +87,11 @@ function quantitychanged(event){
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     var item = cart.find(item => item.title ===title);
     if (item){
-        item.quantity = input.value;
+        item.quantity = parseInt(input.value);
         localStorage.setItem('cart',JSON.stringify(cart));
     }
 
+    updateCartIconQuantity();
     updateTotal();
 }
 

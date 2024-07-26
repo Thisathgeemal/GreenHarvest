@@ -101,8 +101,45 @@
 
     <main>
 
-        <section class="order_title">
-            <h1>Start Your Shopping Journey !</h1> 
+        <section class="title">
+            <h1>Your Order Awaits: Explore Now!</h1> 
+            <section class="container">
+                <!-- background shape  -->
+                <section class="background">
+                    <section class="shape"></section>
+                    <section class="shape"></section>
+                </section>
+    
+                <section class="table_background">
+                    <!--- table  -->
+                    <table>
+                        <!-- table head -->
+                        <thead>
+                            <tr>
+                                <th colspan="3">Product Details</th>
+                            </tr>
+                        </thead>
+        
+                        <!-- table body -->
+                        <tbody class="cart_content">   
+                            
+                        </tbody>    
+        
+                        <!-- table footer -->
+                        <tfoot>
+                            <tr>
+                                <td colspan="3"><section class="total">Total: <span class="total_price">Rs.0</span></section></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+    
+                </section> 
+            </section>
+        </section>
+
+
+        <section class="title">
+            <h1>Review and Complete Your Shopping Journey!</h1> 
             <section class="container">
                 <form class="order_details" onsubmit="submitForm(event)">
                     <section class="row">
@@ -126,7 +163,7 @@
                             <!-- E-mail -->
                             <section class="inputbox">
                                 <label for="email">E-mail:</label>
-                                <input type="text" id="email" name="email" placeholder="Enter Your E-mail" required>
+                                <input type="email" id="email" name="email" placeholder="Enter Your E-mail" required>
                             </section>
 
                             <!-- Address -->
@@ -138,7 +175,7 @@
                             <!-- Mobile number -->
                             <section class="inputbox">
                                 <label for="cnumber">Contact Number:</label>
-                                <input type="text" id="cnumber" name="cnumber" placeholder="Enter Your Mobile Number" required>
+                                <input type="number" id="cnumber" name="cnumber" placeholder="Enter Your Mobile Number" required>
                             </section>
 
                             <!-- City -->
@@ -150,7 +187,7 @@
                             <!-- Zip code -->
                             <section class="inputbox">
                                 <label for="zipcode">Zip Code:</label>
-                                <input type="text" id="zipcode" name="zipcode" placeholder="Enter Your Zip Code" required>
+                                <input type="number" id="zipcode" name="zipcode" placeholder="Enter Your Zip Code" required>
                             </section>
                         </section>
 
@@ -167,6 +204,12 @@
                                 <img src="./image/card-4.webp" alt="DISCOVER card">
                             </section>
 
+                            <!-- Type of card -->
+                            <section class="inputbox">
+                                <label for="cardtype">Type of card:</label>
+                                <input type="text" id="cardtype" name="cardtype" placeholder="Select Your Card Type" required>
+                            </section>
+
                             <!-- Name on Card -->
                             <section class="inputbox">
                                 <label for="cname">Name on Card:</label>
@@ -176,25 +219,19 @@
                             <!-- Card number -->
                             <section class="inputbox">
                                 <label for="cardnumber">Card Number:</label>
-                                <input type="text" id="cardnumber" name="cardnumber" placeholder="Enter Your Cardnumber" required>
+                                <input type="number" id="cardnumber" name="cardnumber" placeholder="Enter Your Cardnumber" required>
                             </section>
 
-                            <!-- Exp Month -->
+                            <!-- Exp Month & Year-->
                             <section class="inputbox">
-                                <label for="expmonth">Exp Month:</label>
-                                <input type="text" id="expmonth" name="expmonth" min="1" max="12" placeholder="Enter Your Card Exp Month" required>
-                            </section>
-
-                            <!-- Exp Year -->
-                            <section class="inputbox">
-                                <label for="expyear">Exp Year:</label>
-                                <input type="text" id="expyear" name="expyear" placeholder="Enter Your Card Exp Year" required>
+                                <label for="expmonth">Exp Month & Year:</label>
+                                <input type="month" id="expmonth" name="expmonth" min="1" max="12" placeholder="Enter Your Card Exp Month & Year" required>
                             </section>
 
                             <!-- CVV -->
                             <section class="inputbox">
                                 <label for="cvv">CVV:</label>
-                                <input type="text" id="cvv" name="cvv" placeholder="Enter Your Card CVV" required>
+                                <input type="number" id="cvv" name="cvv" placeholder="Enter Your Card CVV" required>
                             </section>
 
                             <!-- Country -->
@@ -206,8 +243,8 @@
                     </section>
 
                     <section class="cart_button">
-                        <button type="button" id="fav_button" class="addto">Add to favourites</button>
-                        <button type="button" id="fav_button" class="apply">Apply favourites</button>
+                        <button type="button" id="fav_button" class="addto" onclick="addToFavorites()">Add to favourites</button>
+                        <button type="button" id="fav_button" class="apply" onclick="applyFavorites()">Apply favourites</button>
                     </section>
 
                     <!-- Pay Button -->

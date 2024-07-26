@@ -20,7 +20,8 @@ function closeSearch() {
 
 // submission conform alert 
 function submitForm(event) {
-
+    event.preventDefault();
+    
     // calculate the dilivery date
     let today = new Date();
     let deliveryDate = new Date(today);
@@ -31,8 +32,11 @@ function submitForm(event) {
     let formattedDeliveryDate = deliveryDate.toLocaleDateString(undefined, options);
     
     // display the alert
-    swal("Success!", `Your order has been successfully submitted! Your items will arrive on ${formattedDeliveryDate}.`, "success");
-
+    swal("Success!", `Your order has been successfully submitted! Your items will arrive on ${formattedDeliveryDate}.`, "success")
+    .then(() => {
+        // refresh the page
+        window.location.reload();
+    });
 }
 
 
@@ -99,7 +103,7 @@ function applyFavorites(){
                             </td>
                             <td>
                                 <section class="remove_item">
-                                    <i class="fa-solid fa-trash"></i>
+                                    <i class="fa-sharp fa-solid fa-heart"></i>
                                 </section>
                             </td>
                     </tr>`;

@@ -129,7 +129,7 @@ function loadCart(){
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     var cartItems = document.getElementsByClassName('cart_content')[0];
     
-    // Clear any existing content
+    // clear any existing content
     cartItems.innerHTML = '';
 
     cart.forEach(item => {
@@ -183,7 +183,7 @@ function updateTotal(){
 }
 
 
-// Function to update the cart icon quantity
+// function to update the cart icon quantity
 function updateCartIconQuantity() {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let iconCartSpan = document.getElementsByClassName('cart_icon_quantity');

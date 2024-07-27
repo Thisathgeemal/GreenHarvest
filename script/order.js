@@ -4,7 +4,6 @@ function toggleMenu() {
     menu.classList.toggle('active');
 }
 
-
 // onclick searchbar 
 function toggleSearch() {
     const searchBar = document.getElementById('search_bar');

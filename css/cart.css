@@ -153,6 +153,13 @@ a {
 }
 
 
+.title h1 {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    padding: 40px 20px 0 20px;
+}
+
 /* container */
 .container {
     max-width: 90%;
@@ -667,6 +674,9 @@ table td img {
 
 
 
+    .title h1 {
+        font-size: 1.8em;
+    }
     /* container */
     .background .shape {
         max-width: 150px;
@@ -806,6 +816,9 @@ table td img {
 
 
     
+    .title h1 {
+        font-size: 1.7em;
+    }
     /* container */
     .container {
         height: 650px;

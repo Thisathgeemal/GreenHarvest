@@ -200,7 +200,8 @@ a {
     width: 90%;
 }
 
-/* info about dairy_product */
+
+/* info about dairy product */
 .title h1 {
     font-size: 2em;
     font-weight: 600;
@@ -214,7 +215,7 @@ a {
     margin: 3% 5%;
 }
 
-/* dairy_product text */
+/* dairy product text */
 .dairy_product {
     display: flex;
     flex-direction: column;
@@ -246,7 +247,7 @@ a {
     font-weight: 600;
 }
 
-/* dairy_product img */
+/* dairy product img */
 .dairy_product_img {
     display: flex;
     justify-content: center;
@@ -345,7 +346,7 @@ a {
     color: var(--text);
 }
 
-.dairy .box_container .box h3 {
+.dairy .box_container .box h3, span {
     font-size: 1.2em;
     font-weight: 600;
 }
@@ -577,7 +578,7 @@ input {
     }
 
 
-    /* dairy_product text */
+    /* dairy product text */
     .dairy_product {
         padding: 35px;
         margin-right: 8px;
@@ -698,8 +699,7 @@ input {
         width: 75%;
     }
 
-
-    /* dairy_product text */
+    /* dairy product text */
     .dairy_product {
         padding: 30px;
     }
@@ -842,7 +842,7 @@ input {
         margin-right: 0;
         margin-bottom: 3%;
     }
-    .dairy_product h3 {
+    .dairy_product h3, span {
         font-size: 1.3em;
         padding-bottom: 25px;
     }
@@ -980,13 +980,13 @@ input {
         display: none;
     }
 
-    
 
-    /* info about dairy_product */
+
+    /* info about dairy product */
     .sub_banner {
         display: block;
     }
-    /* dairy_product text */
+    /* dairy product text */
     .dairy_product {
         display: block;
         padding: 30px;
@@ -995,7 +995,7 @@ input {
         margin-right: 0;
         margin-bottom: 5%;
     }
-    .dairy_product h3 {
+    .dairy_product h3, span {
         font-size: 1.2em;
         padding-bottom: 25px;
     }
@@ -1035,7 +1035,6 @@ input {
         height: 250px;
         padding: 50px;
     }
-
 
 
     /* footer */

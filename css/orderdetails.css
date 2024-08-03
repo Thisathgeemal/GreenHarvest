@@ -8,7 +8,7 @@
     --icon-notification-bg: black;
     --banner-bg-color: #ecf7ee;
     --border: black;
-    --sub-text: #1D632B;
+    --sub-text: #058920;
     --Button-hover: white;
     --star: #ff5e1a;
     --th-bg: #f2f2f2;
@@ -320,49 +320,6 @@ table td img {
     color: var(--price);
 }
 
-/* buy now btn */
-.buy_now {
-    margin-top: 8px;
-    width: 100%;
-    background-color: var(--icon-bg);
-    color: var(--icon-text);
-    padding: 15px 0;
-    font-size: 1.3em;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-}
-
-.buy_now a {
-    color: var(--icon-text);
-}
-
-.buy_now:hover,
-#fav_button:hover {
-    background-color: rgba(228, 228, 228, 0.54);
-}
-
-.cart_button {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-}
-
-#fav_button {
-    width: 100%;
-    background-color: var(--icon-bg);
-    color: var(--icon-text);
-    padding: 12px 4px;
-    margin: 8px;
-    font-weight: 500;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-}
-
 
 
 .row {
@@ -409,22 +366,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.cart_button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-#fav_button {
-    background-color: var(--bg-color);
-    color: var(--text);
-    padding: 12px;
-    border: none;
-    margin: 0 auto 3% auto;
-    border-radius: 10px;
-}
-
 .pay_btn {
     background-color: var(--bg-color);
     color: var(--text);
@@ -435,10 +376,6 @@ input::-webkit-inner-spin-button {
     border-radius: 3px;
     cursor: pointer;
     font-size: 1.1em;
-}
-
-#fav_button:hover {
-    background-color: var(--sub-text);
 }
 
 .pay_btn:hover {

@@ -180,7 +180,7 @@ function updateTotal() {
         let priceElement = row.querySelector('.cart_price');
         let quantityElement = row.querySelector('.cart_quantity');
         let price = parseFloat(priceElement.innerText.replace('Rs.', ''));
-        let quantity = quantityElement.value;
+        let quantity = parseFloat(quantityElement.value);
         total += price * quantity;
     }
 

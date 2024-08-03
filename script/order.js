@@ -27,7 +27,7 @@ if (document.readyState == 'loading'){
 
 // Create function
 function ready() {
-    // Remove item from cart
+    // Remove items from cart
     var removeCartIcons = document.getElementsByClassName('remove_item');
     for (var i = 0; i < removeCartIcons.length; i++) {
         var icon = removeCartIcons[i];
@@ -56,7 +56,7 @@ function ready() {
 }
 
 
-// Remove item from cart
+// Remove items from cart
 function removeCartItem(event) {
     var iconClicked = event.target.closest('.remove_item');
     var cartRow = iconClicked.closest('tr');
@@ -205,11 +205,12 @@ function updateCartIconQuantity() {
 }
 
 
+// Add to favorites
 function addToFavorites() {
     let products = [];
     var cartItems = document.querySelectorAll('.cart_content tr');
   
-    // Check if there are any products in the cart
+    // check if there are any products in the cart
     if (cartItems.length === 0) {
       swal("Error!", "No products in the cart to add to favorites.", "error");
       return;
@@ -235,13 +236,15 @@ function addToFavorites() {
 
 // Apply favorites 
 function applyFavorites() {
-    // Retrieve from local storage
+    // retrieve from local storage
     let favorites = JSON.parse(localStorage.getItem('favorites'));
 
+    // check any favorites are saved
     if (favorites) {
         let cartContent = document.querySelector('.cart_content');
         cartContent.innerHTML = '';
 
+        // create a table row for favorite items
         favorites.forEach(product => {
             let row = `<tr>
                             <td>
@@ -261,12 +264,14 @@ function applyFavorites() {
                             </td>
                         </tr>`;
             cartContent.insertAdjacentHTML('beforeend', row);
+
+            // update the product quantity to the product box
             updateProductQuantityInBox(product.name, product.quantity)
         });
         
         updateTotal()
 
-        // Confirmation
+        // confirmation
         swal("Success!", "Favorites have been applied.", "success");
     } else {
         swal("Error!", "You have not saved any favorites yet.", "error");
@@ -276,10 +281,14 @@ function applyFavorites() {
 
 // Function to update product quantity in product box
 function updateProductQuantityInBox(productName, quantity) {
+    // select product box using data attribute matching
     let productBox = document.querySelector(`.box[data-product-name="${productName}"]`);
   
+    // If the product box is found
     if (productBox) {
         let productQuantityDisplay = productBox.querySelector('.pquantity');
+
+        // update quantity display element value
         if (productQuantityDisplay) {
         productQuantityDisplay.value = quantity;
 

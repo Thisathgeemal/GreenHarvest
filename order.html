@@ -12,26 +12,30 @@
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
 
     <!-- stylesheet -->
-    <link rel="stylesheet" href="./css/cart.css" type="text/css">
+    <link rel="stylesheet" href="./css/order.css" type="text/css">
 
     <!-- favicon  -->
     <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg">
     <link rel="icon" type="image/png" href="./favicon/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">  
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
     <link rel="manifest" href="./favicon/site.webmanifest">
     <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#313131">
     <meta name="msapplication-TileColor" content="#00a300">
     <meta name="theme-color" content="#ffffff">
-    
+
     <!-- font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,7 +65,7 @@
             <section class="navbar">
                 <ul class="menu">
                     <li><a href="./index.html">Home</a></li>
-                    <li><a href="./about.html">About</a></li>                    
+                    <li><a href="./about.html">About</a></li>
                     <li><a href="./categories.html">Product</a></li>
                     <li><a href="./order.html" class="active">Order</a></li>
                     <li><a href="./registration.html">Registration</a></li>
@@ -72,18 +76,19 @@
             <section class="right_nav">
                 <!-- search bar -->
                 <section id="search_bar" class="search_bar">
-                    <input type="text" placeholder="Search here..." name="search_bar">
+                    <label for="searchItem">🔍</label>
+                    <input type="text" id="searchItem" placeholder="Search here..." name="search_bar">
                     <button onclick="closeSearch()">&times;</button>
                 </section>
 
-                <a href="#" class="search" onclick="toggleSearch()">
+                <a class="search" onclick="toggleSearch()">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
 
                 <!-- cart -->
                 <a href="./cart.html" class="cart">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    <span class="cart_icon_quantity"></span>
+                    <span class="cart_icon_quantity">0</span>
                 </a>
                 <!-- log in -->
                 <a href="./login.html" class="user">
@@ -91,7 +96,7 @@
                     <span>0</span>
                 </a>
                 <!-- side menu -->
-                <a href="#" class="side_menu" onclick="toggleMenu()">
+                <a class="side_menu" onclick="toggleMenu()">
                     <i class="fa-solid fa-bars"></i>
                 </a>
             </section>
@@ -101,15 +106,1570 @@
 
     <main>
 
+        <!-- main bannner -->
+        <section class="main_banner">
+            <section class="main_banner_text">
+                <h1>Order Your Essentials</h1>
+                <strong>"Empowering Your Purchases, Simplifying Your Life"</strong>
+            </section>
+
+            <section class="main_banner_img">
+                <img src="./image/order_bg-1.webp" alt="Background image">
+            </section>
+        </section>
+
+
+        <!-- vegetable -->
         <section class="title">
-            <h1>Your Order Awaits: Explore Now!</h1> 
+            <h1>Vegetable</h1>
+            <section class="products">
+                <section class="box_container">
+
+                    <!-- vegetable-product 01 -->
+                    <section class="box" data-product-name="Carrot">
+                        <span class="discount">-13%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/vege_product-1.webp" alt="Carrot" class="product_img">
+                        <h3 class="product_title">Carrot</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 420.00</section>
+                        <section class="quantity">
+                            <label for="quantity-1">Quantity :
+                                <input type="number" id="quantity-1" name="quantity" min="1" value="1"
+                                    class="pquantity">
+                                <span>/kg</span>
+                            </label>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- vegetable-product 02 -->
+                    <section class="box" data-product-name="Cucumber">
+                        <span class="discount">-3%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/vege_product-2.webp" alt="Cucumber" class="product_img">
+                        <h3 class="product_title">Cucumber</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 80.00</section>
+                        <section class="quantity">
+                            <label for="quantity-2">Quantity :</label>
+                            <input type="number" id="quantity-2" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- vegetable-product 03 -->
+                    <section class="box" data-product-name="Cabbage">
+                        <span class="discount">-11%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/vege_product-3.webp" alt="Cabbage" class="product_img">
+                        <h3 class="product_title">Cabbage</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 470.00</section>
+                        <section class="quantity">
+                            <label for="quantity-3">Quantity :</label>
+                            <input type="number" id="quantity-3" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- vegetable-product 04 -->
+                    <section class="box" data-product-name="Batana">
+                        <span class="discount">-8%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/vege_product-4.webp" alt="Batana" class="product_img">
+                        <h3 class="product_title">Batana</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 470.00</section>
+                        <section class="quantity">
+                            <label for="quantity-4">Quantity :</label>
+                            <input type="number" id="quantity-4" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- vegetable-product 05 -->
+                    <section class="box" data-product-name="Capsicum">
+                        <span class="discount">-15%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/vege_product-5.webp" alt="Capsicum" class="product_img">
+                        <h3 class="product_title">Capsicum</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 450.00</section>
+                        <section class="quantity">
+                            <label for="quantity-5">Quantity :</label>
+                            <input type="number" id="quantity-5" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- vegetable-product 06 -->
+                    <section class="box" data-product-name="Cauliflower">
+                        <span class="discount">-18%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/vege_product-6.webp" alt="Cauliflower" class="product_img">
+                        <h3 class="product_title">Cauliflower</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 830.00</section>
+                        <section class="quantity">
+                            <label for="quantity-6">Quantity :</label>
+                            <input type="number" id="quantity-6" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- vegetable-product 07 -->
+                    <section class="box" data-product-name="Red Onions">
+                        <span class="discount">-2%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/vege_product-7.webp" alt="Red Onions" class="product_img">
+                        <h3 class="product_title">Red Onions</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 400.00</section>
+                        <section class="quantity">
+                            <label for="quantity-7">Quantity :</label>
+                            <input type="number" id="quantity-7" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- vegetable-product 08 -->
+                    <section class="box" data-product-name="Leeks">
+                        <span class="discount">-5%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/vege_product-8.webp" alt="Leeks" class="product_img">
+                        <h3 class="product_title">Leeks</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 200.00</section>
+                        <section class="quantity">
+                            <label for="quantity-8">Quantity :</label>
+                            <input type="number" id="quantity-8" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- vegetable-product 09 -->
+                    <section class="box" data-product-name="Sweet Potato">
+                        <span class="discount">-3%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/vege_product-9.webp" alt="Sweet Potato" class="product_img">
+                        <h3 class="product_title">Sweet Potato</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 410.00</section>
+                        <section class="quantity">
+                            <label for="quantity-9">Quantity :</label>
+                            <input type="number" id="quantity-9" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                </section>
+            </section>
+        </section>
+
+
+        <!-- fruit -->
+        <section class="title">
+            <h1>Fruit</h1>
+            <section class="products">
+                <section class="box_container">
+
+                    <!-- fruit-product 01 -->
+                    <section class="box" data-product-name="Green Apple">
+                        <span class="discount">-13%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/fruit_product-1.webp" alt="Green Apple" class="product_img">
+                        <h3 class="product_title">Apple - Green</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 2080.00</section>
+                        <section class="quantity">
+                            <label for="quantity-10">Quantity :</label>
+                            <input type="number" id="quantity-10" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- fruit-product 02 -->
+                    <section class="box" data-product-name="Red Apple">
+                        <span class="discount">-3%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/fruit_product-2.webp" alt="Red Apple" class="product_img">
+                        <h3 class="product_title">Apple - Red</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 2260.00</section>
+                        <section class="quantity">
+                            <label for="quantity-11">Quantity :</label>
+                            <input type="number" id="quantity-11" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- fruit-product 03 -->
+                    <section class="box" data-product-name="Orange Imported">
+                        <span class="discount">-11%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/fruit_product-3.webp" alt="Orange Imported" class="product_img">
+                        <h3 class="product_title">Orange Imported</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 1920.00</section>
+                        <section class="quantity">
+                            <label for="quantity-12">Quantity :</label>
+                            <input type="number" id="quantity-12" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- fruit-product 04 -->
+                    <section class="box" data-product-name="Banana - Ambul">
+                        <span class="discount">-8%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/fruit_product-4.webp" alt="Banana - Ambul" class="product_img">
+                        <h3 class="product_title">Banana - Ambul</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 290.00</section>
+                        <section class="quantity">
+                            <label for="quantity-13">Quantity :</label>
+                            <input type="number" id="quantity-13" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- fruit-product 05 -->
+                    <section class="box" data-product-name="Melon - Dark Bell">
+                        <span class="discount">-15%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/fruit_product-5.webp" alt="Melon - Dark Bell" class="product_img">
+                        <h3 class="product_title">Melon - Dark Bell</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 140.00</section>
+                        <section class="quantity">
+                            <label for="quantity-14">Quantity :</label>
+                            <input type="number" id="quantity-14" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- fruit-product 06 -->
+                    <section class="box" data-product-name="Mango - Bud">
+                        <span class="discount">-18%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/fruit_product-6.webp" alt="Mango - Bud" class="product_img">
+                        <h3 class="product_title">Mango - Bud</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 560.00</section>
+                        <section class="quantity">
+                            <label for="quantity-15">Quantity :</label>
+                            <input type="number" id="quantity-15" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- fruit-product 07 -->
+                    <section class="box" data-product-name="Papaya">
+                        <span class="discount">-2%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/fruit_product-7.webp" alt="Papaya" class="product_img">
+                        <h3 class="product_title">Papaya</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 305.00</section>
+                        <section class="quantity">
+                            <label for="quantity-16">Quantity :</label>
+                            <input type="number" id="quantity-16" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- fruit-product 08 -->
+                    <section class="box" data-product-name="Grapes - Red">
+                        <span class="discount">-5%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/fruit_product-8.webp" alt="Grapes - Red" class="product_img">
+                        <h3 class="product_title">Grapes - Red</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 1880.00</section>
+                        <section class="quantity">
+                            <label for="quantity-17">Quantity :</label>
+                            <input type="number" id="quantity-17" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- fruit-product 09 -->
+                    <section class="box" data-product-name="Pineapple">
+                        <span class="discount">-3%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/fruit_product-9.webp" alt="Pineapple" class="product_img">
+                        <h3 class="product_title">Pineapple</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 696.00</section>
+                        <section class="quantity">
+                            <label for="quantity-18">Quantity :</label>
+                            <input type="number" id="quantity-18" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                </section>
+            </section>
+        </section>
+
+
+        <!-- meat & seafood-->
+        <section class="title">
+            <h1>Meat & Seafood</h1>
+            <section class="products">
+                <section class="box_container">
+
+                    <!-- Meat & Seafood-product 01 -->
+                    <section class="box" data-product-name="Cic Whole Chicken With Giblet">
+                        <span class="discount">-5%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/meat_product-1.webp" alt="Cic Whole Chicken With Giblet" class="product_img">
+                        <h3 class="product_title">Cic Whole Chicken With Giblet</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 1150.00</section>
+                        <section class="quantity">
+                            <label for="quantity-19">Quantity :</label>
+                            <input type="number" id="quantity-19" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- Meat & Seafood-product 02 -->
+                    <section class="box" data-product-name="Chicken Full Breast Skinless">
+                        <span class="discount">-3%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/meat_product-2.webp" alt="Chicken Full Breast Skinless" class="product_img">
+                        <h3 class="product_title">Chicken Full Breast Skinless</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 2200.00</section>
+                        <section class="quantity">
+                            <label for="quantity-20">Quantity :</label>
+                            <input type="number" id="quantity-20" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- Meat & Seafood-product 03 -->
+                    <section class="box" data-product-name="Chicken Whole Legs Skinless">
+                        <span class="discount">-9%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/meat_product-3.webp" alt="Chicken Whole Legs Skinless" class="product_img">
+                        <h3 class="product_title">Chicken Whole Legs Skinless</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 2305.00</section>
+                        <section class="quantity">
+                            <label for="quantity-21">Quantity :</label>
+                            <input type="number" id="quantity-21" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- Meat & Seafood-product 04 -->
+                    <section class="box" data-product-name="Aust. Mutton Leg Boneless">
+                        <span class="discount">-7%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/meat_product-4.webp" alt="Aust. Mutton Leg Boneless" class="product_img">
+                        <h3 class="product_title">Aust. Mutton Leg Boneless</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 4990.00</section>
+                        <section class="quantity">
+                            <label for="quantity-22">Quantity :</label>
+                            <input type="number" id="quantity-22" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- Meat & Seafood-product 05 -->
+                    <section class="box" data-product-name="Curry Pork Rind On Boneless">
+                        <span class="discount">-6%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/meat_product-5.webp" alt="Curry Pork Rind On Boneless" class="product_img">
+                        <h3 class="product_title">Curry Pork Rind On Boneless</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 2460.00</section>
+                        <section class="quantity">
+                            <label for="quantity-23">Quantity :</label>
+                            <input type="number" id="quantity-23" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- Meat & Seafood-product 06 -->
+                    <section class="box" data-product-name="Thalapath Small">
+                        <span class="discount">-4%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/meat_product-6.webp" alt="Thalapath Small" class="product_img">
+                        <h3 class="product_title">Thalapath Small</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 290.00</section>
+                        <section class="quantity">
+                            <label for="quantity-24">Quantity :</label>
+                            <input type="number" id="quantity-24" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- Meat & Seafood-product 07 -->
+                    <section class="box" data-product-name="Prawns Jumbo">
+                        <span class="discount">-2%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/meat_product-7.webp" alt="Prawns Jumbo" class="product_img">
+                        <h3 class="product_title">Prawns Jumbo</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 4350.00</section>
+                        <section class="quantity">
+                            <label for="quantity-25">Quantity :</label>
+                            <input type="number" id="quantity-25" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- Meat & Seafood-product 08 -->
+                    <section class="box" data-product-name="Cleaned Handella">
+                        <span class="discount">-5%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/meat_product-8.webp" alt="Cleaned Handella" class="product_img">
+                        <h3 class="product_title">Cleaned Handella</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 3490.00</section>
+                        <section class="quantity">
+                            <label for="quantity-26">Quantity :</label>
+                            <input type="number" id="quantity-26" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- Meat & Seafood-product 09 -->
+                    <section class="box" data-product-name="Hurulla">
+                        <span class="discount">-3%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/meat_product-9.webp" alt="Hurulla" class="product_img">
+                        <h3 class="product_title">Hurulla</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 960.00</section>
+                        <section class="quantity">
+                            <label for="quantity-27">Quantity :</label>
+                            <input type="number" id="quantity-27" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/kg</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                </section>
+            </section>
+        </section>
+
+
+        <!-- dairy -->
+        <section class="title">
+            <h1>Dairy</h1>
+            <section class="products">
+                <section class="box_container">
+
+                    <!-- dairy-product 01 -->
+                    <section class="box" data-product-name="Kotmale Butter Salted">
+                        <span class="discount">-12%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/dairy_product-1.webp" alt="Kotmale Butter Salted" class="product_img">
+                        <h3 class="product_title">Kotmale Butter Salted</h3>
+                        <span class="namespan">200 g</span>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 880.00</section>
+                        <section class="quantity">
+                            <label for="quantity-28">Quantity :</label>
+                            <input type="number" id="quantity-28" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- dairy-product 02 -->
+                    <section class="box" data-product-name="Kotmale Cheddar Cheese">
+                        <span class="discount">-15%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/dairy_product-2.webp" alt="Kotmale Cheddar Cheese" class="product_img">
+                        <h3 class="product_title">Kotmale Cheddar Cheese</h3>
+                        <span class="namespan">250 g</span>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 1040.00</section>
+                        <section class="quantity">
+                            <label for="quantity-29">Quantity :</label>
+                            <input type="number" id="quantity-29" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- dairy-product 03 -->
+                    <section class="box" data-product-name="Kotmale Non Fat Yoghurt">
+                        <span class="discount">-11%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/dairy_product-3.webp" alt="Kotmale Non Fat Yoghurt" class="product_img">
+                        <h3 class="product_title">Kotmale Non Fat Yoghurt</h3>
+                        <span class="namespan">450 g</span>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 296.00</section>
+                        <section class="quantity">
+                            <label for="quantity-30">Quantity :</label>
+                            <input type="number" id="quantity-30" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- dairy-product 04 -->
+                    <section class="box" data-product-name="Magic Heavenly Crunch">
+                        <span class="discount">-8%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/dairy_product-4.webp" alt="Magic Cone Heavenly Crunch" class="product_img">
+                        <h3 class="product_title">Magic Heavenly Crunch</h3>
+                        <span class="namespan">120 ml</span>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 180.00</section>
+                        <section class="quantity">
+                            <label for="quantity-31">Quantity :</label>
+                            <input type="number" id="quantity-31" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- dairy-product 05 -->
+                    <section class="box" data-product-name="Richlife Fresh Milk">
+                        <span class="discount">-13%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/dairy_product-5.webp" alt="Richlife Fresh Milk" class="product_img">
+                        <h3 class="product_title">Richlife Fresh Milk</h3>
+                        <span class="namespan">180 ml</span>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 104.00</section>
+                        <section class="quantity">
+                            <label for="quantity-32">Quantity :</label>
+                            <input type="number" id="quantity-32" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- dairy-product 06 -->
+                    <section class="box" data-product-name="Magic Fruit & Nut">
+                        <span class="discount">-16%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/dairy_product-6.webp" alt="Magic Fruit & Nut Ice Cream" class="product_img">
+                        <h3 class="product_title">Magic Fruit & Nut</h3>
+                        <span class="namespan">Ice Cream 1l</span>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 656.00</section>
+                        <section class="quantity">
+                            <label for="quantity-33">Quantity :</label>
+                            <input type="number" id="quantity-33" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- dairy-product 07 -->
+                    <section class="box" data-product-name="Kotmale Cheese Spread">
+                        <span class="discount">-10%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/dairy_product-7.webp" alt="Kotmale Cheese Spread" class="product_img">
+                        <h3 class="product_title">Kotmale Cheese Spread</h3>
+                        <span class="namespan">175 g</span>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 660.00</section>
+                        <section class="quantity">
+                            <label for="quantity-34">Quantity :</label>
+                            <input type="number" id="quantity-34" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- dairy-product 08 -->
+                    <section class="box" data-product-name="Kotmale Curd">
+                        <span class="discount">-11%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/dairy_product-8.webp" alt="Kotmale Curd" class="product_img">
+                        <h3 class="product_title">Kotmale Curd</h3>
+                        <span class="namespan">450 g</span>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 350.00</section>
+                        <section class="quantity">
+                            <label for="quantity-35">Quantity :</label>
+                            <input type="number" id="quantity-35" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- dairy-product 09 -->
+                    <section class="box" data-product-name="Imorich Salted Caramel">
+                        <span class="discount">-3%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/dairy_product-9.webp" alt="Imorich Salted Caramel Ice Cream"
+                            class="product_img">
+                        <h3 class="product_title">Imorich Salted Caramel</h3>
+                        <span class="namespan">Ice Cream 1l</span>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 1100.00</section>
+                        <section class="quantity">
+                            <label for="quantity-36">Quantity :</label>
+                            <input type="number" id="quantity-36" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                </section>
+            </section>
+        </section>
+
+
+        <!-- juices & carbonates -->
+        <section class="title">
+            <h1>Juices & Carbonates</h1>
+            <section class="products">
+                <section class="box_container">
+
+                    <!-- juices & carbonates-product 01 -->
+                    <section class="box" data-product-name="Eh Ginger Beer">
+                        <span class="discount">-22%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/juices_product-1.webp" alt="Eh Ginger Beer" class="product_img">
+                        <h3 class="product_title">Eh Ginger Beer 1.5L</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 310.00</section>
+                        <section class="quantity">
+                            <label for="quantity-37">Quantity :</label>
+                            <input type="number" id="quantity-37" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- juices & carbonates-product 02 -->
+                    <section class="box" data-product-name="Coca Cola Pet">
+                        <span class="discount">-15%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/juices_product-2.webp" alt="Coca Cola Pet" class="product_img">
+                        <h3 class="product_title">Coca Cola Pet 1.5L</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 380.00</section>
+                        <section class="quantity">
+                            <label for="quantity-38">Quantity :</label>
+                            <input type="number" id="quantity-38" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- juices & carbonates-product 03 -->
+                    <section class="box" data-product-name="Mountain Dew">
+                        <span class="discount">-11%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/juices_product-3.webp" alt="Mountain Dew" class="product_img">
+                        <h3 class="product_title">Mountain Dew 1.5L</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 395.00</section>
+                        <section class="quantity">
+                            <label for="quantity-39">Quantity :</label>
+                            <input type="number" id="quantity-39" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- juices & carbonates-product 04 -->
+                    <section class="box" data-product-name="Sprite Pet">
+                        <span class="discount">-12%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/juices_product-4.webp" alt="Sprite Pet" class="product_img">
+                        <h3 class="product_title">Sprite Pet 1.5L</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 388.00</section>
+                        <section class="quantity">
+                            <label for="quantity-40">Quantity :</label>
+                            <input type="number" id="quantity-40" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- juices & carbonates-product 05 -->
+                    <section class="box" data-product-name="Kist Nectar Mixed Fruit">
+                        <span class="discount">-8%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/juices_product-5.webp" alt="Kist Nectar Mixed Fruit" class="product_img">
+                        <h3 class="product_title">Kist Nectar Mixed Fruit 1L</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 540.00</section>
+                        <section class="quantity">
+                            <label for="quantity-41">Quantity :</label>
+                            <input type="number" id="quantity-41" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- juices & carbonates-product 06 -->
+                    <section class="box" data-product-name="Eh Fit O Orange">
+                        <span class="discount">-15%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/juices_product-6.webp" alt="Eh Fit O Orange" class="product_img">
+                        <h3 class="product_title">Eh Fit O Orange 1L</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 467.00</section>
+                        <section class="quantity">
+                            <label for="quantity-42">Quantity :</label>
+                            <input type="number" id="quantity-42" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- juices & carbonates-product 07 -->
+                    <section class="box" data-product-name="Fontana Cranberry Juice">
+                        <span class="discount">-10%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/juices_product-7.webp" alt="Fontana Cranberry Juice" class="product_img">
+                        <h3 class="product_title">Fontana Cranberry Juice 1L</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 1510.00</section>
+                        <section class="quantity">
+                            <label for="quantity-43">Quantity :</label>
+                            <input type="number" id="quantity-43" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- juices & carbonates-product 08 -->
+                    <section class="box" data-product-name="Eh Twistee Apple">
+                        <span class="discount">-15%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/juices_product-8.webp" alt="Eh Twistee Apple" class="product_img">
+                        <h3 class="product_title">Eh Twistee Apple 1L</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 399.00</section>
+                        <section class="quantity">
+                            <label for="quantity-44">Quantity :</label>
+                            <input type="number" id="quantity-44" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- juices & carbonates-product 09 -->
+                    <section class="box" data-product-name="Sozo Ginger Lime Tonic">
+                        <span class="discount">-10%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/juices_product-9.webp" alt="Sozo Ginger Lime Tonic" class="product_img">
+                        <h3 class="product_title">Sozo Ginger Lime Tonic 1L</h3>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 1490.00</section>
+                        <section class="quantity">
+                            <label for="quantity-45">Quantity :</label>
+                            <input type="number" id="quantity-45" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                </section>
+            </section>
+        </section>
+
+
+        <!-- baking & cooking ingredients -->
+        <section class="title">
+            <h1>Baking & Cooking Ingredients</h1>
+            <section class="products">
+                <section class="box_container">
+
+                    <!-- baking & cooking ingredients 01 -->
+                    <section class="box" data-product-name="CBL Sera Curry Powder">
+                        <span class="discount">-10%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/baking_product-1.webp" alt="CBL Sera Curry Powder" class="product_img">
+                        <h3 class="product_title">CBL Sera Curry Powder</h3>
+                        <span class="namespan">500 g</span>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 545.00</section>
+                        <section class="quantity">
+                            <label for="quantity-46">Quantity :</label>
+                            <input type="number" id="quantity-46" name="quantity" min="1" max="1000" value="1" class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- baking & cooking ingredients 02 -->
+                    <section class="box" data-product-name="Wijaya Chilli Powder">
+                        <span class="discount">-5%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/baking_product-2.webp" alt="Wijaya Chilli Powder" class="product_img">
+                        <h3 class="product_title">Wijaya Chilli Powder</h3>
+                        <span class="namespan">500 g</span>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 703.00</section>
+                        <section class="quantity">
+                            <label for="quantity-47">Quantity :</label>
+                            <input type="number" id="quantity-47" name="quantity" min="1" max="1000" value="1" class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- baking & cooking ingredients 03 -->
+                    <section class="box" data-product-name="Wijaya Kurakkan Flour">
+                        <span class="discount">-11%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/baking_product-3.webp" alt="Wijaya Kurakkan Flour" class="product_img">
+                        <h3 class="product_title">Wijaya Kurakkan Flour</h3>
+                        <span class="namespan">400 g</span>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 330.00</section>
+                        <section class="quantity">
+                            <label for="quantity-48">Quantity :</label>
+                            <input type="number" id="quantity-48" name="quantity" min="1" max="1000" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- baking & cooking ingredients 04 -->
+                    <section class="box" data-product-name="Motha Cocoa Powder">
+                        <span class="discount">-18%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/baking_product-4.webp" alt="Motha Cocoa Powder" class="product_img">
+                        <h3 class="product_title">Motha Cocoa Powder</h3>
+                        <span class="namespan">100 g</span>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 600.00</section>
+                        <section class="quantity">
+                            <label for="quantity-49">Quantity :</label>
+                            <input type="number" id="quantity-49" name="quantity" min="1" max="1000" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- baking & cooking ingredients 05 -->
+                    <section class="box" data-product-name="Fortune Coconut Oil">
+                        <span class="discount">-13%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/baking_product-5.webp" alt="Fortune Coconut Oil" class="product_img">
+                        <h3 class="product_title">Fortune Coconut Oil</h3>
+                        <span class="namespan">1l</span>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 1058.00</section>
+                        <section class="quantity">
+                            <label for="quantity-50">Quantity :</label>
+                            <input type="number" id="quantity-50" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- baking & cooking ingredients 06 -->
+                    <section class="box" data-product-name="Motha Baking Powder">
+                        <span class="discount">-20%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/baking_product-6.webp" alt="Motha Baking Powder" class="product_img">
+                        <h3 class="product_title">Motha Baking Powder</h3>
+                        <span class="namespan">50 g</span>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 776.00</section>
+                        <section class="quantity">
+                            <label for="quantity-51">Quantity :</label>
+                            <input type="number" id="quantity-51" name="quantity" min="1" max="100" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- baking & cooking ingredients 07-->
+                    <section class="box" data-product-name="Delmege Vanilla Essence">
+                        <span class="discount">-5%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/baking_product-7.webp" alt="Delmege Vanilla Essence" class="product_img">
+                        <h3 class="product_title">Delmege Vanilla Essence</h3>
+                        <span class="namespan">28ml</span>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 660.00</section>
+                        <section class="quantity">
+                            <label for="quantity-52">Quantity :</label>
+                            <input type="number" id="quantity-52" name="quantity" min="1" max="1000" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- baking & cooking ingredients 08 -->
+                    <section class="box" data-product-name="Motha Watalappan Mix">
+                        <span class="discount">-4%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/baking_product-8.webp" alt="Motha Watalappan Mix" class="product_img">
+                        <h3 class="product_title">Motha Watalappan Mix</h3>
+                        <span class="namespan">110 g</span>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 990.00</section>
+                        <section class="quantity">
+                            <label for="quantity-53">Quantity :</label>
+                            <input type="number" id="quantity-53" name="quantity" min="1" max="1000" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                    <!-- baking & cooking ingredients 09 -->
+                    <section class="box" data-product-name="Harischandra Kurakkan Flour">
+                        <span class="discount">-3%</span>
+                        <section class="icons">
+                            <a class="fas fa-heart"></a>
+                            <a class="fas fa-share"></a>
+                            <a class="fas fa-eye"></a>
+                        </section>
+                        <img src="./image/baking_product-9.webp" alt="Harischandra Kurakkan Flour" class="product_img">
+                        <h3 class="product_title">Kurakkan Flour</h3>
+                        <span class="namespan">400 g</span>
+                        <section class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </section>
+                        <section class="price">Rs. 1520.00</section>
+                        <section class="quantity">
+                            <label for="quantity-54">Quantity :</label>
+                            <input type="number" id="quantity-54" name="quantity" min="1" max="1000" value="1"
+                                class="pquantity">
+                            <span>/Unit</span>
+                        </section>
+                        <button class="btn">Add to Cart</button>
+                    </section>
+
+                </section>
+            </section>
+        </section>
+
+
+        <section class="title">
+            <h1>Your Order Awaits: Explore Now!</h1>
             <section class="container">
                 <!-- background shape  -->
                 <section class="background">
                     <section class="shape"></section>
                     <section class="shape"></section>
                 </section>
-    
+
                 <section class="table_background">
                     <!--- table  -->
                     <table>
@@ -119,29 +1679,43 @@
                                 <th colspan="3">Product Details</th>
                             </tr>
                         </thead>
-        
+
                         <!-- table body -->
-                        <tbody class="cart_content">   
-                            
-                        </tbody>    
-    
+                        <tbody class="cart_content">
+
+                        </tbody>
+
                         <!-- table footer -->
                         <tfoot>
                             <tr>
-                                <td colspan="3"><section class="total">Total: <span class="total_price">Rs.0</span></section></td>
+                                <td colspan="3">
+                                    <section class="total">Total: <span class="total_price">Rs.0.00</span></section>
+                                </td>
                             </tr>
                         </tfoot>
                     </table>
-    
+
                     <!-- buy now btn -->
-                     <button type="button" class="buy_now"><a href="./orderdetails .html">Buy Now</a></button>
-                </section>                    
+                    <section class="cart_button">
+                        <button type="button" id="fav_button" class="addto" onclick="addToFavorites()">Add to
+                            favourites</button>
+                        <button type="button" id="fav_button" class="apply" onclick="applyFavorites()">Apply
+                            favourites</button>
+                    </section>
+
+                    <button type="button" class="buy_now"><a href="./orderdetails.html">Buy Now</a></button>
+
+                </section>
             </section>
         </section>
 
     </main>
-    
-    
+
+    <!-- back to top button  -->
+    <button class="back_to_top" aria-label="back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
     <footer>
         <section class="footer">
             <!-- company infoo -->
@@ -180,41 +1754,61 @@
                 <!-- social logo -->
                 <section class="social_logo">
                     <!-- facebook -->
-                    <a href="#" class="facebook">
+                    <a class="facebook">
                         <i class="fa-brands fa-facebook"></i>
                     </a>
 
                     <!-- twitter -->
-                    <a href="#" class="twitter">
-                        <i class="fa-brands fa-twitter"></i> 
+                    <a class="twitter">
+                        <i class="fa-brands fa-twitter"></i>
                     </a>
 
                     <!-- instagram -->
-                    <a href="#" class="instagram">
-                        <i class="fa-brands fa-instagram"></i>    
+                    <a class="instagram">
+                        <i class="fa-brands fa-instagram"></i>
                     </a>
                 </section>
-            </section>           
-            
+            </section>
+
             <section class="footer_right">
                 <!-- quick_links -->
                 <section class="quick_links">
                     <h4>Quick Links</h4>
-                    <a href="./index.html"><p>Home</p></a>
-                    <a href="./about.html"><p>About</p></a>
-                    <a href="./categories.html"><p>Product</p></a>
-                    <a href="./order.html"><p>Order</p></a>
-                    <a href="./registration.html"><p>Registration</p></a>  
+                    <a href="./index.html">
+                        <p>Home</p>
+                    </a>
+                    <a href="./about.html">
+                        <p>About</p>
+                    </a>
+                    <a href="./categories.html">
+                        <p>Product</p>
+                    </a>
+                    <a href="./order.html">
+                        <p>Order</p>
+                    </a>
+                    <a href="./registration.html">
+                        <p>Registration</p>
+                    </a>
                 </section>
 
                 <!-- Product -->
                 <section class="categories">
                     <h4>Products</h4>
-                    <a href="./vegetable.html"><p>Vegetable</p></a>
-                    <a href="./fruit.html"><p>Fruit</p></a>
-                    <a href="./meat .html"><p>Meat & Seafood</p></a>
-                    <a href="./dairy.html"><p>Dairy</p></a>
-                    <a href="./cosmetic.html"><p>Cosmatic</p></a>
+                    <a href="./vegetable.html">
+                        <p>Vegetable</p>
+                    </a>
+                    <a href="./fruit.html">
+                        <p>Fruit</p>
+                    </a>
+                    <a href="./meat .html">
+                        <p>Meat & Seafood</p>
+                    </a>
+                    <a href="./dairy.html">
+                        <p>Dairy</p>
+                    </a>
+                    <a href="./cosmetic.html">
+                        <p>Cosmatic</p>
+                    </a>
                 </section>
             </section>
 
@@ -222,7 +1816,8 @@
     </footer>
 
     <!-- js file  -->
-    <script src="./script/cart.js"></script>
+    <script src="./script/order.js"></script>
 
 </body>
+
 </html>

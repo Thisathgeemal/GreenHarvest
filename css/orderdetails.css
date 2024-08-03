@@ -1,5 +1,5 @@
 :root {
-    --bg-color: #03A65A;
+    --bg-color: #035E33;
     --text: #fff;
     --text-hover: yellow;
     --header-text: #001AFF;
@@ -8,7 +8,7 @@
     --icon-notification-bg: black;
     --banner-bg-color: #ecf7ee;
     --border: black;
-    --sub-text: #3ac253;
+    --sub-text: #1D632B;
     --Button-hover: white;
     --star: #ff5e1a;
     --th-bg: #f2f2f2;
@@ -16,7 +16,7 @@
     --tr-even: #f9f9f9;
     --input-box: #ccc;
     --product-icon: #dedada;
-    --price: red;
+    --price: #A80000;
 }
 
 * {
@@ -152,246 +152,311 @@ a {
 
 
 
-/* main-banner */ 
-.main_banner {
+.title h1 {
+    font-family: "Poetsen One", sans-serif;
+    font-size: 2em;
+    font-weight: 500;
+    text-align: center;
+    padding: 30px 20px 20px 20px;
+}
+
+/* container */
+.container {
     max-width: 90%;
-    height: 600px;
+    height: auto;
     border-radius: 30px;
-    margin: 3% 5%;
     background-color: var(--banner-bg-color);
+    margin: 2% 5%;
     position: relative; 
     overflow: hidden;
-    padding: 20px;
+    padding: 2%;
     display: flex;
-    justify-content: center;
-    border: 2px solid var(--border);
-}
-
-.main_banner_text {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: center;
-    padding-bottom: 320px;
-    margin: 15px auto;
-}
-
-/* header text  */
-.main_banner_text h1 {
-    font-size: 3em;
-    color: var(--header-text);
-    line-height: 60px;
-    font-weight: 700;
-    font-family: "Langar", system-ui;
-    padding: 10px;
-}
-
-/* sub text  */
-.main_banner_text strong {
-    font-size: 1.4em;
-    color: var(--sub-text);
-    text-align: center;
-    font-family: "Poetsen One", sans-serif;
-    font-weight: 500;
-    padding: 10px;
-}
-
-.main_banner_text img {
-    width: 90%;
-}
-
-/* info about vegetable_providers */
-.title h1 {
-    font-size: 2em;
-    font-weight: 600;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.sub_banner {
-    display: flex;
-    width: 90%;
-    margin: 3% 5%;
-}
-
-/* vegetable_providers text */
-.vegetable_provider {
-    display: flex;
-    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
-    position: relative;
-    padding: 45px;
-    width: 50%;
-    height: 400px;
-    background-color: var(--banner-bg-color);
-    border-radius: 30px;
-    border: 2px solid var(--border);
-    margin-right: 8px;
 }
 
-.vegetable_provider h3 {
-    font-size: 1.5em;
-    padding-bottom: 25px;
-    font-family: "Poetsen One", sans-serif;
-    color: var(--header-text);
-    text-align: center;
-}
-
-.vegetable_provider h4 {
-    font-size: 1em;
-    line-height: 25px;
-    text-align: justify;
-    padding-bottom: 12px;
-    font-weight: 600;
-}
-
-/* vegetable_providers img */
-.vegetable_provider_img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 400px;
-    padding: 25px;
-    background-color: var(--banner-bg-color);
-    border-radius: 30px;
-    border: 2px solid var(--border);
-    position: relative;
-}
-
-.vegetable_provider_img img {
-    max-width: 450px;
-    border-radius: 30px;
-}
-
-
-
-/* vegetable products */
-.vagetable_title h1 {
-    font-size: 2em;
-    font-weight: 600;
-    text-align: center;
-    padding: 10px 20px 0 20px;
-}
-
-.vegetable {
-    display: grid; 
-    width: 90%;
-    margin: 3% 5%;     
-}
-
-/* product container */
-.vegetable .box_container{
-    display: grid; 
-    grid-template-columns: auto auto auto;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* product cart */
-.vegetable .box_container .box {
-    margin-bottom: 30px;
-    text-align: center;
-    padding: 20px;
-    border: 2px solid var(--border);
-    border-radius: 30px;
-    overflow: hidden;
-    position: relative;
-    background-color: var(--banner-bg-color);
-}
-
-/* product cart img */
-.vegetable .box_container .box img{
-    width: 300px;
-    height: 300px;
-    padding: 50px;
-}
-
-/* product cart discount */
-.vegetable .box_container .box .discount {
+.background {
+    width: 430px;
+    height: 520px;
     position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: var(--icon-bg);
-    color: var(--sub-text);
-    padding: 10px;
-    font-size: 1em;
-    border-radius: 30px;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
 }
 
-/* product cart icons */
-.vegetable .box_container .box .icons {
+/* circle shape  */
+.background .shape {
+    height: 200px;
+    width: 200px;
     position: absolute;
-    top: 3px;
-    right: 10px;
-}
-
-/* product cart icons hyper links */
-.vegetable .box_container .box .icons a {
-    display: block;
-    height: 40px;
-    width: 40px;
-    line-height: 40px;
-    font-size: 16px;
-    color: var(--icon-text);
-    background-color: var(--product-icon);
     border-radius: 50%;
-    margin-top: 10px;
 }
 
-.vegetable .box_container .box .icons a:hover{
-    background-color: var(--sub-text);
-    color: var(--text);
+/* first circle  */
+.shape:first-child {
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -80px;
+    top: -80px;
 }
 
-.vegetable .box_container .box h3 {
-    font-size: 1.2em;
-    font-weight: 600;
+/* last circle  */
+.shape:last-child {
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -70px;
+    bottom: -80px;
 }
 
-/* product stars */
-.vegetable .box_container .box .stars {
-    color: var(--star);
-    padding: 5px;
+.table_background {
+    width: 400px;
+    height: 580px;
+    background-color: rgba(255, 255, 255, 0);
+    position: relative;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(244, 237, 237, 0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 40px 30px 20px 30px;
+    border-collapse: collapse;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
 }
 
-/* product cart price */
-.vegetable .box_container .box .price {
-    font-size: 1.2em;
-    color: var(--price);
-    padding: 5px;
-} 
-
-/* product cart quantity */
-.vegetable .box_container .box .quantity  {
-    padding-bottom: 18px;
-}
-
-input {
-    border: 1px solid var(--border);
-    padding: 0;
+/* table styles */
+table * {
+    font-family: 'Poppins',sans-serif;
     color: var(--icon-text);
-    width: 60px;
-    border-radius: 3px;
-}
-
-/* product cart btn */
-.vegetable .box_container .box .btn {
-    background-color: var(--icon-bg);
-    color: var(--icon-text);
-    font-size: 1em;
-    font-weight: 400;
-    padding: 8px 15px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 100px;
+    letter-spacing: 0.5px;
+    outline: none;
     border: none;
 }
 
-.vegetable .box_container .box .btn:hover {
-    background-color: var(--sub-text);
+/* table th styles */
+table th {
+    font-size: 2em;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 500;
+    text-align: center;
+} 
+
+/* table body */
+tbody {
+    display: block;
+    height: 440px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+/* cart image */
+table td img {
+    max-width: 100px;
+    height: 100px;
+    margin: 6px;
+    padding: 4px;
+}
+
+/* item details */
+.cart_info {
+    margin: 6px;
+    padding: 4px;
+}
+
+.cart_info h4 {
+    font-size: 1em;
+    color: var(--header-text);
+}
+
+.cart_info span {
+    font-size: 0.9em;
+}
+
+.cart_quantity {
+    background-color: var(--banner-bg-color);
+    width: 50px;
+    height: 28px;
+    padding: 3px 5px 4px;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 500;
+    border: none;
+}
+
+/* trash icon for remove the items form csrt  */
+.remove_item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    transition: 1s;
+    background-color: var(--icon-bg);
+    color: var(--icon-text);
+    margin: 10px;
+    padding: 10px; 
+}
+
+
+/* total of cart product */
+.total { 
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 1em;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.total_price {
+    color: var(--price);
+}
+
+/* buy now btn */
+.buy_now {
+    margin-top: 8px;
+    width: 100%;
+    background-color: var(--icon-bg);
+    color: var(--icon-text);
+    padding: 15px 0;
+    font-size: 1.3em;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.buy_now a {
+    color: var(--icon-text);
+}
+
+.buy_now:hover,
+#fav_button:hover {
+    background-color: rgba(228, 228, 228, 0.54);
+}
+
+.cart_button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+#fav_button {
+    width: 100%;
+    background-color: var(--icon-bg);
+    color: var(--icon-text);
+    padding: 12px 4px;
+    margin: 8px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.row .col  {
+    width: 50%;
+    font-weight: 400;
+    margin: 2% 2% 0 2%;
+    padding: 2%;
+}
+
+.row .col h3 {
+    font-size: 1.8em;
+    font-family: "Poetsen One", sans-serif;
+    color: var(--header-text);
+    padding: 20px;
+}
+
+.row .col .inputbox {
+    padding: 5px;
+    margin: 10px;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 3px;
+    padding: 10px;
+    border: 1px solid var(--input-box);
+    border-radius: 3px; 
+}
+
+.input-error {
+    border: 1px solid var(--price);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cart_button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#fav_button {
+    background-color: var(--bg-color);
     color: var(--text);
+    padding: 12px;
+    border: none;
+    margin: 0 auto 3% auto;
+    border-radius: 10px;
+}
+
+.pay_btn {
+    background-color: var(--bg-color);
+    color: var(--text);
+    padding: 12px;
+    margin: auto;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+#fav_button:hover {
+    background-color: var(--sub-text);
+}
+
+.pay_btn:hover {
+    background-color: var(--sub-text);
+}
+
+.row .col h5 {
+    font-size: 1em;
+    padding: 8px;
+    font-weight: 400;
+}
+
+.row .col .cards {
+    padding: 0 5% 0 5%; 
+}
+
+.row .col .cards img {
+    padding: 5px;
 }
 
 
@@ -563,15 +628,6 @@ input {
 }
 
 
-/* media queries */
-@media screen and (max-width: 3000px) and (min-width: 1600px){
-
-    .vegetable .box_container{
-        display: grid; 
-        grid-template-columns: auto auto auto auto;
-    }
-}
-
 
 /* media queries */
 @media screen and (max-width: 1100px) and (min-width: 950px){
@@ -586,31 +642,6 @@ input {
         font-size: 1em;
     }
 
-
-    /* vegetable_providers text */
-    .vegetable_provider  {
-        padding: 35px;
-        margin-right: 2%;
-    }
-    .vegetable_provider h3 {
-        font-size: 1.3em;
-    }
-    .vegetable_provider h4 {
-        font-size: 0.9em;
-        line-height: 20px;;
-    }
-    .vegetable_provider_img img {
-        width: 400px;
-        height: 250px;
-    }
-
-
-    /* product container */
-    .vegetable .box_container {
-        display: grid; 
-        grid-template-columns: auto auto ;
-        justify-content: space-around;
-    } 
 
 
     /* footer */
@@ -697,47 +728,28 @@ input {
     }
 
 
-    /* main-banner */ 
-    .main_banner {
-        height: 500px;
+
+    /* container */
+    .row .col  {
+        margin: 1%;
+        padding: 2%;
     }
-    .main_banner_text img {
-        width: 70%;
+    .row .col h3 {
+        font-size: 1.6em;
+    }
+    .row .col h5 {
+        font-size: 1em;
+    }
+    .row .col .cards {
+        padding: 2px 10px; 
+    }
+    .cards img {
+        max-width: 55px;
+    }
+    .pau_btn {
+        font-size: 1em;
     }
 
-
-    /* vegetable_providers text */
-    .vegetable_provider {
-        padding: 20px;
-    }
-    .vegetable_provider h3 {
-        font-size: 1.2em;
-        padding-bottom: 20px;
-    }
-    .vegetable_provider h4 {
-        font-size: 0.7em;
-        line-height: 20px;
-    }
-    .vegetable_provider_img {
-        padding: 20px;
-    }
-    .vegetable_provider_img img {
-        max-width: 400px;
-        max-height: 250px;
-        min-width: 200px;
-    }
-
-
-    /* product container */
-    .vegetable .box_container {
-        display: grid; 
-        grid-template-columns: auto auto ;
-        justify-content: space-around;
-    }
-    /* product cart */
-    .vegetable .box_container .box  {
-        padding: 10px;
-    }
 
 
     /* footer */
@@ -825,68 +837,43 @@ input {
         display: flex;
         text-align: center;       
     }
-    
-
-    
-    /* main-banner */   
-    .main_banner {
-        height: auto;
-    }
-    .main_banner_text {
-        padding-bottom: 0px;
-    }
-    .main_banner_text strong {
-        font-size: 1.2em;
-    }
 
     
 
-    /* info about vegetable_providers */
-    .sub_banner {
-        display: block;
+    /* container */
+    .title h1 {
+        font-size: 1.8em;
     }
-    /* vegetable_providers text */
-    .vegetable_provider {
-        display: block;
-        padding: 30px;
-        width: 100%;
-        height: auto;
-        margin-right: 0;
-        margin-bottom: 3%;
+    .row .col  {
+        margin: 1%;
+        padding: 1%;
     }
-    .vegetable_provider h3 {
-        font-size: 1.3em;
-        padding-bottom: 25px;
+    .row .col h3 {
+        font-size: 1.4em;
+        padding: 15px;
     }
-    .vegetable_provider h4 {
+    .pay_btn {
+        margin: 15px auto;
         font-size: 0.9em;
-        line-height: 25px;
     }
-    /* vegetable_providers img */
-    .vegetable_provider_img {
-        display: block;
-        width: 100%;
-        height: auto;
-        padding: 20px;
+    .row .col h5 {
+        font-size: 0.9em;
+        padding: 12px;
+    }
+    .inputbox {
+        font-size: 0.9em;
+    }
+    .cards img {
+        max-width: 45px;
+    }
+    .row .col .cards {
+        padding: 2px 15px; 
         text-align: center;
     }
-    .vegetable_provider_img img {
-        max-width: 400px;
+    .row .col .cards img {
+        padding: 3px;
     }
 
-
-    /* product container */
-    .vagetable_title h1 {
-        padding: 20px 20px 20px 20px;
-    }
-    .vegetable .box_container {
-        grid-template-columns: auto;
-        justify-content: space-around;
-    }
-    /* product cart */
-    .vegetable .box_container .box {
-        margin-bottom: 5%;
-    }
 
 
     /* footer */
@@ -973,89 +960,99 @@ input {
     }
     .search_bar input[type="text"] {
         width: 270px;
+        margin-bottom: 0;
     }
     .right_nav .side_menu {
         display: flex;
         text-align: center;       
     }
     
-
-    /* main-banner */
-    .main_banner {
-        max-width: 90%;
-        height: auto;
-        margin: 5% auto;
+    
+    .title h1 {
+        font-size: 1.7em;
     }
-    /* main banner text  */
-    .main_banner_text {
-        padding-bottom: 10px;
+    /* container */
+    #cart_background {
+        height: 650px;
+        margin: 5%;
     }
-    .main_banner_text h1 {
-        font-size: 2.5em;
+    .background .shape {
+        width: 100px;
+        height: 100px;
     }
-    .main_banner_text strong {
-        display: none;
+    /* first circle  */
+    .shape:first-child {
+        left: 30px;
+        top: -40px;
     }
-    .main_banner_text img {
-        width: 90%;
+    /* last circle  */
+    .shape:last-child {
+        right: 30px;
+        bottom: -40px;
     }
-
-    /* info about vegetable_providers */
-    .sub_banner {
-        display: block;
+    .table_background {
+        width: 300px;
+        height: 540px;
+        padding: 30px 20px;
+        margin: 0;
+    }    
+    /* table th styles */
+    table th {
+        font-size: 1.8em;
+        padding: 2px;
+    } 
+    /* table body */
+    tbody {
+        height: 420px;
     }
-    /* vegetable_providers text */
-    .vegetable_provider {
-        display: block;
-        padding: 30px;
-        width: 100%;
-        height: auto;
-        margin-right: 0;
-        margin-bottom: 5%;
+    /* cart image */
+    table td img {
+        max-width: 70px;
+        height: 70px;
+        margin: 2px;
     }
-    .vegetable_provider h3 {
-        font-size: 1.2em;
-        padding-bottom: 25px;
+    .cart_info h4 {
+        font-size: 0.85em;
     }
-    .vegetable_provider h4 {
+    .cart_info span {
+        font-size: 0.75em;
+    }
+    .cart_quantity {
+        font-size: 0.75em;
+    }
+    /* trash icon  */
+    .remove_item {
+        width: 30px;
+        height: 30px;
+        margin: 4px;
+        padding: 4px; 
+    }
+    /* total of cart product */
+    .total { 
         font-size: 0.9em;
-        line-height: 25px;
+        padding: 8px;
     }
-    /* vegetable_providers img */
-    .vegetable_provider_img {
-        display: block;
+
+
+    /* container */
+    .container {
+        margin: 5%;
+    }
+    .row {
         width: 100%;
-        height: auto;
-        padding: 20px;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    .vegetable_provider_img img {
-        max-width: 250px;
+    .row .col  {
+        width: 100%;
     }
-
-
-    /* vegetable products */
-    .vegetable_title h1 {
-        padding: 20px 20px 20px 20px;
+    input {
+        margin-bottom: 3%;
     }
-    .vegetable {
-        margin: 5%;     
-    }
-    /* product container */
-    .vegetable .box_container {
-        grid-template-columns: auto;
-        justify-content: space-around;
-    }
-    /* product cart */
-    .vegetable .box_container .box {
-        padding: 15px;
-        margin-bottom: 5%;
-    }
-    /* product cart img */
-    .vegetable .box_container .box img {
-        width: 250px;
-        height: 250px;
-        padding: 50px;
+    .pay_btn {
+        font-size: 1em;
+        margin-bottom: 20px;
     }
 
 
@@ -1097,3 +1094,4 @@ input {
         font-size: 0.9em;
     }
 }
+

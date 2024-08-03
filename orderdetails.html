@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/reset.css" type="text/css">
 
     <!-- stylesheet -->
-    <link rel="stylesheet" href="./css/order.css" type="text/css">
+    <link rel="stylesheet" href="./css/orderdetails.css" type="text/css">
 
     <!-- favicon  -->
     <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg">
@@ -72,11 +72,12 @@
             <section class="right_nav">
                 <!-- search bar -->
                 <section id="search_bar" class="search_bar">
-                    <input type="text" placeholder="Search here..." name="search_bar">
+                    <label for="searchItem">🔍</label>
+                    <input type="text" id="searchItem" placeholder="Search here..." name="search_bar">
                     <button onclick="closeSearch()">&times;</button>
                 </section>
 
-                <a href="#" class="search" onclick="toggleSearch()">
+                <a class="search" onclick="toggleSearch()">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
 
@@ -91,7 +92,7 @@
                     <span>0</span>
                 </a>
                 <!-- side menu -->
-                <a href="#" class="side_menu" onclick="toggleMenu()">
+                <a class="side_menu" onclick="toggleMenu()">
                     <i class="fa-solid fa-bars"></i>
                 </a>
             </section>
@@ -103,7 +104,7 @@
 
         <section class="title">
             <h1>Your Order Awaits: Explore Now!</h1> 
-            <section class="container">
+            <section class="container" id="cart_background">
                 <!-- background shape  -->
                 <section class="background">
                     <section class="shape"></section>
@@ -242,11 +243,6 @@
                         </section>                       
                     </section>
 
-                    <section class="cart_button">
-                        <button type="button" id="fav_button" class="addto" onclick="addToFavorites()">Add to favourites</button>
-                        <button type="button" id="fav_button" class="apply" onclick="applyFavorites()">Apply favourites</button>
-                    </section>
-
                     <!-- Pay Button -->
                     <button type="submit" class="pay_btn" onclick="submitForm()">Pay Now</button>
                 </form>
@@ -256,7 +252,7 @@
     </main>
 
     <!-- back to top button  -->
-    <button class="back_to_top">
+    <button class="back_to_top" aria-label="back to top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
     
@@ -298,17 +294,17 @@
                 <!-- social logo -->
                 <section class="social_logo">
                     <!-- facebook -->
-                    <a href="#" class="facebook">
+                    <a class="facebook">
                         <i class="fa-brands fa-facebook"></i>
                     </a>
 
                     <!-- twitter -->
-                    <a href="#" class="twitter">
+                    <a class="twitter">
                         <i class="fa-brands fa-twitter"></i> 
                     </a>
 
                     <!-- instagram -->
-                    <a href="#" class="instagram">
+                    <a class="instagram">
                         <i class="fa-brands fa-instagram"></i>    
                     </a>
                 </section>
@@ -341,7 +337,6 @@
 
     <!-- js file  -->
     <script src="./script/order.js"></script>
-    <script src="./script/cart.js"></script>
 
 </body>
 </html>

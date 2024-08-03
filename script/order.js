@@ -17,9 +17,286 @@ function closeSearch() {
 }
 
 
+// check if the document is ready 
+if (document.readyState == 'loading'){
+    document.addEventListener('DOMContentLoaded', ready);
+}else{
+    ready();
+}
+
+
+// Create function
+function ready() {
+    // Remove item from cart
+    var removeCartIcons = document.getElementsByClassName('remove_item');
+    for (var i = 0; i < removeCartIcons.length; i++) {
+        var icon = removeCartIcons[i];
+        icon.addEventListener('click', removeCartItem);
+    }
+
+    // Quantity changes
+    var quantityInputs = document.getElementsByClassName('cart_quantity');
+    for (var i = 0; i < quantityInputs.length; i++) {
+        var input = quantityInputs[i];
+        input.addEventListener('change', quantityChanged);
+    }
+
+    // Add to cart
+    var addCartButtons = document.getElementsByClassName('btn');
+    for (var i = 0; i < addCartButtons.length; i++) {
+        var button = addCartButtons[i];
+        button.addEventListener('click', addCartClicked);
+    }
+
+    // Load cart info from localStorage
+    loadCart();
+
+    // Update cart icon quantity
+    updateCartIconQuantity();
+}
+
+
+// Remove item from cart
+function removeCartItem(event) {
+    var iconClicked = event.target.closest('.remove_item');
+    var cartRow = iconClicked.closest('tr');
+    var title = cartRow.getElementsByClassName('cart_name')[0].innerText;
+
+    // Update localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart = cart.filter(item => item.title !== title);
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    loadCart();
+    updateCartIconQuantity();
+    updateTotal();
+}
+
+
+// Quantity changes
+function quantityChanged(event) {
+    var input = event.target;
+    if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1;
+    }
+
+    var cartRow = input.closest('tr');
+    var title = cartRow.getElementsByClassName('cart_name')[0].innerText;
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    var item = cart.find(item => item.title === title);
+    if (item) {
+        item.quantity = parseInt(input.value);
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    updateCartIconQuantity();
+    updateTotal();
+}
+
+
+// Add product to cart
+function addCartClicked(event) {
+    var button = event.target;
+    var shopProducts = button.closest('.box');
+
+    var title = shopProducts.getElementsByClassName('product_title')[0].innerText;
+    var price = shopProducts.getElementsByClassName('price')[0].innerText;
+    var productImg = shopProducts.getElementsByClassName('product_img')[0].src;
+    var quantity = parseInt(shopProducts.getElementsByClassName('pquantity')[0].value);
+
+    addProductToCart(title, price, productImg, quantity);
+    updateCartIconQuantity();
+    updateTotal();
+}
+
+
+// Store cart details in localStorage
+function addProductToCart(title, price, productImg, quantity) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Check if the item already exists in the cart
+    if (cart.some(item => item.title === title)) {
+        swal("You have already added this item to cart");
+        return;
+    }
+
+    cart.push({ title, price, productImg, quantity });
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    loadCart();
+}
+
+
+// Load cart info on cart page
+function loadCart() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    var cartItems = document.getElementsByClassName('cart_content')[0];
+
+    // Clear any existing content
+    cartItems.innerHTML = '';
+
+    cart.forEach(item => {
+        var cartShopBox = document.createElement('tr');
+        cartShopBox.classList.add('cart_box');
+
+        var cartBoxContent = `
+            <td>
+                <img src="${item.productImg}" alt="${item.title}">
+            </td>
+            <td>
+                <section class="cart_info">
+                    <h4 class="cart_name">${item.title}</h4>
+                    <span class="cart_price">${item.price}</span><br>
+                    <span>Quantity :</span><input type="number" value="${item.quantity}" min="1" class="cart_quantity" name="quantity">                                     
+                </section>
+            </td>
+            <td>
+                <section class="remove_item">
+                    <i class="fa-solid fa-trash"></i>
+                </section>
+            </td>`;
+
+        cartShopBox.innerHTML = cartBoxContent;
+        cartItems.append(cartShopBox);
+
+        cartShopBox.getElementsByClassName('remove_item')[0].addEventListener('click', removeCartItem);
+        cartShopBox.getElementsByClassName('cart_quantity')[0].addEventListener('change', quantityChanged);
+    });
+
+    updateCartIconQuantity();
+    updateTotal();
+}
+
+
+// Update total price
+function updateTotal() {
+    let cartContent = document.querySelector('.cart_content');
+    let rows = cartContent.getElementsByTagName('tr');
+    let total = 0;
+
+    for (let i = 0; i < rows.length; i++) {
+        let row = rows[i];
+        let priceElement = row.querySelector('.cart_price');
+        let quantityElement = row.querySelector('.cart_quantity');
+        let price = parseFloat(priceElement.innerText.replace('Rs.', ''));
+        let quantity = quantityElement.value;
+        total += price * quantity;
+    }
+
+    document.getElementsByClassName('total_price')[0].innerText = 'Rs.' + total.toFixed(2);
+}
+
+
+// Function to update the cart icon quantity
+function updateCartIconQuantity() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let iconCartSpan = document.getElementsByClassName('cart_icon_quantity');
+    let cartIconQuantity = 0;
+
+    cart.forEach(item => {
+        cartIconQuantity += item.quantity;
+    });
+
+    // Update all cart icon span elements with the new quantity
+    for (let i = 0; i < iconCartSpan.length; i++) {
+        iconCartSpan[i].innerText = cartIconQuantity;
+    }
+}
+
+
+function addToFavorites() {
+    let products = [];
+    var cartItems = document.querySelectorAll('.cart_content tr');
+  
+    // Check if there are any products in the cart
+    if (cartItems.length === 0) {
+      swal("Error!", "No products in the cart to add to favorites.", "error");
+      return;
+    }
+  
+    cartItems.forEach(row => {
+      let product = {
+        image: row.querySelector('img').src,
+        name: row.querySelector('.cart_name').innerText,
+        price: row.querySelector('.cart_price').innerText,
+        quantity: row.querySelector('.cart_quantity').value
+      };
+      products.push(product);
+    });
+  
+    // Store in local storage
+    localStorage.setItem('favorites', JSON.stringify(products));
+  
+    // Confirmation
+    swal("Success!", "Favorites have been saved.", "success");
+}
+
+
+// Apply favorites 
+function applyFavorites() {
+    // Retrieve from local storage
+    let favorites = JSON.parse(localStorage.getItem('favorites'));
+
+    if (favorites) {
+        let cartContent = document.querySelector('.cart_content');
+        cartContent.innerHTML = '';
+
+        favorites.forEach(product => {
+            let row = `<tr>
+                            <td>
+                                <img src="${product.image}" alt="${product.name}">
+                            </td>
+                            <td>
+                                <section class="cart_info">
+                                    <h4 class="cart_name">${product.name}</h4>
+                                    <span class="cart_price">${product.price}</span><br>
+                                    <span>Quantity :</span><input type="number" value="${product.quantity}" min="1" class="cart_quantity" name="quantity">                                     
+                                </section>
+                            </td>
+                            <td>
+                                <section class="remove_item">
+                                    <i class="fa-sharp fa-solid fa-heart"></i>
+                                </section>
+                            </td>
+                        </tr>`;
+            cartContent.insertAdjacentHTML('beforeend', row);
+            updateProductQuantityInBox(product.name, product.quantity)
+        });
+        
+        updateTotal()
+
+        // Confirmation
+        swal("Success!", "Favorites have been applied.", "success");
+    } else {
+        swal("Error!", "You have not saved any favorites yet.", "error");
+    }
+}
+
+
+// Function to update product quantity in product box
+function updateProductQuantityInBox(productName, quantity) {
+    let productBox = document.querySelector(`.box[data-product-name="${productName}"]`);
+  
+    if (productBox) {
+        let productQuantityDisplay = productBox.querySelector('.pquantity');
+        if (productQuantityDisplay) {
+        productQuantityDisplay.value = quantity;
+
+        } else {
+            console.warn(`Could not find quantity display element for product Name: ${productName}`);
+        }
+
+    } else {
+        console.warn(`Could not find product box element for product Name: ${productName}`);
+    }
+}
+
+
 // submission conform alert 
 function submitForm(event) {
     event.preventDefault();
+    localStorage.removeItem('cart');
     
     // calculate the dilivery date
     let today = new Date();
@@ -39,99 +316,13 @@ function submitForm(event) {
 }
 
 
-// add to favorites 
-function addToFavorites() {
-    // Validate form inputs
-    let isValid = true;
-    let formData = {};
-    document.querySelectorAll('.order_details input').forEach(input => {
-        if (input.value.trim() === '') {
-            isValid = false;
-            input.classList.add('input-error');
-        } else {
-            input.classList.remove('input-error');
-        }
-        formData[input.name] = input.value;
-    });
-
-    if (!isValid) {
-        swal("Error", "Please fill in all required fields before saving to favorites.", "error");
-        return;
-    }
-
-    // Get product details
-    let products = [];
-    document.querySelectorAll('.cart_content tr').forEach(row => {
-        let product = {
-            image: row.querySelector('img').src,
-            name: row.querySelector('.cart_name').innerText,
-            price: row.querySelector('.cart_price').innerText,
-            quantity: row.querySelector('.cart_quantity').value
-        };
-        products.push(product);
-    });
-
-    // Store in local storage
-    localStorage.setItem('favorites', JSON.stringify({ products, formData }));
-
-    // Confirmation
-    swal("Success!", "Favorites have been saved.", "success");
-}
-
-
-// apply favorites 
-function applyFavorites(){
-    // Retrieve from local storage
-    let favorites = JSON.parse(localStorage.getItem('favorites'));
-
-    if (favorites) {
-        
-        let cartContent = document.querySelector('.cart_content');
-        cartContent.innerHTML = '';
-        favorites.products.forEach(product => {
-            let row = `<tr>
-                            <td>
-                                <img src="${product.image}" alt="${product.name}">
-                            </td>
-                            <td>
-                                <section class="cart_info">
-                                    <h4 class="cart_name">${product.name}</h4>
-                                    <span class="cart_price">${product.price}</span><br>
-                                    <span>Quantity :</span><input type="number" value="${product.quantity}" min="1" class="cart_quantity" name="quantity">                                     
-                                </section>
-                            </td>
-                            <td>
-                                <section class="remove_item">
-                                    <i class="fa-sharp fa-solid fa-heart"></i>
-                                </section>
-                            </td>
-                    </tr>`;
-            cartContent.insertAdjacentHTML('beforeend', row);
-        });
-
-        // favorites form fields
-        Object.keys(favorites.formData).forEach(key => {
-            let input = document.querySelector(`.order_details [name=${key}]`);
-            if (input) {
-                input.value = favorites.formData[key];
-            }
-        });
-
-        // confirmation
-        swal("Success!", `Favorites have been applied.`, "success");
-    } else {
-        swal("error!", `You have not saved any favorites yet.`, "error");
-    }   
-}
-
-
-// back to top button 
+// Back to top button
 document.addEventListener('DOMContentLoaded', function() {
     const backToTopButton = document.querySelector('.back_to_top');
 
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) { 
-            backToTopButton.style.display = 'flex'; 
+        if (window.scrollY > 100) {
+            backToTopButton.style.display = 'flex';
         } else {
             backToTopButton.style.display = 'none';
         }
@@ -140,10 +331,9 @@ document.addEventListener('DOMContentLoaded', function() {
     backToTopButton.addEventListener('click', function() {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth' 
+            behavior: 'smooth'
         });
     });
 
     updateCartIconQuantity();
-    
 });

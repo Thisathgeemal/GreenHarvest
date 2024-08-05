@@ -521,7 +521,8 @@ table td img {
 }
 
 .buy_now:hover,
-#fav_button:hover {
+.addto:hover, 
+.apply:hover {
     background-color: rgba(228, 228, 228, 0.54);
 }
 
@@ -533,7 +534,7 @@ table td img {
     width: 90%;
 }
 
-#fav_button {
+.addto, .apply {
     width: 100%;
     background-color: var(--icon-bg);
     color: var(--icon-text);
@@ -1133,7 +1134,7 @@ table td img {
     .cart_button {
         width: 95%;
     }
-    #fav_button {
+    .addto, .apply {
         font-size: 0.8em;
         padding: 10px 4px;
         margin: 5px;

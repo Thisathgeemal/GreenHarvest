@@ -17,6 +17,10 @@
     --input-box: #ccc;
     --product-icon: #dedada;
     --price: #A80000;
+
+    .fa-rotate-by {
+        transform: rotate(var(--fa-rotate-angle, 0deg));
+    }
 }
 
 * {

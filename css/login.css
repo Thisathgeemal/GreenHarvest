@@ -1,5 +1,5 @@
 :root {
-    --bg-color: #03A65A;
+    --bg-color: #035E33;
     --text: #fff;
     --text-hover: yellow;
     --header-text: #001AFF;
@@ -8,7 +8,7 @@
     --icon-notification-bg: black;
     --banner-bg-color: #ecf7ee;
     --border: black;
-    --sub-text: #3ac253;
+    --sub-text: #1D632B;
     --Button-hover: white;
     --star: #ff5e1a;
     --th-bg: #f2f2f2;
@@ -16,7 +16,7 @@
     --tr-even: #f9f9f9;
     --input-box: #ccc;
     --product-icon: #dedada;
-    --price: red;
+    --price: #A80000;
 }
 
 * {

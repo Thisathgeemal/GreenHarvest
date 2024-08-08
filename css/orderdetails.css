@@ -251,7 +251,7 @@ table th {
 /* table body */
 tbody {
     display: block;
-    height: 440px;
+    height: 380px;
     overflow-y: auto;
     width: 100%;
 }
@@ -320,7 +320,29 @@ table td img {
     color: var(--price);
 }
 
+.cart_button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
 
+.apply {
+    width: 100%;
+    background-color: var(--icon-bg);
+    color: var(--icon-text);
+    padding: 12px 4px;
+    margin: 8px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.apply:hover {
+    background-color: rgba(228, 228, 228, 0.54);
+}
 
 .row {
     width: 100%;

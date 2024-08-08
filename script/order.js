@@ -266,7 +266,49 @@ function applyFavorites() {
             cartContent.insertAdjacentHTML('beforeend', row);
 
             // update the product quantity to the product box
-            updateProductQuantityInBox(product.name, product.quantity)
+            updateProductQuantityInBox(product.name, product.quantity);
+        });
+        
+        updateTotal()
+
+        // confirmation
+        swal("Success!", "Favorites have been applied.", "success");
+    } else {
+        swal("Error!", "You have not saved any favorites yet.", "error");
+    }
+}
+
+
+// Apply favorites for checkOut 
+function applyFavoritesForCheckOut() {
+    // retrieve from local storage
+    let favorites = JSON.parse(localStorage.getItem('favorites'));
+
+    // check any favorites are saved
+    if (favorites) {
+        let cartContent = document.querySelector('.cart_content');
+        cartContent.innerHTML = '';
+
+        // create a table row for favorite items
+        favorites.forEach(product => {
+            let row = `<tr>
+                            <td>
+                                <img src="${product.image}" alt="${product.name}">
+                            </td>
+                            <td>
+                                <section class="cart_info">
+                                    <h4 class="cart_name">${product.name}</h4>
+                                    <span class="cart_price">${product.price}</span><br>
+                                    <span>Quantity :</span><input type="number" value="${product.quantity}" min="1" class="cart_quantity" name="quantity">                                     
+                                </section>
+                            </td>
+                            <td>
+                                <section class="remove_item">
+                                    <i class="fa-sharp fa-solid fa-heart"></i>
+                                </section>
+                            </td>
+                        </tr>`;
+            cartContent.insertAdjacentHTML('beforeend', row);
         });
         
         updateTotal()

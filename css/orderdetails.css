@@ -962,7 +962,7 @@ input::-webkit-inner-spin-button {
     } 
     /* table body */
     tbody {
-        height: 420px;
+        height: 375px;
     }
     /* cart image */
     table td img {
@@ -989,7 +989,10 @@ input::-webkit-inner-spin-button {
     /* total of cart product */
     .total { 
         font-size: 0.9em;
-        padding: 8px;
+        padding: 8px 8px 4px 8px;
+    }
+    .apply {
+        margin: 4px;
     }
 
 

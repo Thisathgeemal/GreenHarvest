@@ -195,7 +195,7 @@ function updateCartIconQuantity() {
     let cartIconQuantity = 0;
 
     cart.forEach(item => {
-        cartIconQuantity += item.quantity;
+        cartIconQuantity += parseInt(item.quantity);
     });
 
     // Update all cart icon span elements with the new quantity
@@ -371,6 +371,7 @@ function submitForm(event) {
 document.addEventListener('DOMContentLoaded', function() {
     const backToTopButton = document.querySelector('.back_to_top');
 
+    // when the user scrolls the page this function work.
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
             backToTopButton.style.display = 'flex';
@@ -379,6 +380,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // when the user clicked back to top button 
     backToTopButton.addEventListener('click', function() {
         window.scrollTo({
             top: 0,
@@ -386,5 +388,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    updateCartIconQuantity();
 });

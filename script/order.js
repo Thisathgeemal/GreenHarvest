@@ -86,7 +86,7 @@ function quantityChanged(event) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     var item = cart.find(item => item.title === title);
     if (item) {
-        item.quantity = parseInt(input.value);
+        item.quantity = parseFloat(input.value);
         localStorage.setItem('cart', JSON.stringify(cart));
     }
 

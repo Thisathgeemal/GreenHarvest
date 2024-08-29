@@ -359,7 +359,7 @@ function submitForm(event) {
     let formattedDeliveryDate = deliveryDate.toLocaleDateString(undefined, options);
     
     // display the alert
-    swal("Success!", `Your order has been successfully submitted! Your items will arrive on ${formattedDeliveryDate}.`, "success")
+    swal("Success!", `Thank You very much! Your order has been successfully submitted! Your items will arrive on ${formattedDeliveryDate}.`, "success")
     .then(() => {
         // refresh the page
         window.location.reload();

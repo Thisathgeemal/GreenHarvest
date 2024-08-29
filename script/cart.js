@@ -96,31 +96,36 @@ function quantitychanged(event){
 }
 
 
-// add product to cart 
-function addCartoClicked(event){
+// Add product to cart
+function addCartClicked(event) {
     var button = event.target;
     var shopProducts = button.closest('.box');
+
     var title = shopProducts.getElementsByClassName('product_title')[0].innerText;
     var price = shopProducts.getElementsByClassName('price')[0].innerText;
     var productImg = shopProducts.getElementsByClassName('product_img')[0].src;
-    addProductToCart(title, price, productImg);
+    var quantity = parseFloat(shopProducts.getElementsByClassName('pquantity')[0].value);
+
+    addProductToCart(title, price, productImg, quantity);
     updateCartIconQuantity();
     updateTotal();
 }
 
 
-// store cart details in a localstorage
-function addProductToCart(title, price, productImg){
+// Store cart details in localStorage
+function addProductToCart(title, price, productImg, quantity) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // check the item is already exists in the cart
-    if (cart.some(item => item.title === title)){
+    // Check if the item already exists in the cart
+    if (cart.some(item => item.title === title)) {
         swal("You have already added this item to cart");
         return;
     }
 
-    cart.push({title, price, productImg, quantity: 1 });
-    localStorage.setItem('cart',JSON.stringify(cart));
+    cart.push({ title, price, productImg, quantity });
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    loadCart();
 }
 
 
